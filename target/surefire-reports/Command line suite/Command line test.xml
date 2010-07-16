@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Command line test" failures="0" tests="4" time="0.059" errors="0">
+  <properties/>
+  <testcase name="testAmountInStock" time="0.0020" classname="org.seke.fs.beans.ProductBeanTest"/>
+  <testcase name="testId" time="0.0" classname="org.seke.fs.beans.ProductBeanTest"/>
+  <testcase name="testTitle" time="0.0010" classname="org.seke.fs.beans.ProductBeanTest"/>
+  <testcase name="testPrice" time="0.0010" classname="org.seke.fs.beans.ProductBeanTest"/>
+</testsuite>
