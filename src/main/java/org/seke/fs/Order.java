@@ -1,5 +1,7 @@
 package org.seke.fs;
 
+import java.util.List;
+
 /**
  * Created by IntelliJ IDEA.
  * User: user
@@ -7,32 +9,19 @@ package org.seke.fs;
  * Time: 9:59:05 AM
  * To change this template use File | Settings | File Templates.
  */
-public class Order {
+public interface Order {
 
-    private int id;
-    private String commitDate;
-    
-    public Order() {
-    }
+    int getId();
 
-    public Order(int id, String commitDate) {
-        this.id = id;
-        this.commitDate = commitDate;
-    }
+    void setId(int id);
 
-    public int getId() {
-        return id;
-    }
+    String getCommitDate();
 
-    public void setId(int id) {
-        this.id = id;
-    }
+    void setCommitDate(String commitDate);
 
-    public String getCommitDate() {
-        return commitDate;
-    }
+    Costumer getCostumer();
 
-    public void setCommitDate(String commitDate) {
-        this.commitDate = commitDate;
-    }
+    void setCostumer(Costumer costumer);
+
+    List<OrdersItem> getOrdersItems();
 }

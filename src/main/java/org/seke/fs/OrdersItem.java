@@ -7,42 +7,18 @@ package org.seke.fs;
  * Time: 4:16:41 PM
  * To change this template use File | Settings | File Templates.
  */
-public class OrdersItem {
+public interface OrdersItem {
 
-    private double ordersItemNumber;
-    private int amount;
-    private double price;
+    int getOrdersItemNumber();
 
-    public OrdersItem() {
-    }
+    void setOrdersItemNumber(int ordersItemNumber);
 
-    public OrdersItem(double ordersItemNumber, int amount, double price) {
-        this.ordersItemNumber = ordersItemNumber;
-        this.amount = amount;
-        this.price = price;
-    }
+    int getAmount();
 
-    public double getOrdersItemNumber() {
-        return ordersItemNumber;
-    }
+    void setAmount(int amount);
 
-    public void setOrdersItemNumber(double ordersItemNumber) {
-        this.ordersItemNumber = ordersItemNumber;
-    }
+    double getPrice();
 
-    public int getAmount() {
-        return amount;
-    }
+    void setPrice(double price);
 
-    public void setAmount(int amount) {
-        this.amount = amount;
-    }
-
-    public double getPrice() {
-        return price;
-    }
-
-    public void setPrice(double price) {
-        this.price = price;
-    }
 }
