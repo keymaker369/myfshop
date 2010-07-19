@@ -10,6 +10,7 @@
           <module name="fs" />
         </modules>
       </facet-type>
+      <facet-type id="tapestry" />
     </autodetection-disabled>
   </component>
   <component name="IdProvider" IDEtalkID="45182EE30AD5F62C7A815EFE45C049BE" />

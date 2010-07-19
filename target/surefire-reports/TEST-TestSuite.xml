@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite failures="0" time="0.379" errors="0" skipped="0" tests="15" name="TestSuite">
+<testsuite failures="0" time="0.296" errors="0" skipped="0" tests="15" name="TestSuite">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.6.0_18\jre\bin"/>
@@ -19,7 +19,7 @@
     <property name="basedir" value="D:\java\ideaProjects\myfshop"/>
     <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.6.0_18\jre\lib\endorsed"/>
     <property name="os.arch" value="x86"/>
-    <property name="surefire.real.class.path" value="C:\Users\user\surefirebooter4704375774531794840.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\user\surefirebooter1125897782650682757.jar"/>
     <property name="java.io.tmpdir" value="C:\Users\user\"/>
     <property name="line.separator" value="
 "/>
@@ -59,19 +59,19 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="pentium_pro+mmx pentium_pro pentium+mmx pentium i486 i386 i86"/>
   </properties>
-  <testcase time="0.004" classname="org.seke.fs.beans.CostumerBeanTest" name="testUsername"/>
+  <testcase time="0.003" classname="org.seke.fs.beans.CostumerBeanTest" name="testUsername"/>
   <testcase time="0" classname="org.seke.fs.beans.CostumerBeanTest" name="testFirstName"/>
   <testcase time="0" classname="org.seke.fs.beans.CostumerBeanTest" name="testPassword"/>
-  <testcase time="0.001" classname="org.seke.fs.beans.CostumerBeanTest" name="testLastName"/>
+  <testcase time="0" classname="org.seke.fs.beans.CostumerBeanTest" name="testLastName"/>
   <testcase time="0.001" classname="org.seke.fs.beans.CostumerBeanTest" name="testOrders"/>
   <testcase time="0" classname="org.seke.fs.beans.OrderBeanTest" name="commitDate"/>
   <testcase time="0" classname="org.seke.fs.beans.OrderBeanTest" name="testOrdersItems"/>
   <testcase time="0" classname="org.seke.fs.beans.OrderBeanTest" name="id"/>
-  <testcase time="0.001" classname="org.seke.fs.beans.OrdersItemBeanTest" name="testPrice"/>
+  <testcase time="0" classname="org.seke.fs.beans.OrdersItemBeanTest" name="testPrice"/>
   <testcase time="0" classname="org.seke.fs.beans.OrdersItemBeanTest" name="testOrdersItemNumber"/>
   <testcase time="0" classname="org.seke.fs.beans.OrdersItemBeanTest" name="testAmount"/>
   <testcase time="0" classname="org.seke.fs.beans.ProductBeanTest" name="testAmountInStock"/>
-  <testcase time="0.001" classname="org.seke.fs.beans.ProductBeanTest" name="testId"/>
+  <testcase time="0" classname="org.seke.fs.beans.ProductBeanTest" name="testId"/>
   <testcase time="0" classname="org.seke.fs.beans.ProductBeanTest" name="testTitle"/>
   <testcase time="0" classname="org.seke.fs.beans.ProductBeanTest" name="testPrice"/>
 </testsuite>
