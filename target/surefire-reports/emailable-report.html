@@ -29,46 +29,138 @@ div.shootout {padding:2em;border:3px #4854A8 solid}
 <body>
 <table cellspacing=0 cellpadding=0 class="param">
 <tr><th>Test</th><th class="numi">Methods<br/>Passed</th><th class="numi">Scenarios<br/>Passed</th><th class="numi"># skipped</th><th class="numi"># failed</th><th class="numi">Total<br/>Time</th><th class="numi">Included<br/>Groups</th><th class="numi">Excluded<br/>Groups</th></tr>
-<tr><td style="text-align:left;padding-right:2em">Command line test</td><td class="numi">15</td><td class="numi">15</td><td class="numi">0</td><td class="numi">0</td><td class="numi">0.0 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr><td style="text-align:left;padding-right:2em">Command line test</td><td class="numi">18</td><td class="numi">18</td><td class="numi_attn">1</td><td class="numi">0</td><td class="numi">37.4 seconds</td><td class="numi"></td><td class="numi"></td></tr>
 </table>
 <a id="summary"></a>
 <table cellspacing=0 cellpadding=0 class="passed">
 <tr><th>Class</th><th>Method</th><th># of<br/>Scenarios</th><th>Time<br/>(Msecs)</th></tr>
+<tr><th colspan="4">Command line test &#8212; failed (configuration methods)</th></tr>
+<tr class="failedodd"><td rowspan="1">org.seke.fs.SeleniumTest<td><a href="#m1">setup</a></td><td class="numi">1</td><td class="numi">0</td></tr>
+<tr><th colspan="4">Command line test &#8212; skipped</th></tr>
+<tr class="skippedodd"><td rowspan="1">org.seke.fs.SeleniumTest<td><a href="#m2">testApplicationStartUp</a></td><td class="numi">1</td><td class="numi">1</td></tr>
 <tr><th colspan="4">Command line test &#8212; passed</th></tr>
-<tr class="passedodd"><td rowspan="5">org.seke.fs.beans.CostumerBeanTest<td><a href="#m1">testFirstName</a></td><td class="numi">1</td><td class="numi">0</td></tr><tr class="passedodd"><td><a href="#m2">testLastName</a></td><td class="numi">1</td><td class="numi">0</td></tr><tr class="passedodd"><td><a href="#m3">testOrders</a></td><td class="numi">1</td><td class="numi">0</td></tr><tr class="passedodd"><td><a href="#m4">testPassword</a></td><td class="numi">1</td><td class="numi">1</td></tr><tr class="passedodd"><td><a href="#m5">testUsername</a></td><td class="numi">1</td><td class="numi">2</td></tr>
-<tr class="passedeven"><td rowspan="3">org.seke.fs.beans.OrderBeanTest<td><a href="#m6">commitDate</a></td><td class="numi">1</td><td class="numi">0</td></tr><tr class="passedeven"><td><a href="#m7">id</a></td><td class="numi">1</td><td class="numi">0</td></tr><tr class="passedeven"><td><a href="#m8">testOrdersItems</a></td><td class="numi">1</td><td class="numi">1</td></tr>
-<tr class="passedodd"><td rowspan="3">org.seke.fs.beans.OrdersItemBeanTest<td><a href="#m9">testAmount</a></td><td class="numi">1</td><td class="numi">0</td></tr><tr class="passedodd"><td><a href="#m10">testOrdersItemNumber</a></td><td class="numi">1</td><td class="numi">0</td></tr><tr class="passedodd"><td><a href="#m11">testPrice</a></td><td class="numi">1</td><td class="numi">0</td></tr>
-<tr class="passedeven"><td rowspan="4">org.seke.fs.beans.ProductBeanTest<td><a href="#m12">testAmountInStock</a></td><td class="numi">1</td><td class="numi">1</td></tr><tr class="passedeven"><td><a href="#m13">testId</a></td><td class="numi">1</td><td class="numi">4</td></tr><tr class="passedeven"><td><a href="#m14">testPrice</a></td><td class="numi">1</td><td class="numi">0</td></tr><tr class="passedeven"><td><a href="#m15">testTitle</a></td><td class="numi">1</td><td class="numi">0</td></tr>
+<tr class="passedodd"><td rowspan="1">org.seke.fs.EewrTest<td><a href="#m3">testergergPrice</a></td><td class="numi">1</td><td class="numi">3</td></tr>
+<tr class="passedeven"><td rowspan="5">org.seke.fs.beans.CostumerBeanTest<td><a href="#m4">testFirstName</a></td><td class="numi">1</td><td class="numi">0</td></tr><tr class="passedeven"><td><a href="#m5">testLastName</a></td><td class="numi">1</td><td class="numi">0</td></tr><tr class="passedeven"><td><a href="#m6">testOrders</a></td><td class="numi">1</td><td class="numi">0</td></tr><tr class="passedeven"><td><a href="#m7">testPassword</a></td><td class="numi">1</td><td class="numi">0</td></tr><tr class="passedeven"><td><a href="#m8">testUsername</a></td><td class="numi">1</td><td class="numi">2</td></tr>
+<tr class="passedodd"><td rowspan="1">org.seke.fs.beans.EewrTest<td><a href="#m9">testergergPrice</a></td><td class="numi">1</td><td class="numi">1</td></tr>
+<tr class="passedeven"><td rowspan="3">org.seke.fs.beans.OrderBeanTest<td><a href="#m10">commitDate</a></td><td class="numi">1</td><td class="numi">0</td></tr><tr class="passedeven"><td><a href="#m11">id</a></td><td class="numi">1</td><td class="numi">0</td></tr><tr class="passedeven"><td><a href="#m12">testOrdersItems</a></td><td class="numi">1</td><td class="numi">0</td></tr>
+<tr class="passedodd"><td rowspan="3">org.seke.fs.beans.OrdersItemBeanTest<td><a href="#m13">testAmount</a></td><td class="numi">1</td><td class="numi">0</td></tr><tr class="passedodd"><td><a href="#m14">testOrdersItemNumber</a></td><td class="numi">1</td><td class="numi">0</td></tr><tr class="passedodd"><td><a href="#m15">testPrice</a></td><td class="numi">1</td><td class="numi">1</td></tr>
+<tr class="passedeven"><td rowspan="4">org.seke.fs.beans.ProductBeanTest<td><a href="#m16">testAmountInStock</a></td><td class="numi">1</td><td class="numi">0</td></tr><tr class="passedeven"><td><a href="#m17">testId</a></td><td class="numi">1</td><td class="numi">0</td></tr><tr class="passedeven"><td><a href="#m18">testPrice</a></td><td class="numi">1</td><td class="numi">0</td></tr><tr class="passedeven"><td><a href="#m19">testTitle</a></td><td class="numi">1</td><td class="numi">0</td></tr>
+<tr class="passedodd"><td rowspan="1">org.seke.fs.beans.SeleniumTest<td><a href="#m20">testApplicationStartUp</a></td><td class="numi">1</td><td class="numi">1</td></tr>
 </table>
 <h1>Command line test</h1>
-<a id="m1"></a><h2>org.seke.fs.beans.CostumerBeanTest:testFirstName</h2>
+<a id="m1"></a><h2>org.seke.fs.SeleniumTest:setup</h2>
+<div style="padding-left:3em">
+<p>Could not start Selenium session: Internal Server Error</p>
+com.thoughtworks.selenium.DefaultSelenium.start(DefaultSelenium.java:89)
+<br/>at org.apache.tapestry5.test.AbstractIntegrationTestSuite.setup(AbstractIntegrationTestSuite.java:277)
+<br/>at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+<br/>at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+<br/>at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+<br/>at java.lang.reflect.Method.invoke(Method.java:597)
+<br/>at org.testng.internal.MethodHelper.invokeMethod(MethodHelper.java:580)
+<br/>at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:398)
+<br/>at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:145)
+<br/>at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:82)
+<br/>at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:167)
+<br/>at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:104)
+<br/>at org.testng.TestRunner.runWorkers(TestRunner.java:712)
+<br/>at org.testng.TestRunner.privateRun(TestRunner.java:582)
+<br/>at org.testng.TestRunner.run(TestRunner.java:477)
+<br/>at org.testng.SuiteRunner.runTest(SuiteRunner.java:324)
+<br/>at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:319)
+<br/>at org.testng.SuiteRunner.privateRun(SuiteRunner.java:292)
+<br/>at org.testng.SuiteRunner.run(SuiteRunner.java:198)
+<br/>at org.testng.TestNG.createAndRunSuiteRunners(TestNG.java:821)
+<br/>at org.testng.TestNG.runSuitesLocally(TestNG.java:788)
+<br/>at org.testng.TestNG.run(TestNG.java:708)
+<br/>at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:62)
+<br/>at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:141)
+<br/>at org.apache.maven.surefire.Surefire.run(Surefire.java:177)
+<br/>at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+<br/>at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+<br/>at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+<br/>at java.lang.reflect.Method.invoke(Method.java:597)
+<br/>at org.apache.maven.surefire.booter.SurefireBooter.runSuitesInProcess(SurefireBooter.java:345)
+<br/>at org.apache.maven.surefire.booter.SurefireBooter.main(SurefireBooter.java:1009)
+<br/>1 lines not shown
+<p>Caused by Internal Server Error</p>
+com.thoughtworks.selenium.HttpCommandProcessor.throwAssertionFailureExceptionOrError(HttpCommandProcessor.java:97)
+<br/>at com.thoughtworks.selenium.HttpCommandProcessor.getCommandResponseAsString(HttpCommandProcessor.java:168)
+<br/>at com.thoughtworks.selenium.HttpCommandProcessor.executeCommandOnServlet(HttpCommandProcessor.java:104)
+<br/>at com.thoughtworks.selenium.HttpCommandProcessor.doCommand(HttpCommandProcessor.java:86)
+<br/>at com.thoughtworks.selenium.HttpCommandProcessor.getString(HttpCommandProcessor.java:262)
+<br/>at com.thoughtworks.selenium.HttpCommandProcessor.start(HttpCommandProcessor.java:223)
+<br/>at org.apache.tapestry5.test.ErrorReportingCommandProcessor.start(ErrorReportingCommandProcessor.java:156)
+<br/>at com.thoughtworks.selenium.DefaultSelenium.start(DefaultSelenium.java:81)
+<br/>at org.apache.tapestry5.test.AbstractIntegrationTestSuite.setup(AbstractIntegrationTestSuite.java:277)
+<br/>at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+<br/>at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+<br/>at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+<br/>at java.lang.reflect.Method.invoke(Method.java:597)
+<br/>at org.testng.internal.MethodHelper.invokeMethod(MethodHelper.java:580)
+<br/>at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:398)
+<br/>at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:145)
+<br/>at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:82)
+<br/>at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:167)
+<br/>at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:104)
+<br/>at org.testng.TestRunner.runWorkers(TestRunner.java:712)
+<br/>at org.testng.TestRunner.privateRun(TestRunner.java:582)
+<br/>at org.testng.TestRunner.run(TestRunner.java:477)
+<br/>at org.testng.SuiteRunner.runTest(SuiteRunner.java:324)
+<br/>at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:319)
+<br/>at org.testng.SuiteRunner.privateRun(SuiteRunner.java:292)
+<br/>at org.testng.SuiteRunner.run(SuiteRunner.java:198)
+<br/>at org.testng.TestNG.createAndRunSuiteRunners(TestNG.java:821)
+<br/>at org.testng.TestNG.runSuitesLocally(TestNG.java:788)
+<br/>at org.testng.TestNG.run(TestNG.java:708)
+<br/>at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:62)
+<br/>at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:141)
+<br/>at org.apache.maven.surefire.Surefire.run(Surefire.java:177)
+<br/>at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+<br/>at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+<br/>at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+<br/>at java.lang.reflect.Method.invoke(Method.java:597)
+<br/>at org.apache.maven.surefire.booter.SurefireBooter.runSuitesInProcess(SurefireBooter.java:345)
+<br/>at org.apache.maven.surefire.booter.SurefireBooter.main(SurefireBooter.java:1009)
+<br/>1 lines not shown
+</div>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<a id="m2"></a><h2>org.seke.fs.beans.CostumerBeanTest:testLastName</h2>
+<a id="m2"></a><h2>org.seke.fs.SeleniumTest:testApplicationStartUp</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<a id="m3"></a><h2>org.seke.fs.beans.CostumerBeanTest:testOrders</h2>
+<a id="m3"></a><h2>org.seke.fs.EewrTest:testergergPrice</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<a id="m4"></a><h2>org.seke.fs.beans.CostumerBeanTest:testPassword</h2>
+<a id="m4"></a><h2>org.seke.fs.beans.CostumerBeanTest:testFirstName</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<a id="m5"></a><h2>org.seke.fs.beans.CostumerBeanTest:testUsername</h2>
+<a id="m5"></a><h2>org.seke.fs.beans.CostumerBeanTest:testLastName</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<a id="m6"></a><h2>org.seke.fs.beans.OrderBeanTest:commitDate</h2>
+<a id="m6"></a><h2>org.seke.fs.beans.CostumerBeanTest:testOrders</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<a id="m7"></a><h2>org.seke.fs.beans.OrderBeanTest:id</h2>
+<a id="m7"></a><h2>org.seke.fs.beans.CostumerBeanTest:testPassword</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<a id="m8"></a><h2>org.seke.fs.beans.OrderBeanTest:testOrdersItems</h2>
+<a id="m8"></a><h2>org.seke.fs.beans.CostumerBeanTest:testUsername</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<a id="m9"></a><h2>org.seke.fs.beans.OrdersItemBeanTest:testAmount</h2>
+<a id="m9"></a><h2>org.seke.fs.beans.EewrTest:testergergPrice</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<a id="m10"></a><h2>org.seke.fs.beans.OrdersItemBeanTest:testOrdersItemNumber</h2>
+<a id="m10"></a><h2>org.seke.fs.beans.OrderBeanTest:commitDate</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<a id="m11"></a><h2>org.seke.fs.beans.OrdersItemBeanTest:testPrice</h2>
+<a id="m11"></a><h2>org.seke.fs.beans.OrderBeanTest:id</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<a id="m12"></a><h2>org.seke.fs.beans.ProductBeanTest:testAmountInStock</h2>
+<a id="m12"></a><h2>org.seke.fs.beans.OrderBeanTest:testOrdersItems</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<a id="m13"></a><h2>org.seke.fs.beans.ProductBeanTest:testId</h2>
+<a id="m13"></a><h2>org.seke.fs.beans.OrdersItemBeanTest:testAmount</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<a id="m14"></a><h2>org.seke.fs.beans.ProductBeanTest:testPrice</h2>
+<a id="m14"></a><h2>org.seke.fs.beans.OrdersItemBeanTest:testOrdersItemNumber</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<a id="m15"></a><h2>org.seke.fs.beans.ProductBeanTest:testTitle</h2>
+<a id="m15"></a><h2>org.seke.fs.beans.OrdersItemBeanTest:testPrice</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m16"></a><h2>org.seke.fs.beans.ProductBeanTest:testAmountInStock</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m17"></a><h2>org.seke.fs.beans.ProductBeanTest:testId</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m18"></a><h2>org.seke.fs.beans.ProductBeanTest:testPrice</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m19"></a><h2>org.seke.fs.beans.ProductBeanTest:testTitle</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m20"></a><h2>org.seke.fs.beans.SeleniumTest:testApplicationStartUp</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
 </body></html>

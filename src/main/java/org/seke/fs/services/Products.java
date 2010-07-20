@@ -13,7 +13,7 @@ import java.util.Collection;
  */
 public interface Products {
 
-    Collection<Product> retrive();
+    Collection<Product> retrieve();
     Product save(Product product);
 
 }

@@ -1,0 +1,33 @@
+<html t:type="layout" title="AddProduct org.seke.fs" xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd"
+      xmlns:p="tapestry:parameter">
+
+<p>AddProduct org.seke.fs ...</p>
+
+<h1>AddProduct</h1>
+
+<t:form t:id="fAddProduct">
+    <p>
+        <t:label for="tfId">id:</t:label>
+        <t:textfield t:id="tfId" value="newProduct.id" />
+    </p>
+
+    <p>
+        <t:label for="tfTitle">Title:</t:label>
+        <t:textfield t:id="tfTitle" value="newProduct.title" />
+    </p>
+
+    <p>
+        <t:label for="tfAmountInStock">Amount in Stock:</t:label>
+        <t:textfield t:id="tfAmountInStock"  value="newProduct.amountInStock" />
+    </p>
+
+    <p>
+        <t:label for="tfPrice">Price:</t:label>
+        <t:textfield t:id="tfPrice"  value="newProduct.price" />
+    </p>
+    <p>
+        <input type="submit" id="bLogIn" value="Add"/>
+    </p>
+</t:form>
+
+</html>

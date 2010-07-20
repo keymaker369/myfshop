@@ -60,4 +60,5 @@ public class ProductBeanTest {
         productUnderTest.setPrice(price);
         assertEquals(price, productUnderTest.getPrice());
     }
+
 }

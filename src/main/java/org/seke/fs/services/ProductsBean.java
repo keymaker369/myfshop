@@ -17,7 +17,7 @@ public class ProductsBean implements Products{
 
     private Map<Integer, Product> products = new HashMap<Integer, Product>();
 
-    public Collection<Product> retrive() {
+    public Collection<Product> retrieve() {
         return products.values();
     }
 
