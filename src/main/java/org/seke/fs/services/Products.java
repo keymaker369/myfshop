@@ -1,7 +1,9 @@
 package org.seke.fs.services;
 
+import org.apache.tapestry5.hibernate.annotations.CommitAfter;
 import org.seke.fs.Product;
 
+import java.io.Serializable;
 import java.util.Collection;
 
 /**
@@ -14,7 +16,10 @@ import java.util.Collection;
 public interface Products {
 
     Collection<Product> retrieve();
+
+    @CommitAfter
     Product save(Product product);
-    Product retrieve(int id);
+
+    Product retrieve(Serializable id);
 
 }

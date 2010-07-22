@@ -2,6 +2,7 @@ package org.seke.fs.services;
 
 import org.seke.fs.Product;
 
+import java.io.Serializable;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
@@ -37,7 +38,7 @@ public class ProductsBean implements Products{
         return products.put(product.getId(),product);
     }
 
-    public Product retrieve(int id) {
+    public Product retrieve(Serializable id) {
         return products.get(id);
     }
 }

@@ -5,7 +5,13 @@
 
 <h1>BrowseProducts</h1>
 <ul t:type="Loop" t:source="products.retrieve()" t:value="product">
-    <li><b>Product:</b> ${product.id} <b>Title:</b>${product.title} <b>Amount in stock:</b> ${product.amountInStock}
-        <b>Price:</b> ${product.price}</li>
+    <li>
+        <a t:type="PageLink" t:page="ShowProduct" t:context="product.id">
+            <b>Product:</b>${product.id}
+            <b>Title:</b>${product.title}
+            <b>Amount in stock:</b> ${product.amountInStock}
+            <b>Price:</b> ${product.price}
+        </a>
+    </li>
 </ul>
 </html>

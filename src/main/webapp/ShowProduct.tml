@@ -4,11 +4,16 @@
 <p>ShowProduct org.seke.fs ...</p>
 
 <h1>ShowProduct</h1>
-<ul>
-    <li>ID: ${product.id}</li>
-    <li>Title: ${product.title}</li>
-    <li>Amount in stock: ${product.amountInStock}</li>
-    <li>Price: ${product.price}</li>
+<t:if test="product">
+    <ul>
+        <li>ID: ${product.id}</li>
+        <li>Title: ${product.title}</li>
+        <li>Amount in stock: ${product.amountInStock}</li>
+        <li>Price: ${product.price}</li>
 
-</ul>
+    </ul>
+    <p:else>
+        Unknown product.
+    </p:else>
+</t:if>
 </html>
