@@ -2,32 +2,51 @@
       xmlns:p="tapestry:parameter">
 
 <p>AddProduct org.seke.fs ...</p>
+<t:zone t:id="addZone">
+    <t:delegate to="edit"/>
+</t:zone>
+<t:block id="edit">
+    <h1>AddProduct</h1>
 
-<h1>AddProduct</h1>
+    <t:form t:id="fAddProduct" t:zone="addZone">
+        <p>
+            <t:label for="tfId">id:</t:label>
+            <t:textfield t:id="tfId" value="newProduct.id" t:validate="required,minlength=1"/>
+        </p>
 
-<t:form t:id="fAddProduct">
+        <p>
+            <t:label for="tfTitle">Title:</t:label>
+            <t:textfield t:id="tfTitle" value="newProduct.title"
+                         t:validate="required,minlength=2,regexp=^[A-Z][a-z]+$"/>
+        </p>
+
+        <p>
+            <t:label for="tfAmountInStock">Amount in Stock:</t:label>
+            <t:textfield t:id="tfAmountInStock" value="newProduct.amountInStock" t:validate="required,minlength=1"/>
+        </p>
+
+        <p>
+            <t:label for="tfPrice">Price:</t:label>
+            <t:textfield t:id="tfPrice" value="newProduct.price" t:validate="required,minlength=1"/>
+        </p>
+        <p>
+            <input type="submit" id="add" value="Add"/>
+        </p>
+    </t:form>
+</t:block>
+<t:block id="congratulations">
     <p>
-        <t:label for="tfId">id:</t:label>
-        <t:textfield t:id="tfId" value="newProduct.id" />
+        You have successfully added product: ${newProduct.id}
+        ${newProduct.title}
     </p>
 
     <p>
-        <t:label for="tfTitle">Title:</t:label>
-        <t:textfield t:id="tfTitle" value="newProduct.title" />
+        Continue
+        <a t:type="PageLink" t:page="BrowseProducts">browsing</a>
+        or
+        <a t:type="PageLink" t:page="ShowProduct" context="newProduct.id">show
+            ${newProduct.title}'s details.</a>
     </p>
-
-    <p>
-        <t:label for="tfAmountInStock">Amount in Stock:</t:label>
-        <t:textfield t:id="tfAmountInStock"  value="newProduct.amountInStock" />
-    </p>
-
-    <p>
-        <t:label for="tfPrice">Price:</t:label>
-        <t:textfield t:id="tfPrice"  value="newProduct.price" />
-    </p>
-    <p>
-        <input type="submit" id="bLogIn" value="Add"/>
-    </p>
-</t:form>
+</t:block>
 
 </html>

@@ -31,9 +31,9 @@ public class AppModule {
     public static Products buildProducts() {
         Products mockProducts = new ProductsBean();
 
-        Product p1 = new ProductBean(1,"Fotelja",36,999.90);
+        Product p1 = new ProductBean(1, "Fotelja", 36, 999.90);
         mockProducts.save(p1);
-        Product p2 = new ProductBean(2,"Stolica",73,247.56);
+        Product p2 = new ProductBean(2, "Stolica", 73, 247.56);
         mockProducts.save(p2);
         return mockProducts;
     }

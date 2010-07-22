@@ -1,5 +1,6 @@
 package org.seke.fs.pages;
 
+import org.apache.tapestry5.Block;
 import org.apache.tapestry5.annotations.OnEvent;
 import org.apache.tapestry5.annotations.Persist;
 import org.apache.tapestry5.annotations.Property;
@@ -19,6 +20,14 @@ import org.seke.fs.services.Products;
 public class AddProduct {
 
     @Property
+	@Inject
+	private Block edit;
+
+	@Property
+	@Inject
+	private Block congratulations;
+	
+    @Property
     @Persist("flash")
     private Product newProduct;
 
@@ -31,8 +40,9 @@ public class AddProduct {
     }
 
     @OnEvent(value = "submit", component = "fAddProduct")
-    public void saveProduct(){
+    Object saveProduct(){
         System.out.println("Stiso dugme add product!!!!!!!!!!!!!!!!!!!!!");
         products.save(newProduct);
+        return congratulations;
     }
 }

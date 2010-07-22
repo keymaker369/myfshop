@@ -2,6 +2,9 @@
       xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd" xmlns:p="tapestry:parameter">
 <!-- Most of the page content, including <head>, <body>, etc. tags, comes from Layout.tml -->
 
+<p>
+    <i><h2>Main page</h2></i>
+</p>
 <t:form t:id="fLogIn">
     <p>
         <t:label for="tfUsername">username:</t:label>

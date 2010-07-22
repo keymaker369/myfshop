@@ -1,48 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Command line test" failures="0" tests="19" time="37.364" errors="0">
+<testsuite name="Command line test" failures="0" tests="19" time="0.364" errors="0">
   <properties/>
-  <testcase name="@BeforeClass setup" time="0.0" classname="org.seke.fs.SeleniumTest">
-    <failure type="java.lang.RuntimeException" message="Could not start Selenium session: Internal Server Error">
-      <![CDATA[java.lang.RuntimeException: Could not start Selenium session: Internal Server Error
-	at com.thoughtworks.selenium.DefaultSelenium.start(DefaultSelenium.java:89)
-	at org.apache.tapestry5.test.AbstractIntegrationTestSuite.setup(AbstractIntegrationTestSuite.java:277)
-	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:62)
-	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:141)
-	at org.apache.maven.surefire.Surefire.run(Surefire.java:177)
-	at org.apache.maven.surefire.booter.SurefireBooter.runSuitesInProcess(SurefireBooter.java:345)
-	at org.apache.maven.surefire.booter.SurefireBooter.main(SurefireBooter.java:1009)
-Caused by: com.thoughtworks.selenium.SeleniumException: Internal Server Error
-	at com.thoughtworks.selenium.HttpCommandProcessor.throwAssertionFailureExceptionOrError(HttpCommandProcessor.java:97)
-	at com.thoughtworks.selenium.HttpCommandProcessor.getCommandResponseAsString(HttpCommandProcessor.java:168)
-	at com.thoughtworks.selenium.HttpCommandProcessor.executeCommandOnServlet(HttpCommandProcessor.java:104)
-	at com.thoughtworks.selenium.HttpCommandProcessor.doCommand(HttpCommandProcessor.java:86)
-	at com.thoughtworks.selenium.HttpCommandProcessor.getString(HttpCommandProcessor.java:262)
-	at com.thoughtworks.selenium.HttpCommandProcessor.start(HttpCommandProcessor.java:223)
-	at org.apache.tapestry5.test.ErrorReportingCommandProcessor.start(ErrorReportingCommandProcessor.java:156)
-	at com.thoughtworks.selenium.DefaultSelenium.start(DefaultSelenium.java:81)
-	... 30 more
-... Removed 24 stack frames]]>
-    </failure>
-  </testcase>
-  <testcase name="testergergPrice" time="0.0030" classname="org.seke.fs.EewrTest"/>
-  <testcase name="testApplicationStartUp" time="0.0010" classname="org.seke.fs.SeleniumTest">
-    <skipped/>
-  </testcase>
-  <testcase name="testUsername" time="0.0020" classname="org.seke.fs.beans.CostumerBeanTest"/>
-  <testcase name="testFirstName" time="0.0" classname="org.seke.fs.beans.CostumerBeanTest"/>
+  <testcase name="testUsername" time="0.0030" classname="org.seke.fs.beans.CostumerBeanTest"/>
   <testcase name="testPassword" time="0.0" classname="org.seke.fs.beans.CostumerBeanTest"/>
+  <testcase name="testFirstName" time="0.0" classname="org.seke.fs.beans.CostumerBeanTest"/>
   <testcase name="testLastName" time="0.0" classname="org.seke.fs.beans.CostumerBeanTest"/>
-  <testcase name="testOrders" time="0.0" classname="org.seke.fs.beans.CostumerBeanTest"/>
-  <testcase name="testergergPrice" time="0.0010" classname="org.seke.fs.beans.EewrTest"/>
-  <testcase name="commitDate" time="0.0" classname="org.seke.fs.beans.OrderBeanTest"/>
-  <testcase name="testOrdersItems" time="0.0" classname="org.seke.fs.beans.OrderBeanTest"/>
+  <testcase name="testOrders" time="0.0010" classname="org.seke.fs.beans.CostumerBeanTest"/>
+  <testcase name="commitDate" time="0.0010" classname="org.seke.fs.beans.OrderBeanTest"/>
+  <testcase name="testOrdersItems" time="0.0070" classname="org.seke.fs.beans.OrderBeanTest"/>
   <testcase name="id" time="0.0" classname="org.seke.fs.beans.OrderBeanTest"/>
-  <testcase name="testPrice" time="0.0010" classname="org.seke.fs.beans.OrdersItemBeanTest"/>
+  <testcase name="testPrice" time="0.0" classname="org.seke.fs.beans.OrdersItemBeanTest"/>
   <testcase name="testOrdersItemNumber" time="0.0" classname="org.seke.fs.beans.OrdersItemBeanTest"/>
-  <testcase name="testAmount" time="0.0" classname="org.seke.fs.beans.OrdersItemBeanTest"/>
-  <testcase name="testAmountInStock" time="0.0" classname="org.seke.fs.beans.ProductBeanTest"/>
-  <testcase name="testId" time="0.0" classname="org.seke.fs.beans.ProductBeanTest"/>
-  <testcase name="testTitle" time="0.0" classname="org.seke.fs.beans.ProductBeanTest"/>
+  <testcase name="testAmount" time="0.0010" classname="org.seke.fs.beans.OrdersItemBeanTest"/>
+  <testcase name="testAmountInStock" time="0.0010" classname="org.seke.fs.beans.ProductBeanTest"/>
+  <testcase name="testId" time="0.0010" classname="org.seke.fs.beans.ProductBeanTest"/>
+  <testcase name="testTitle" time="0.0010" classname="org.seke.fs.beans.ProductBeanTest"/>
   <testcase name="testPrice" time="0.0" classname="org.seke.fs.beans.ProductBeanTest"/>
-  <testcase name="testApplicationStartUp" time="0.0010" classname="org.seke.fs.beans.SeleniumTest"/>
+  <testcase name="testRetreive" time="0.0" classname="org.seke.fs.services.ProductsBeanTest"/>
+  <testcase name="testSaveInvalid" time="0.303" classname="org.seke.fs.services.ProductsBeanTest"/>
+  <testcase name="testSave" time="0.0020" classname="org.seke.fs.services.ProductsBeanTest"/>
+  <testcase name="testRetreiveById" time="0.0010" classname="org.seke.fs.services.ProductsBeanTest"/>
 </testsuite>

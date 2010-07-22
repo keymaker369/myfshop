@@ -15,5 +15,6 @@ public interface Products {
 
     Collection<Product> retrieve();
     Product save(Product product);
+    Product retrieve(int id);
 
 }

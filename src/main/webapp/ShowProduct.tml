@@ -1,0 +1,14 @@
+<html t:type="layout" title="ShowProduct org.seke.fs" xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd"
+      xmlns:p="tapestry:parameter">
+
+<p>ShowProduct org.seke.fs ...</p>
+
+<h1>ShowProduct</h1>
+<ul>
+    <li>ID: ${product.id}</li>
+    <li>Title: ${product.title}</li>
+    <li>Amount in stock: ${product.amountInStock}</li>
+    <li>Price: ${product.price}</li>
+
+</ul>
+</html>
