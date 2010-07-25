@@ -23,28 +23,28 @@ import static org.testng.AssertJUnit.assertTrue;
 public class ProductsBeanTest {
 
     private ProductsBean productsUnderTest;
-    private Map<Integer, Product> productsMap;
+    private Map<String, Product> productsMap;
 
     @BeforeMethod
     public void setUp() {
-        productsMap = new HashMap<Integer, Product>();
+        productsMap = new HashMap<String, Product>();
         productsUnderTest = new ProductsBean(productsMap);
     }
 
     @Test
     public void testSave() {
         Product product = mock(Product.class);
-        int id = 478;
-        when(product.getId()).thenReturn(id);
+        String title = "Chair";
+        when(product.getTitle()).thenReturn(title);
         productsUnderTest.save(product);
-        assertTrue(productsMap.containsKey(id));
+        assertTrue(productsMap.containsKey(title));
     }
 
     @Test(expectedExceptions = AssertionError.class)
     public void testSaveInvalid() {
         Product product = mock(Product.class);
-        int id = 0;
-        when(product.getId()).thenReturn(id);
+        String title = "chair";
+        when(product.getTitle()).thenReturn(title);
         productsUnderTest.save(product);
     }
 
@@ -56,10 +56,10 @@ public class ProductsBeanTest {
     @Test
     public void testRetreiveById() {
         Product product = mock(Product.class);
-        int id = 789;
-        when(product.getId()).thenReturn(id);
-        productsMap.put(id, product);
-        assertSame(product, productsUnderTest.retrieve(id));
+        String title = "Chair";
+        when(product.getTitle()).thenReturn(title);
+        productsMap.put(title, product);
+        assertSame(product, productsUnderTest.retrieve(title));
         assertNull(productsUnderTest.retrieve(9854));
     }
 

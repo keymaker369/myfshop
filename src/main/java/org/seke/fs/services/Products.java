@@ -15,11 +15,10 @@ import java.util.Collection;
  */
 public interface Products {
 
-    Collection<Product> retrieve();
-
     @CommitAfter
     Product save(Product product);
 
     Product retrieve(Serializable id);
 
+    Collection<Product> retrieve();
 }

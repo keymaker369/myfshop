@@ -2,6 +2,7 @@ package org.seke.fs.pages;
 
 import org.apache.tapestry5.annotations.Property;
 import org.apache.tapestry5.ioc.annotations.Inject;
+import org.seke.fs.Identifiable;
 import org.seke.fs.Product;
 import org.seke.fs.services.Products;
 
@@ -19,5 +20,10 @@ public class BrowseProducts {
     private Products products;
 
     @Property
-    private Product product;
+    private Product currentProduct;
+
+    public long getCurrentProductId() {
+        return Identifiable.class.cast(currentProduct).getId();
+    }
+
 }

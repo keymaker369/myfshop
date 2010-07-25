@@ -4,13 +4,13 @@
 <p>BrowseProducts org.seke.fs ...</p>
 
 <h1>BrowseProducts</h1>
-<ul t:type="Loop" t:source="products.retrieve()" t:value="product">
+<ul t:type="Loop" t:source="products.retrieve()" t:value="currentProduct">
     <li>
-        <a t:type="PageLink" t:page="ShowProduct" t:context="product.id">
-            <b>Product:</b>${product.id}
-            <b>Title:</b>${product.title}
-            <b>Amount in stock:</b> ${product.amountInStock}
-            <b>Price:</b> ${product.price}
+        <a t:type="PageLink" t:page="ShowProduct" t:context="currentProductId">
+            <b>Product:</b>${currentProductId}
+            <b>Title:</b>${currentProduct.title}
+            <b>Amount in stock:</b> ${currentProduct.amountInStock}
+            <b>Price:</b> ${currentProduct.price}
         </a>
     </li>
 </ul>

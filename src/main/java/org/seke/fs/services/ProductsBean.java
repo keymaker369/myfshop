@@ -16,15 +16,15 @@ import java.util.Map;
  */
 public class ProductsBean implements Products{
 
-    private Map<Integer, Product> products;
+    private Map<String, Product> products;
 
-    public ProductsBean(Map<Integer, Product> products) {
+    public ProductsBean(Map<String, Product> products) {
         super();
         this.products = products;
     }
 
     public ProductsBean() {
-        this(new HashMap<Integer, Product>());        
+        this(new HashMap<String, Product>());        
     }
 
     public Collection<Product> retrieve() {
@@ -33,12 +33,12 @@ public class ProductsBean implements Products{
 
     public Product save(Product product) {
         assert product != null;
-		assert product.getId() != 0;
-		//assert product.getId().s > 1;
-        return products.put(product.getId(),product);
+		assert Character.isUpperCase(product.getTitle().charAt(0));
+		assert product.getTitle().length() > 1;
+        return products.put(product.getTitle(),product);
     }
 
-    public Product retrieve(Serializable id) {
-        return products.get(id);
+    public Product retrieve(Serializable title) {
+        return products.get(title);
     }
 }

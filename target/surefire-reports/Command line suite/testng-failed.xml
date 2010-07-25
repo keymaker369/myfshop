@@ -4,7 +4,6 @@
     <classes>
       <class name="org.seke.fs.SeleniumTest">
         <methods>
-          <include name="testShowProductDoesNotExist"/>
           <include name="testAddProduct"/>
           <include name="setup"/>
           <include name="cleanup"/>

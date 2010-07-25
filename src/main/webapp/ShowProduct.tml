@@ -6,7 +6,6 @@
 <h1>ShowProduct</h1>
 <t:if test="product">
     <ul>
-        <li>ID: ${product.id}</li>
         <li>Title: ${product.title}</li>
         <li>Amount in stock: ${product.amountInStock}</li>
         <li>Price: ${product.price}</li>

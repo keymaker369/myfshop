@@ -6,6 +6,7 @@ import org.apache.tapestry5.annotations.Persist;
 import org.apache.tapestry5.annotations.Property;
 import org.apache.tapestry5.annotations.SetupRender;
 import org.apache.tapestry5.ioc.annotations.Inject;
+import org.seke.fs.Identifiable;
 import org.seke.fs.Product;
 import org.seke.fs.beans.ProductBean;
 import org.seke.fs.services.Products;
@@ -20,29 +21,33 @@ import org.seke.fs.services.Products;
 public class AddProduct {
 
     @Property
-	@Inject
-	private Block edit;
+    @Inject
+    private Block edit;
 
-	@Property
-	@Inject
-	private Block congratulations;
-	
+    @Property
+    @Inject
+    private Block congratulations;
+
     @Property
     @Persist("flash")
-    private Product newProduct;
+    private Product product;
 
     @Inject
     private Products products;
 
     @SetupRender
-    public void createProduct() {
-        newProduct = new ProductBean();
+    public void createObject() {
+        product = new ProductBean();
     }
 
     @OnEvent(value = "submit", component = "fAddProduct")
-    Object saveProduct(){
+    Object saveProduct() {
         System.out.println("Stiso dugme add product!!!!!!!!!!!!!!!!!!!!!");
-        products.save(newProduct);
+        products.save(product);
         return congratulations;
+    }
+
+    public long getId() {
+        return Identifiable.class.cast(product).getId();
     }
 }

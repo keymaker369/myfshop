@@ -27,14 +27,14 @@ public class ProductBeanTest {
     }
 
 
-    @Test
-    public void testId() {
-        assertNotNull(productUnderTest.getId());
-        assertSame(0, productUnderTest.getId());
-        int id = 3;
-        productUnderTest.setId(id);
-        assertSame(id, productUnderTest.getId());
-    }
+//    @Test
+//    public void testId() {
+//        assertNotNull(productUnderTest.getId());
+//        assertSame(0, productUnderTest.getId());
+//        int id = 3;
+//        productUnderTest.setId(id);
+//        assertSame(id, productUnderTest.getId());
+//    }
 
     @Test
     public void testTitle() {

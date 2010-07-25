@@ -1,15 +1,14 @@
 package org.seke.fs.services;
 
-import java.io.IOException;
-
-import org.apache.tapestry5.*;
+import org.apache.tapestry5.SymbolConstants;
 import org.apache.tapestry5.hibernate.HibernateSymbols;
 import org.apache.tapestry5.hibernate.HibernateTransactionDecorator;
 import org.apache.tapestry5.ioc.Configuration;
 import org.apache.tapestry5.ioc.MappedConfiguration;
 import org.apache.tapestry5.ioc.ServiceBinder;
 import org.apache.tapestry5.ioc.annotations.Match;
-import org.seke.fs.Product;
+
+import org.seke.fs.services.Products;
 import org.seke.fs.hibernate.ProductsServiceHibernate;
 
 /**

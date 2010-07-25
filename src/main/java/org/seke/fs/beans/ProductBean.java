@@ -1,9 +1,11 @@
 package org.seke.fs.beans;
 
+import org.seke.fs.Identifiable;
 import org.seke.fs.Product;
 
 import javax.persistence.Basic;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 /**
@@ -11,10 +13,11 @@ import javax.persistence.Id;
  * change this template use File | Settings | File Templates.
  */
 @Entity
-public class ProductBean implements Product {
+public class ProductBean implements Product,Identifiable {
 
     @Id
-	private int id;
+    @GeneratedValue
+	private long id;
 	
     @Basic
     private String title;
@@ -28,19 +31,14 @@ public class ProductBean implements Product {
 	public ProductBean() {
 	}
 
-	public ProductBean(int id, String title, int amountInStock, double price) {
-		this.id = id;
+	public ProductBean(String title, int amountInStock, double price) {
 		this.title = title;
 		this.amountInStock = amountInStock;
 		this.price = price;
 	}
 
-	public int getId() {
+	public long getId() {
 		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
 	}
 
 	public String getTitle() {

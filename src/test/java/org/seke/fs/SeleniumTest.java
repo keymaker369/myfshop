@@ -25,11 +25,11 @@ public class SeleniumTest extends AbstractIntegrationTestSuite {
         click("link=AddProduct");
         waitForPageToLoad("30000");
         type("tfTitle", "Chair");
-        type("tfId", "34");
+        //type("tfId", "34");
         type("tfAmountInStock", "356");
         type("tfPrice", "245.98");
         click("add");
-        waitForCondition("var value=selenium.getText(\"addZone\");value.match(/You have successfully added product: 34 Chair/);","2000");
+        waitForCondition("var value=selenium.getText(\"addZone\");value.match(/You have successfully added product: Chair/);","2000");
         click("link=browsing");
         waitForPageToLoad("30000");
         click("link=BrowseProducts");
@@ -40,6 +40,6 @@ public class SeleniumTest extends AbstractIntegrationTestSuite {
 	void testShowProductDoesNotExist() {
 		open(BASE_URL+"showproduct/" + "987");
         assertTextPresent("Unknown product.");
-	}
+	}     
 
 }
