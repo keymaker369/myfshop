@@ -1,0 +1,47 @@
+<html t:type="layout" title="AddProduct org.seke.fs" xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd"
+      xmlns:p="tapestry:parameter">
+
+<p>AddProduct org.seke.fs ...</p>
+<t:zone t:id="addZone">
+    <t:delegate to="edit"/>
+</t:zone>
+<t:block id="edit">
+    <h1>AddProduct</h1>
+
+    <t:form t:id="fAddProduct" t:zone="addZone">
+        
+        <p>
+            <t:label for="tfTitle">Title:</t:label>
+            <t:textfield t:id="tfTitle" value="product.title"
+                         t:validate="required,minlength=2,regexp=^[A-Z][a-z]+$"/>
+        </p>
+
+        <p>
+            <t:label for="tfAmountInStock">Amount in Stock:</t:label>
+            <t:textfield t:id="tfAmountInStock" value="product.amountInStock" t:validate="required,minlength=1"/>
+        </p>
+
+        <p>
+            <t:label for="tfPrice">Price:</t:label>
+            <t:textfield t:id="tfPrice" value="product.price" t:validate="required,minlength=1"/>
+        </p>
+        <p>
+            <input type="submit" id="add" value="Add"/>
+        </p>
+    </t:form>
+</t:block>
+<t:block id="congratulations">
+    <p>
+        You have successfully added product: ${product.title}
+    </p>
+
+    <p>
+        Continue
+        <a t:type="PageLink" t:page="BrowseProducts">browsing</a>
+        or
+        <a t:type="PageLink" t:page="ShowProduct" context="id">show
+            ${product.title}'s details.</a>
+    </p>
+</t:block>
+
+</html>

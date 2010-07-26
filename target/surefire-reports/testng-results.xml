@@ -6,27 +6,31 @@
     </groups>
     <test name="Command line test">
       <class name="org.seke.fs.beans.OrderBeanTest">
-        <test-method status="PASS" signature="setUp()" name="setUp" is-config="true" duration-ms="0" started-at="2010-07-25T22:19:49Z" finished-at="2010-07-25T22:19:49Z">
+        <test-method status="PASS" signature="id()" name="id" duration-ms="0" started-at="2010-07-26T03:01:11Z" finished-at="2010-07-26T03:01:11Z">
         </test-method>
-        <test-method status="PASS" signature="commitDate()" name="commitDate" duration-ms="1" started-at="2010-07-25T22:19:49Z" finished-at="2010-07-25T22:19:49Z">
+        <test-method status="PASS" signature="commitDate()" name="commitDate" duration-ms="0" started-at="2010-07-26T03:01:11Z" finished-at="2010-07-26T03:01:11Z">
         </test-method>
-        <test-method status="PASS" signature="id()" name="id" duration-ms="1" started-at="2010-07-25T22:19:49Z" finished-at="2010-07-25T22:19:49Z">
+        <test-method status="PASS" signature="testOrdersItems()" name="testOrdersItems" duration-ms="1" started-at="2010-07-26T03:01:11Z" finished-at="2010-07-26T03:01:11Z">
         </test-method>
-        <test-method status="PASS" signature="setUp()" name="setUp" is-config="true" duration-ms="0" started-at="2010-07-25T22:19:49Z" finished-at="2010-07-25T22:19:49Z">
+        <test-method status="PASS" signature="setUp()" name="setUp" is-config="true" duration-ms="0" started-at="2010-07-26T03:01:11Z" finished-at="2010-07-26T03:01:11Z">
         </test-method>
-        <test-method status="PASS" signature="testOrdersItems()" name="testOrdersItems" duration-ms="0" started-at="2010-07-25T22:19:49Z" finished-at="2010-07-25T22:19:49Z">
+        <test-method status="PASS" signature="setUp()" name="setUp" is-config="true" duration-ms="0" started-at="2010-07-26T03:01:11Z" finished-at="2010-07-26T03:01:11Z">
         </test-method>
-        <test-method status="PASS" signature="setUp()" name="setUp" is-config="true" duration-ms="0" started-at="2010-07-25T22:19:49Z" finished-at="2010-07-25T22:19:49Z">
+        <test-method status="PASS" signature="setUp()" name="setUp" is-config="true" duration-ms="1" started-at="2010-07-26T03:01:11Z" finished-at="2010-07-26T03:01:11Z">
         </test-method>
       </class>
       <class name="org.seke.fs.services.ProductsBeanTest">
-        <test-method status="PASS" signature="testSave()" name="testSave" duration-ms="2" started-at="2010-07-25T22:19:49Z" finished-at="2010-07-25T22:19:49Z">
+        <test-method status="PASS" signature="testRetreiveById()" name="testRetreiveById" duration-ms="1" started-at="2010-07-26T03:01:12Z" finished-at="2010-07-26T03:01:12Z">
         </test-method>
-        <test-method status="PASS" signature="setUp()" name="setUp" is-config="true" duration-ms="0" started-at="2010-07-25T22:19:49Z" finished-at="2010-07-25T22:19:49Z">
+        <test-method status="PASS" signature="testSave()" name="testSave" duration-ms="1" started-at="2010-07-26T03:01:12Z" finished-at="2010-07-26T03:01:12Z">
         </test-method>
-        <test-method status="PASS" signature="testRetreiveById()" name="testRetreiveById" duration-ms="1" started-at="2010-07-25T22:19:49Z" finished-at="2010-07-25T22:19:49Z">
+        <test-method status="PASS" signature="setUp()" name="setUp" is-config="true" duration-ms="0" started-at="2010-07-26T03:01:11Z" finished-at="2010-07-26T03:01:11Z">
         </test-method>
-        <test-method status="PASS" signature="testSaveInvalid()" name="testSaveInvalid" duration-ms="179" started-at="2010-07-25T22:19:49Z" finished-at="2010-07-25T22:19:49Z">
+        <test-method status="PASS" signature="setUp()" name="setUp" is-config="true" duration-ms="0" started-at="2010-07-26T03:01:12Z" finished-at="2010-07-26T03:01:12Z">
+        </test-method>
+        <test-method status="PASS" signature="setUp()" name="setUp" is-config="true" duration-ms="0" started-at="2010-07-26T03:01:12Z" finished-at="2010-07-26T03:01:12Z">
+        </test-method>
+        <test-method status="PASS" signature="testSaveInvalid()" name="testSaveInvalid" duration-ms="248" started-at="2010-07-26T03:01:11Z" finished-at="2010-07-26T03:01:12Z">
           <exception class="java.lang.AssertionError">
             <full-stacktrace>
               <![CDATA[java.lang.AssertionError
@@ -65,75 +69,71 @@
             </full-stacktrace>
           </exception>
         </test-method>
-        <test-method status="PASS" signature="setUp()" name="setUp" is-config="true" duration-ms="0" started-at="2010-07-25T22:19:49Z" finished-at="2010-07-25T22:19:49Z">
+        <test-method status="PASS" signature="setUp()" name="setUp" is-config="true" duration-ms="1" started-at="2010-07-26T03:01:11Z" finished-at="2010-07-26T03:01:11Z">
         </test-method>
-        <test-method status="PASS" signature="setUp()" name="setUp" is-config="true" duration-ms="0" started-at="2010-07-25T22:19:49Z" finished-at="2010-07-25T22:19:49Z">
-        </test-method>
-        <test-method status="PASS" signature="setUp()" name="setUp" is-config="true" duration-ms="1" started-at="2010-07-25T22:19:49Z" finished-at="2010-07-25T22:19:49Z">
-        </test-method>
-        <test-method status="PASS" signature="testRetreive()" name="testRetreive" duration-ms="0" started-at="2010-07-25T22:19:49Z" finished-at="2010-07-25T22:19:49Z">
+        <test-method status="PASS" signature="testRetreive()" name="testRetreive" duration-ms="0" started-at="2010-07-26T03:01:11Z" finished-at="2010-07-26T03:01:11Z">
         </test-method>
       </class>
       <class name="org.seke.fs.beans.CostumerBeanTest">
-        <test-method status="PASS" signature="testPassword()" name="testPassword" duration-ms="0" started-at="2010-07-25T22:19:49Z" finished-at="2010-07-25T22:19:49Z">
+        <test-method status="PASS" signature="setUp()" name="setUp" is-config="true" duration-ms="0" started-at="2010-07-26T03:01:11Z" finished-at="2010-07-26T03:01:11Z">
         </test-method>
-        <test-method status="PASS" signature="setUp()" name="setUp" is-config="true" duration-ms="1" started-at="2010-07-25T22:19:49Z" finished-at="2010-07-25T22:19:49Z">
+        <test-method status="PASS" signature="setUp()" name="setUp" is-config="true" duration-ms="0" started-at="2010-07-26T03:01:11Z" finished-at="2010-07-26T03:01:11Z">
         </test-method>
-        <test-method status="PASS" signature="testOrders()" name="testOrders" duration-ms="1" started-at="2010-07-25T22:19:49Z" finished-at="2010-07-25T22:19:49Z">
+        <test-method status="PASS" signature="setUp()" name="setUp" is-config="true" duration-ms="0" started-at="2010-07-26T03:01:11Z" finished-at="2010-07-26T03:01:11Z">
         </test-method>
-        <test-method status="PASS" signature="setUp()" name="setUp" is-config="true" duration-ms="0" started-at="2010-07-25T22:19:49Z" finished-at="2010-07-25T22:19:49Z">
+        <test-method status="PASS" signature="testPassword()" name="testPassword" duration-ms="1" started-at="2010-07-26T03:01:11Z" finished-at="2010-07-26T03:01:11Z">
         </test-method>
-        <test-method status="PASS" signature="setUp()" name="setUp" is-config="true" duration-ms="1" started-at="2010-07-25T22:19:49Z" finished-at="2010-07-25T22:19:49Z">
+        <test-method status="PASS" signature="testFirstName()" name="testFirstName" duration-ms="0" started-at="2010-07-26T03:01:11Z" finished-at="2010-07-26T03:01:11Z">
         </test-method>
-        <test-method status="PASS" signature="testUsername()" name="testUsername" duration-ms="2" started-at="2010-07-25T22:19:49Z" finished-at="2010-07-25T22:19:49Z">
+        <test-method status="PASS" signature="testLastName()" name="testLastName" duration-ms="0" started-at="2010-07-26T03:01:11Z" finished-at="2010-07-26T03:01:11Z">
         </test-method>
-        <test-method status="PASS" signature="setUp()" name="setUp" is-config="true" duration-ms="0" started-at="2010-07-25T22:19:49Z" finished-at="2010-07-25T22:19:49Z">
+        <test-method status="PASS" signature="testOrders()" name="testOrders" duration-ms="0" started-at="2010-07-26T03:01:11Z" finished-at="2010-07-26T03:01:11Z">
         </test-method>
-        <test-method status="PASS" signature="testLastName()" name="testLastName" duration-ms="0" started-at="2010-07-25T22:19:49Z" finished-at="2010-07-25T22:19:49Z">
+        <test-method status="PASS" signature="testUsername()" name="testUsername" duration-ms="2" started-at="2010-07-26T03:01:11Z" finished-at="2010-07-26T03:01:11Z">
         </test-method>
-        <test-method status="PASS" signature="testFirstName()" name="testFirstName" duration-ms="0" started-at="2010-07-25T22:19:49Z" finished-at="2010-07-25T22:19:49Z">
+        <test-method status="PASS" signature="setUp()" name="setUp" is-config="true" duration-ms="0" started-at="2010-07-26T03:01:11Z" finished-at="2010-07-26T03:01:11Z">
         </test-method>
-        <test-method status="PASS" signature="setUp()" name="setUp" is-config="true" duration-ms="0" started-at="2010-07-25T22:19:49Z" finished-at="2010-07-25T22:19:49Z">
+        <test-method status="PASS" signature="setUp()" name="setUp" is-config="true" duration-ms="0" started-at="2010-07-26T03:01:11Z" finished-at="2010-07-26T03:01:11Z">
         </test-method>
       </class>
       <class name="org.seke.fs.beans.OrdersItemBeanTest">
-        <test-method status="PASS" signature="setUp()" name="setUp" is-config="true" duration-ms="1" started-at="2010-07-25T22:19:49Z" finished-at="2010-07-25T22:19:49Z">
+        <test-method status="PASS" signature="testPrice()" name="testPrice" duration-ms="0" started-at="2010-07-26T03:01:11Z" finished-at="2010-07-26T03:01:11Z">
         </test-method>
-        <test-method status="PASS" signature="setUp()" name="setUp" is-config="true" duration-ms="1" started-at="2010-07-25T22:19:49Z" finished-at="2010-07-25T22:19:49Z">
+        <test-method status="PASS" signature="setUp()" name="setUp" is-config="true" duration-ms="0" started-at="2010-07-26T03:01:11Z" finished-at="2010-07-26T03:01:11Z">
         </test-method>
-        <test-method status="PASS" signature="testPrice()" name="testPrice" duration-ms="0" started-at="2010-07-25T22:19:49Z" finished-at="2010-07-25T22:19:49Z">
+        <test-method status="PASS" signature="testAmount()" name="testAmount" duration-ms="0" started-at="2010-07-26T03:01:11Z" finished-at="2010-07-26T03:01:11Z">
         </test-method>
-        <test-method status="PASS" signature="testOrdersItemNumber()" name="testOrdersItemNumber" duration-ms="0" started-at="2010-07-25T22:19:49Z" finished-at="2010-07-25T22:19:49Z">
+        <test-method status="PASS" signature="setUp()" name="setUp" is-config="true" duration-ms="0" started-at="2010-07-26T03:01:11Z" finished-at="2010-07-26T03:01:11Z">
         </test-method>
-        <test-method status="PASS" signature="testAmount()" name="testAmount" duration-ms="0" started-at="2010-07-25T22:19:49Z" finished-at="2010-07-25T22:19:49Z">
+        <test-method status="PASS" signature="setUp()" name="setUp" is-config="true" duration-ms="0" started-at="2010-07-26T03:01:11Z" finished-at="2010-07-26T03:01:11Z">
         </test-method>
-        <test-method status="PASS" signature="setUp()" name="setUp" is-config="true" duration-ms="0" started-at="2010-07-25T22:19:49Z" finished-at="2010-07-25T22:19:49Z">
+        <test-method status="PASS" signature="testOrdersItemNumber()" name="testOrdersItemNumber" duration-ms="0" started-at="2010-07-26T03:01:11Z" finished-at="2010-07-26T03:01:11Z">
         </test-method>
       </class>
       <class name="org.seke.fs.SeleniumTest">
-        <test-method status="PASS" signature="testAddProduct()" name="testAddProduct" duration-ms="3335" started-at="2010-07-25T22:19:44Z" finished-at="2010-07-25T22:19:47Z">
+        <test-method status="PASS" signature="testShowProductDoesNotExist()" name="testShowProductDoesNotExist" duration-ms="470" started-at="2010-07-26T03:01:10Z" finished-at="2010-07-26T03:01:10Z">
         </test-method>
-        <test-method status="PASS" signature="cleanup()" name="cleanup" is-config="true" duration-ms="1037" started-at="2010-07-25T22:19:48Z" finished-at="2010-07-25T22:19:49Z">
+        <test-method status="PASS" signature="testAddProduct()" name="testAddProduct" duration-ms="6205" started-at="2010-07-26T03:01:03Z" finished-at="2010-07-26T03:01:09Z">
         </test-method>
-        <test-method status="PASS" signature="testShowProductDoesNotExist()" name="testShowProductDoesNotExist" duration-ms="186" started-at="2010-07-25T22:19:48Z" finished-at="2010-07-25T22:19:48Z">
+        <test-method status="PASS" signature="cleanup()" name="cleanup" is-config="true" duration-ms="1022" started-at="2010-07-26T03:01:10Z" finished-at="2010-07-26T03:01:11Z">
         </test-method>
-        <test-method status="PASS" signature="testApplicationStartup()" name="testApplicationStartup" duration-ms="449" started-at="2010-07-25T22:19:47Z" finished-at="2010-07-25T22:19:48Z">
+        <test-method status="PASS" signature="setup()" name="setup" is-config="true" duration-ms="16352" started-at="2010-07-26T03:00:46Z" finished-at="2010-07-26T03:01:03Z">
         </test-method>
-        <test-method status="PASS" signature="setup()" name="setup" is-config="true" duration-ms="10346" started-at="2010-07-25T22:19:33Z" finished-at="2010-07-25T22:19:44Z">
+        <test-method status="PASS" signature="testApplicationStartup()" name="testApplicationStartup" duration-ms="1105" started-at="2010-07-26T03:01:09Z" finished-at="2010-07-26T03:01:10Z">
         </test-method>
       </class>
       <class name="org.seke.fs.beans.ProductBeanTest">
-        <test-method status="PASS" signature="setUp()" name="setUp" is-config="true" duration-ms="0" started-at="2010-07-25T22:19:49Z" finished-at="2010-07-25T22:19:49Z">
+        <test-method status="PASS" signature="testTitle()" name="testTitle" duration-ms="0" started-at="2010-07-26T03:01:11Z" finished-at="2010-07-26T03:01:11Z">
         </test-method>
-        <test-method status="PASS" signature="testAmountInStock()" name="testAmountInStock" duration-ms="0" started-at="2010-07-25T22:19:49Z" finished-at="2010-07-25T22:19:49Z">
+        <test-method status="PASS" signature="setUp()" name="setUp" is-config="true" duration-ms="0" started-at="2010-07-26T03:01:11Z" finished-at="2010-07-26T03:01:11Z">
         </test-method>
-        <test-method status="PASS" signature="testTitle()" name="testTitle" duration-ms="0" started-at="2010-07-25T22:19:49Z" finished-at="2010-07-25T22:19:49Z">
+        <test-method status="PASS" signature="setUp()" name="setUp" is-config="true" duration-ms="0" started-at="2010-07-26T03:01:11Z" finished-at="2010-07-26T03:01:11Z">
         </test-method>
-        <test-method status="PASS" signature="testPrice()" name="testPrice" duration-ms="1" started-at="2010-07-25T22:19:49Z" finished-at="2010-07-25T22:19:49Z">
+        <test-method status="PASS" signature="setUp()" name="setUp" is-config="true" duration-ms="0" started-at="2010-07-26T03:01:11Z" finished-at="2010-07-26T03:01:11Z">
         </test-method>
-        <test-method status="PASS" signature="setUp()" name="setUp" is-config="true" duration-ms="1" started-at="2010-07-25T22:19:49Z" finished-at="2010-07-25T22:19:49Z">
+        <test-method status="PASS" signature="testPrice()" name="testPrice" duration-ms="2" started-at="2010-07-26T03:01:11Z" finished-at="2010-07-26T03:01:11Z">
         </test-method>
-        <test-method status="PASS" signature="setUp()" name="setUp" is-config="true" duration-ms="0" started-at="2010-07-25T22:19:49Z" finished-at="2010-07-25T22:19:49Z">
+        <test-method status="PASS" signature="testAmountInStock()" name="testAmountInStock" duration-ms="0" started-at="2010-07-26T03:01:11Z" finished-at="2010-07-26T03:01:11Z">
         </test-method>
       </class>
     </test>

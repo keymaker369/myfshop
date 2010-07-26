@@ -1,8 +1,13 @@
 package org.seke.fs.beans;
 
 import org.seke.fs.Costumer;
+import org.seke.fs.Identifiable;
 import org.seke.fs.Order;
 
+import javax.persistence.Basic;
+import javax.persistence.CascadeType;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -13,13 +18,27 @@ import java.util.List;
  * Time: 10:57:18 AM
  * To change this template use File | Settings | File Templates.
  */
-public class CostumerBean implements Costumer {
+public class CostumerBean implements Costumer, Identifiable {
 
+    @Id
+    private long id;
+
+    @Basic
     private String username;
+
+    @Basic
     private String password;
+
+    @Basic
     private String firstName;
+
+    @Basic
     private String lastName;
+
+    @Basic
     private String email;
+
+    @OneToMany(targetEntity=OrderBean.class,cascade= CascadeType.ALL)
     private List<Order> orders = new LinkedList<Order>();
 
     public CostumerBean() {
@@ -75,5 +94,9 @@ public class CostumerBean implements Costumer {
 
     public List<Order> getOrders() {
         return orders;
+    }
+
+    public long getId() {
+        return id;
     }
 }

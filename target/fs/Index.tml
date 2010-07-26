@@ -1,0 +1,40 @@
+<html t:type="layout" title="fs Index" t:sidebarTitle="Current Time"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd" xmlns:p="tapestry:parameter">
+<!-- Most of the page content, including <head>, <body>, etc. tags, comes from Layout.tml -->
+
+<p>
+    <i><h2>Main page</h2></i>
+</p>
+<t:form t:id="fLogIn">
+    <p>
+        <t:label for="tfUsername">username:</t:label>
+        <t:textfield t:id="tfUsername" t:value="username"/>
+    </p>
+    <p>
+        <t:label for="tfPassword">password:</t:label>
+        <t:textfield t:id="tfPassword" t:value="password"/>
+    </p>
+
+    <p>
+        <input type="submit" name="bLogIn" id="bLogIn" value="LogIn"/>
+    </p>
+</t:form>
+
+
+<p:sidebar>
+
+    <p>
+        Just to prove this is live:
+    </p>
+
+    <p>The current time is: ${currentTime}.</p>
+
+
+    <p>
+        [
+        <t:pagelink page="Index">refresh</t:pagelink>
+        ]
+    </p>
+</p:sidebar>
+
+</html>

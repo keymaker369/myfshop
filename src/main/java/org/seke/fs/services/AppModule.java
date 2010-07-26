@@ -8,6 +8,7 @@ import org.apache.tapestry5.ioc.MappedConfiguration;
 import org.apache.tapestry5.ioc.ServiceBinder;
 import org.apache.tapestry5.ioc.annotations.Match;
 
+import org.seke.fs.hibernate.CostumersServiceHibernate;
 import org.seke.fs.services.Products;
 import org.seke.fs.hibernate.ProductsServiceHibernate;
 
@@ -27,6 +28,7 @@ public class AppModule {
 
     public static void bind(ServiceBinder binder) {
         binder.bind(Products.class, ProductsServiceHibernate.class);
+        binder.bind(Costumers.class, CostumersServiceHibernate.class);
     }
 
     public static void contributeHibernateEntityPackageManager(
@@ -34,11 +36,13 @@ public class AppModule {
         configuration.add("org.seke.fs.beans");
     }
 
-    @Match("*Products")
+    @Match({"*Products","*Costumers"})
     public static <T> T decorateTransactionally(
             HibernateTransactionDecorator decorator, Class<T> serviceInterface,
             T delegate, String serviceId) {
         return decorator.build(serviceInterface, delegate, serviceId);
     }
+
+
 }
  
