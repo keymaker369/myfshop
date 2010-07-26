@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Command line test" failures="0" tests="21" time="15.566" errors="0">
+<testsuite name="Command line test" failures="0" tests="21" time="25.445" errors="0">
   <properties/>
-  <testcase name="testAddProduct" time="3.335" classname="org.seke.fs.SeleniumTest"/>
-  <testcase name="testApplicationStartup" time="0.449" classname="org.seke.fs.SeleniumTest"/>
-  <testcase name="testShowProductDoesNotExist" time="0.186" classname="org.seke.fs.SeleniumTest"/>
+  <testcase name="testAddProduct" time="6.205" classname="org.seke.fs.SeleniumTest"/>
+  <testcase name="testApplicationStartup" time="1.105" classname="org.seke.fs.SeleniumTest"/>
+  <testcase name="testShowProductDoesNotExist" time="0.47" classname="org.seke.fs.SeleniumTest"/>
   <testcase name="testUsername" time="0.0020" classname="org.seke.fs.beans.CostumerBeanTest"/>
   <testcase name="testFirstName" time="0.0" classname="org.seke.fs.beans.CostumerBeanTest"/>
-  <testcase name="testPassword" time="0.0" classname="org.seke.fs.beans.CostumerBeanTest"/>
+  <testcase name="testPassword" time="0.0010" classname="org.seke.fs.beans.CostumerBeanTest"/>
   <testcase name="testLastName" time="0.0" classname="org.seke.fs.beans.CostumerBeanTest"/>
-  <testcase name="testOrders" time="0.0010" classname="org.seke.fs.beans.CostumerBeanTest"/>
-  <testcase name="commitDate" time="0.0010" classname="org.seke.fs.beans.OrderBeanTest"/>
-  <testcase name="testOrdersItems" time="0.0" classname="org.seke.fs.beans.OrderBeanTest"/>
-  <testcase name="id" time="0.0010" classname="org.seke.fs.beans.OrderBeanTest"/>
+  <testcase name="testOrders" time="0.0" classname="org.seke.fs.beans.CostumerBeanTest"/>
+  <testcase name="commitDate" time="0.0" classname="org.seke.fs.beans.OrderBeanTest"/>
+  <testcase name="testOrdersItems" time="0.0010" classname="org.seke.fs.beans.OrderBeanTest"/>
+  <testcase name="id" time="0.0" classname="org.seke.fs.beans.OrderBeanTest"/>
   <testcase name="testPrice" time="0.0" classname="org.seke.fs.beans.OrdersItemBeanTest"/>
   <testcase name="testOrdersItemNumber" time="0.0" classname="org.seke.fs.beans.OrdersItemBeanTest"/>
   <testcase name="testAmount" time="0.0" classname="org.seke.fs.beans.OrdersItemBeanTest"/>
   <testcase name="testAmountInStock" time="0.0" classname="org.seke.fs.beans.ProductBeanTest"/>
-  <testcase name="testPrice" time="0.0010" classname="org.seke.fs.beans.ProductBeanTest"/>
+  <testcase name="testPrice" time="0.0020" classname="org.seke.fs.beans.ProductBeanTest"/>
   <testcase name="testTitle" time="0.0" classname="org.seke.fs.beans.ProductBeanTest"/>
   <testcase name="testRetreive" time="0.0" classname="org.seke.fs.services.ProductsBeanTest"/>
-  <testcase name="testSaveInvalid" time="0.179" classname="org.seke.fs.services.ProductsBeanTest"/>
-  <testcase name="testSave" time="0.0020" classname="org.seke.fs.services.ProductsBeanTest"/>
+  <testcase name="testSaveInvalid" time="0.248" classname="org.seke.fs.services.ProductsBeanTest"/>
+  <testcase name="testSave" time="0.0010" classname="org.seke.fs.services.ProductsBeanTest"/>
   <testcase name="testRetreiveById" time="0.0010" classname="org.seke.fs.services.ProductsBeanTest"/>
 </testsuite>
