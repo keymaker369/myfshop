@@ -9,7 +9,7 @@ import org.apache.tapestry5.ioc.annotations.Inject;
 import org.seke.fs.Identifiable;
 import org.seke.fs.Product;
 import org.seke.fs.beans.ProductBean;
-import org.seke.fs.services.Products;
+import org.seke.fs.services.ProductsService;
 
 /**
  * Created by IntelliJ IDEA.
@@ -33,7 +33,7 @@ public class AddProduct {
     private Product product;
 
     @Inject
-    private Products products;
+    private ProductsService productsService;
 
     @SetupRender
     public void createObject() {
@@ -43,7 +43,7 @@ public class AddProduct {
     @OnEvent(value = "submit", component = "fAddProduct")
     Object saveProduct() {
         System.out.println("Stiso dugme add product!!!!!!!!!!!!!!!!!!!!!");
-        products.save(product);
+        productsService.save(product);
         return congratulations;
     }
 

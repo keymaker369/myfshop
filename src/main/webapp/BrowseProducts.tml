@@ -4,7 +4,7 @@
 <p>BrowseProducts org.seke.fs ...</p>
 
 <h1>BrowseProducts</h1>
-<ul t:type="Loop" t:source="products.retrieve()" t:value="currentProduct">
+<ul t:type="Loop" t:source="productsService.retrieve()" t:value="currentProduct">
     <li>
         <a t:type="PageLink" t:page="ShowProduct" t:context="currentProductId">
             <b>Product:</b>${currentProductId}

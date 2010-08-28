@@ -1,15 +1,10 @@
 package org.seke.fs.beans;
 
 import org.seke.fs.Order;
-import org.seke.fs.Product;
-import org.seke.fs.beans.ProductBean;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import static org.testng.AssertJUnit.assertEquals;
-import static org.testng.AssertJUnit.assertSame;
-import static org.testng.AssertJUnit.assertNotNull;
-import static org.testng.AssertJUnit.assertNull;
+import static org.testng.AssertJUnit.*;
 
 /**
  * Created by IntelliJ IDEA.
@@ -25,15 +20,6 @@ public class OrderBeanTest {
     @BeforeMethod
     public void setUp() {
         orderUnderTest = new OrderBean();
-    }
-
-
-    @Test
-    public void id() {
-        assertSame(0, orderUnderTest.getId());
-        int id = 135;
-        orderUnderTest.setId(id);
-        assertEquals(id, orderUnderTest.getId());
     }
 
     @Test

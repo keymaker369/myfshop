@@ -1,9 +1,11 @@
 package org.seke.fs.beans;
 
 import org.seke.fs.Costumer;
+import org.seke.fs.Identifiable;
 import org.seke.fs.Order;
 import org.seke.fs.OrdersItem;
 
+import javax.persistence.*;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -14,11 +16,21 @@ import java.util.List;
  * Time: 10:52:46 AM
  * To change this template use File | Settings | File Templates.
  */
-public class OrderBean implements Order {
-    private int id;
+@Entity
+public class OrderBean implements Order, Identifiable {
+
+    @Id
+    @GeneratedValue
+    private long id;
+
+    @Basic
     private String commitDate;
+
+    @ManyToOne(targetEntity=CostumerBean.class)
     private Costumer costumer;
-    private List<OrdersItem> ordersItems = new LinkedList<OrdersItem>(); 
+
+    @OneToMany(targetEntity=OrdersItemBean.class,cascade=CascadeType.ALL)
+    private List<OrdersItem> ordersItems = new LinkedList<OrdersItem>();
 
     public OrderBean() {
     }
@@ -28,12 +40,8 @@ public class OrderBean implements Order {
         this.commitDate = commitDate;
     }
 
-    public int getId() {
+    public long getId() {
         return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public String getCommitDate() {
@@ -55,5 +63,5 @@ public class OrderBean implements Order {
     public List<OrdersItem> getOrdersItems(){
         return ordersItems;
     }
-    
+
 }

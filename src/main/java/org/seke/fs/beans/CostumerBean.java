@@ -4,10 +4,7 @@ import org.seke.fs.Costumer;
 import org.seke.fs.Identifiable;
 import org.seke.fs.Order;
 
-import javax.persistence.Basic;
-import javax.persistence.CascadeType;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -18,9 +15,11 @@ import java.util.List;
  * Time: 10:57:18 AM
  * To change this template use File | Settings | File Templates.
  */
+@Entity
 public class CostumerBean implements Costumer, Identifiable {
 
     @Id
+    @GeneratedValue
     private long id;
 
     @Basic

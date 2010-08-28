@@ -29,7 +29,7 @@ public class SeleniumTest extends AbstractIntegrationTestSuite {
         type("tfAmountInStock", "356");
         type("tfPrice", "245.98");
         click("add");
-        waitForCondition("var value=selenium.getText(\"addZone\");value.match(/You have successfully added product: Chair/);","2000");
+        waitForCondition("var value=selenium.getText(\"addZone\");value.match(/You have successfully added product: Chair/);", "2000");
         click("link=browsing");
         waitForPageToLoad("30000");
         click("link=BrowseProducts");
@@ -37,9 +37,30 @@ public class SeleniumTest extends AbstractIntegrationTestSuite {
     }
 
     @Test
-	void testShowProductDoesNotExist() {
-		open(BASE_URL+"showproduct/" + "987");
+    void testShowProductDoesNotExist() {
+        open(BASE_URL + "showproduct/" + "987");
         assertTextPresent("Unknown product.");
-	}     
+    }
+
+    @Test
+    void testUserLogingIfExists() {
+//        open("/fs/");
+//        click("link=Register");
+//        waitForPageToLoad("30000");
+//        type("tfUsername", "nenad");
+//        type("tfPassword", "seke");
+//        type("tfFirstName", "nenad");
+//        type("tfLastName", "seke");
+//        type("tfEmail", "rwr@ekjn.po");
+//        click("bRegister");
+//        waitForPageToLoad("30000");
+//        click("link=Index");
+//        waitForPageToLoad("30000");
+//        type("tfUsername", "nenad");
+//        type("tfPassword", "seke");
+//        click("bLogIn");
+//        waitForPageToLoad("30000");
+
+    }
 
 }

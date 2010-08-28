@@ -45,6 +45,15 @@
           <element id="library" level="project" name="Maven: org.hibernate:hibernate-c3p0:3.3.1.GA" />
           <element id="library" level="project" name="Maven: c3p0:c3p0:0.9.1" />
           <element id="library" level="project" name="Maven: hsqldb:hsqldb:1.8.0.7" />
+          <element id="library" level="project" name="Maven: org.springframework:spring:2.5.6.SEC02" />
+          <element id="library" level="project" name="Maven: commons-dbcp:commons-dbcp:1.4" />
+          <element id="library" level="project" name="Maven: commons-pool:commons-pool:1.5.4" />
+          <element id="library" level="project" name="Maven: org.apache.tapestry:tapestry-spring:5.1.0.5" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-web:2.5.6" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-beans:2.5.6" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-core:2.5.6" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-context:2.5.6" />
+          <element id="library" level="project" name="Maven: aopalliance:aopalliance:1.0" />
         </element>
       </element>
     </root>
