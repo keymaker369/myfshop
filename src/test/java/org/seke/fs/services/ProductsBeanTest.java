@@ -22,13 +22,13 @@ import static org.testng.AssertJUnit.assertTrue;
  */
 public class ProductsBeanTest {
 
-    private ProductsBean productsUnderTest;
+    private ProductsServiceBean productsUnderTest;
     private Map<String, Product> productsMap;
 
     @BeforeMethod
     public void setUp() {
         productsMap = new HashMap<String, Product>();
-        productsUnderTest = new ProductsBean(productsMap);
+        productsUnderTest = new ProductsServiceBean(productsMap);
     }
 
     @Test

@@ -11,10 +11,6 @@ import java.util.List;
  */
 public interface Order {
 
-    int getId();
-
-    void setId(int id);
-
     String getCommitDate();
 
     void setCommitDate(String commitDate);

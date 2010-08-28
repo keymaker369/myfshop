@@ -2,9 +2,9 @@ package org.seke.fs.pages;
 
 import org.apache.tapestry5.annotations.OnEvent;
 import org.apache.tapestry5.annotations.SetupRender;
-import org.seke.fs.Product;
-import org.seke.fs.beans.ProductBean;
-
+import org.apache.tapestry5.ioc.annotations.Inject;
+import org.seke.fs.Costumer;
+import org.seke.fs.services.CostumersService;
 
 import java.util.Date;
 
@@ -15,6 +15,9 @@ public class Index {
 
     private String username;
     private String password;
+
+    @Inject
+    private CostumersService costumersService;
 
     public String getUsername() {
         return username;
@@ -38,11 +41,14 @@ public class Index {
     
 	@SetupRender
 	public void createObject() {
-	    System.out.println("!!!!!!!zika zikic!!!!!!!!!!!!!!!!!!!!!!!");
+	    //System.out.println("!!!!!!!zika zikic!!!!!!!!!!!!!!!!!!!!!!!");
 	}
 
     @OnEvent(value = "submit", component = "fLogIn")
-    void register(){
-        System.out.println("Stiso dugme login!!!!!!!!!!!!!!!!!!!!!");
+    void logIn(){
+
+        Costumer logingCostumer = costumersService.retrieve(username);
+        System.out.println(logingCostumer.getPassword());
+
     }
 }

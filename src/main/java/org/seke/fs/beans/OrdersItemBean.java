@@ -1,6 +1,10 @@
 package org.seke.fs.beans;
 
+import org.seke.fs.Identifiable;
+import org.seke.fs.Order;
 import org.seke.fs.OrdersItem;
+
+import javax.persistence.*;
 
 /**
  * Created by IntelliJ IDEA.
@@ -9,11 +13,24 @@ import org.seke.fs.OrdersItem;
  * Time: 4:16:41 PM
  * To change this template use File | Settings | File Templates.
  */
-public class OrdersItemBean implements OrdersItem{
+@Entity
+public class OrdersItemBean implements OrdersItem, Identifiable{
 
+    @Id
+    @GeneratedValue
+    private long id;
+
+    @Basic
     private int ordersItemNumber;
+
+    @Basic
     private int amount;
+
+    @Basic
     private double price;
+
+    @ManyToOne(targetEntity = OrderBean.class)
+    private Order order;
 
     public OrdersItemBean() {
     }
@@ -46,5 +63,20 @@ public class OrdersItemBean implements OrdersItem{
 
     public void setPrice(double price) {
         this.price = price;
+    }
+
+    @Override
+    public Order getOrder() {
+        return order;
+    }
+
+    @Override
+    public void setOrder(Order order) {
+        this.order = order;
+    }
+
+    @Override
+    public long getId() {
+        return id;
     }
 }

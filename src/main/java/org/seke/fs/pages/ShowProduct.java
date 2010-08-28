@@ -4,7 +4,7 @@ import org.apache.tapestry5.annotations.Property;
 import org.apache.tapestry5.ioc.annotations.Inject;
 import org.seke.fs.Identifiable;
 import org.seke.fs.Product;
-import org.seke.fs.services.Products;
+import org.seke.fs.services.ProductsService;
 
 /**
  * Created by IntelliJ IDEA.
@@ -19,10 +19,10 @@ public class ShowProduct {
     private Product product;
 
     @Inject
-    private Products products;
+    private ProductsService productsService;
 
     public void onActivate(long id) {
-        product = products.retrieve(id);
+        product = productsService.retrieve(id);
     }
 
     long onPassivate() {
