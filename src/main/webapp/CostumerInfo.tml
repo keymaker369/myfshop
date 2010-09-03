@@ -3,17 +3,32 @@
     <title>Hello World Page</title>
 </head>
 <body>
-<h1>BrowseProducts</h1>
-<ul t:type="Loop" t:source="productsService.retrieve()" t:value="currentProduct">
-    <li>
-        <a t:type="PageLink" t:page="ShowProduct" t:context="currentProductId">
-            Product:${currentProductId}
-            Title:${currentProduct.title}
-            Amount in stock: ${currentProduct.amountInStock}
-            Price: ${currentProduct.price}
-        </a>
-    </li>
-</ul>
+<h1>Costumer Info</h1>
+<t:if t:test="costumerExists">
+    <p>
+        Username: ${costumer.username}
+    </p>
+
+    <p>
+        First name: ${costumer.firstName}
+    </p>
+
+    <p>
+        Last name: ${costumer.getLastName()}
+    </p>
+
+    <p>
+        email: ${costumer.getEmail()}
+    </p>
+
+    <h3>Orders:</h3>
+    <ul t:type="Loop" t:source="costumer.getOrders()" t:value="currentOrder">
+        <li>
+            Commit date:${currentOrder.commitDate}
+            Numer of items:${currentOrder.ordersItems.size()}
+        </li>
+    </ul>
+</t:if>
 <p>
     [
     <t:pagelink page="Index">Index</t:pagelink>

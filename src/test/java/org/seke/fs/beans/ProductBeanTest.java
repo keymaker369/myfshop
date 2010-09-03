@@ -1,7 +1,6 @@
 package org.seke.fs.beans;
 
 import org.seke.fs.Product;
-import org.seke.fs.beans.ProductBean;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 

@@ -1,5 +1,6 @@
 package org.seke.fs;
 
+import java.util.Collection;
 import java.util.List;
 
 /**
@@ -32,4 +33,7 @@ public interface Costumer {
     void setEmail(String email);
 
     List<Order> getOrders();
+
+    void setOrders(List<Order> orders);
+    
 }

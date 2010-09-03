@@ -21,7 +21,11 @@ public interface OrdersItem {
 
     void setPrice(double price);
 
-    Order getOrder();
+//    Order getOrder();
+//
+//    void setOrder(Order order);
 
-    void setOrder(Order order);
+    Product getProduct();
+
+    void setProduct(Product product);
 }

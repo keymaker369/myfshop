@@ -3,6 +3,7 @@ package org.seke.fs.beans;
 import org.seke.fs.Identifiable;
 import org.seke.fs.Order;
 import org.seke.fs.OrdersItem;
+import org.seke.fs.Product;
 
 import javax.persistence.*;
 
@@ -29,8 +30,11 @@ public class OrdersItemBean implements OrdersItem, Identifiable{
     @Basic
     private double price;
 
-    @ManyToOne(targetEntity = OrderBean.class)
-    private Order order;
+    @ManyToOne(targetEntity = ProductBean.class)
+    private Product product;
+
+//    @ManyToOne(targetEntity = OrderBean.class)
+//    private Order order;
 
     public OrdersItemBean() {
     }
@@ -65,14 +69,24 @@ public class OrdersItemBean implements OrdersItem, Identifiable{
         this.price = price;
     }
 
+//    @Override
+//    public Order getOrder() {
+//        return order;
+//    }
+//
+//    @Override
+//    public void setOrder(Order order) {
+//        this.order = order;
+//    }
+
     @Override
-    public Order getOrder() {
-        return order;
+    public Product getProduct() {
+        return product;
     }
 
     @Override
-    public void setOrder(Order order) {
-        this.order = order;
+    public void setProduct(Product product) {
+        this.product = product;
     }
 
     @Override

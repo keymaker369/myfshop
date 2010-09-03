@@ -3,17 +3,21 @@
     <title>Hello World Page</title>
 </head>
 <body>
-<h1>BrowseProducts</h1>
-<ul t:type="Loop" t:source="productsService.retrieve()" t:value="currentProduct">
+<h1>Cart</h1>
+<ul t:type="Loop" t:source="ordersItemsInChart" t:value="currentItem">
     <li>
-        <a t:type="PageLink" t:page="ShowProduct" t:context="currentProductId">
-            Product:${currentProductId}
-            Title:${currentProduct.title}
-            Amount in stock: ${currentProduct.amountInStock}
-            Price: ${currentProduct.price}
-        </a>
+        Product:${currentItemId}
+        Title:${currentItem.product.title}
+        Wonted amount: ${currentItem.amount}
+        Price: ${currentItem.price}
     </li>
 </ul>
+<p>
+    <t:form t:id="fPurchaseOrder">
+        <input type="submit" name="bPurchaseOrder" id="bPurchaseOrder" value="Purchase Order"/>
+    </t:form>
+</p>
+
 <p>
     [
     <t:pagelink page="Index">Index</t:pagelink>

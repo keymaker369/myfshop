@@ -1,32 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:tx="http://www.springframework.org/schema/tx"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
-    http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+    http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+    http://www.springframework.org/schema/tx
+    http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
 
-    <bean id="hibernateTemplate"
-          class="org.springframework.orm.hibernate3.HibernateTemplate">
-        <property name="sessionFactory" ref="sessionFactory"/>
-    </bean>
+    <!--<bean id="hibernateTemplate"-->
+    <!--class="org.springframework.orm.hibernate3.HibernateTemplate">-->
+    <!--<property name="sessionFactory" ref="sessionFactory"/>-->
+    <!--</bean>-->
+
+    <!--<bean id="org.seke.fs.Costumer"-->
+    <!--class="org.seke.fs.beans.CostumerBean"-->
+    <!--scope="prototype">-->
+    <!--</bean>-->
 
     <bean id="org.seke.fs.services.CostumersService"
-          class="org.seke.fs.hibernate.CostumersServiceImpl"
-          scope="singleton">
-        <constructor-arg ref="sessionFactory"/>
+          class="org.seke.fs.hibernate.CostumersServiceImpl">
+        <!--scope="singleton">-->
+        <property name="sessionFactory">
+            <ref bean="sessionFactory"/>
+        </property>
     </bean>
 
     <bean id="org.seke.fs.services.ProductsService"
-          class="org.seke.fs.hibernate.ProductsServiceImpl"
-          scope="singleton">
-        <constructor-arg ref="sessionFactory"/>
+          class="org.seke.fs.hibernate.ProductsServiceImpl">
+        <!--scope="singleton">-->
+        <property name="sessionFactory">
+            <ref bean="sessionFactory"/>
+        </property>
+    </bean>
+
+    <bean id="org.seke.fs.services.OrdersService"
+          class="org.seke.fs.hibernate.OrdersServiceImpl">
+        <!--scope="singleton">-->
+        <property name="sessionFactory">
+            <ref bean="sessionFactory"/>
+        </property>
     </bean>
 
     <bean id="sessionFactory"
           class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
-        <property name="dataSource">
-            <ref bean="dataSource"/>
+        <property name="configLocation">
+            <value>classpath:hibernate.cfg.xml</value>
         </property>
-        <!-- Must reference all O/R mapping files. -->
+        <property name="configurationClass">
+            <value>org.hibernate.cfg.AnnotationConfiguration</value>
+        </property>
         <property name="annotatedClasses">
             <list>
                 <value>org.seke.fs.beans.CostumerBean</value>
@@ -35,40 +57,13 @@
                 <value>org.seke.fs.beans.ProductBean</value>
             </list>
         </property>
-        <property name="hibernateProperties">
-            <ref bean="hibernateProperties"/>
+    </bean>
+    <bean id="org.springframework.transaction.PlatformTransactionManager"
+          class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+        <property name="sessionFactory">
+            <ref bean="sessionFactory"/>
         </property>
     </bean>
-
-    <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
-          destroy-method="close">
-        <property name="driverClassName">
-            <value>org.hsqldb.jdbcDriver</value>
-        </property>
-        <property name="url">
-            <value>jdbc:hsqldb:mem:test</value>
-        </property>
-        <property name="username">
-            <value>sa</value>
-        </property>
-        <!--<property name="password">-->
-            <!--<value></value>-->
-        <!--</property>-->
-    </bean>
-
-    <bean id="hibernateProperties"
-          class="org.springframework.beans.factory.config.PropertiesFactoryBean">
-        <property name="properties">
-            <props>
-                <prop key="hibernate.dialect">org.hibernate.dialect.HSQLDialect</prop>
-                <prop key="hibernate.connection.pool_size">3</prop>
-                <prop key="hibernate.show_sql">true</prop>
-                <!--<prop key="hibernate.cache.provider_class">-->
-                    <!--org.hibernate.cache.HashtableCacheProvider-->
-                <!--</prop>-->
-                <prop key="hibernate.hbm2ddl.auto">update</prop>
-            </props>
-        </property>
-    </bean>
-
+    <tx:annotation-driven
+            transaction-manager="org.springframework.transaction.PlatformTransactionManager"/>
 </beans>

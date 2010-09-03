@@ -5,6 +5,7 @@ import org.hibernate.SessionFactory;
 import org.seke.fs.Costumer;
 import org.seke.fs.beans.CostumerBean;
 import org.seke.fs.services.CostumersService;
+import org.springframework.transaction.annotation.Transactional;
 
 /**
  * Created by IntelliJ IDEA.
@@ -15,23 +16,45 @@ import org.seke.fs.services.CostumersService;
  */
 public class CostumersServiceImpl implements CostumersService {
 
-    private final SessionFactory session;
+    private SessionFactory sessionFactory;
 
-    public CostumersServiceImpl(SessionFactory session) {
-        this.session = session;
+    public SessionFactory getSessionFactory() {
+        return sessionFactory;
     }
 
-    @Override
+    public void setSessionFactory(SessionFactory sessionFactory) {
+        this.sessionFactory = sessionFactory;
+    }
+
+    private Session getSession() {
+        return sessionFactory.getCurrentSession();
+    }
+
+    @Transactional
     public Costumer register(Costumer costumer) {
-        return (Costumer) session.openSession().get(CostumerBean.class, session.openSession().save(costumer));
+        return (Costumer) getSession().get(CostumerBean.class, getSession().save(costumer));
     }
 
-    @Override
+    @Transactional
     public Costumer retrieve(String username) {
-        Object costumer = session.openSession().createQuery("from CostumerBean where username = '" + username + "'").uniqueResult();
+        Object costumer = getSession().createQuery("from CostumerBean where username = '" + username + "'").uniqueResult();
         if (costumer == null)
             return null;
         else
             return (Costumer) costumer;
+    }
+
+    @Transactional
+    public boolean isCostumerExist(String username,String password) {
+        Object costumer = getSession().createQuery("from CostumerBean where username = '" + username + "' and password = '"+password+"'").uniqueResult();
+        if (costumer == null)
+            return false;
+        else
+            return true;
+    }
+
+    @Transactional
+    public void updateCostumersData(Costumer costumer){
+        getSession().saveOrUpdate(costumer);
     }
 }

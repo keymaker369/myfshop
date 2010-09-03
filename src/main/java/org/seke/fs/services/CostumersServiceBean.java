@@ -34,4 +34,14 @@ public class CostumersServiceBean implements CostumersService {
     public Costumer retrieve(String username) {
         return costumers.get(username);
     }
+
+    @Override
+    public boolean isCostumerExist(String username, String password) {
+        return false;  //To change body of implemented methods use File | Settings | File Templates.
+    }
+
+    @Override
+    public void updateCostumersData(Costumer costumer) {
+        //To change body of implemented methods use File | Settings | File Templates.
+    }
 }
