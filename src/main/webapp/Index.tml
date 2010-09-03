@@ -1,10 +1,9 @@
-<html t:type="layout" title="fs Index" t:sidebarTitle="Current Time"
-      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd" xmlns:p="tapestry:parameter">
-<!-- Most of the page content, including <head>, <body>, etc. tags, comes from Layout.tml -->
-
-<p>
-    <i><h2>Main page</h2></i>
-</p>
+<html xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd">
+<head>
+    <title>Hello World Page</title>
+</head>
+<body>
+<h1>Home Page</h1>
 <t:form t:id="fLogIn">
     <p>
         <t:label for="tfUsername">username:</t:label>
@@ -19,22 +18,30 @@
         <input type="submit" name="bLogIn" id="bLogIn" value="LogIn"/>
     </p>
 </t:form>
-
-
-<p:sidebar>
-
+<p>
+    [
+    <t:pagelink page="Index">Index</t:pagelink>
+    ]
+    [
+    <t:pagelink page="AddProduct">AddProduct</t:pagelink>
+    ]
+    [
+    <t:pagelink page="BrowseProducts">BrowseProduct</t:pagelink>
+    ]
+    [
+    <t:pagelink page="CostumerInfo">CostumerInfo</t:pagelink>
+    ]
+    [
+    <t:pagelink page="Register">Register</t:pagelink>
+    ]
+    [
+    <t:pagelink page="Cart">Cart</t:pagelink>
+    ]
+</p>
+<t:form t:id="fLogOut">
     <p>
-        Just to prove this is live:
+        <input type="submit" name="bLogOut" id="bLogOut" value="LogOut"/>
     </p>
-
-    <p>The current time is: ${currentTime}.</p>
-
-
-    <p>
-        [
-        <t:pagelink page="Index">refresh</t:pagelink>
-        ]
-    </p>
-</p:sidebar>
-
+</t:form>
+</body>
 </html>

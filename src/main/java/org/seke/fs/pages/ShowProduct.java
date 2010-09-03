@@ -1,10 +1,18 @@
 package org.seke.fs.pages;
 
+import org.apache.tapestry5.annotations.InjectPage;
+import org.apache.tapestry5.annotations.OnEvent;
 import org.apache.tapestry5.annotations.Property;
 import org.apache.tapestry5.ioc.annotations.Inject;
 import org.seke.fs.Identifiable;
+import org.seke.fs.OrdersItem;
 import org.seke.fs.Product;
+import org.seke.fs.beans.OrdersItemBean;
 import org.seke.fs.services.ProductsService;
+
+import java.util.Collection;
+import java.util.LinkedList;
+import java.util.List;
 
 /**
  * Created by IntelliJ IDEA.
@@ -21,12 +29,34 @@ public class ShowProduct {
     @Inject
     private ProductsService productsService;
 
+    @InjectPage
+    private Cart cart;
+        
+    @Property
+    private int wontedAmount;
+
     public void onActivate(long id) {
         product = productsService.retrieve(id);
     }
 
     long onPassivate() {
         return Identifiable.class.cast(product).getId();
+    }
+
+    @OnEvent(value = "submit", component = "fAddToCart")
+    void addToCart() {
+        List<OrdersItem> collection = new LinkedList<OrdersItem>();
+        if (cart.getOrdersItemsInChart() != null){
+            collection = cart.getOrdersItemsInChart();
+        }
+        OrdersItem newOrdersItem = new OrdersItemBean();
+        newOrdersItem.setProduct(product);
+        newOrdersItem.setAmount(wontedAmount);
+        newOrdersItem.setPrice(wontedAmount*product.getPrice());
+        collection.add(newOrdersItem);
+        cart.setOrdersItemsInChart(collection);
+        System.out.println("<----------------stiso dugme za add to cart---------------->");
+        //return cart;
     }
 
 }

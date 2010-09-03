@@ -9,9 +9,10 @@ import org.apache.tapestry5.BindingConstants;
  * Layout component for pages of application fs.
  */
 @IncludeStylesheet("context:layout/layout.css")
-public class Layout
-{
-    /** The page title, for the <title> element and the <h1> element. */
+public class Layout {
+    /**
+     * The page title, for the <title> element and the <h1> element.
+     */
     @Property
     @Parameter(required = true, defaultPrefix = BindingConstants.LITERAL)
     private String title;
@@ -30,15 +31,14 @@ public class Layout
     @Inject
     private ComponentResources resources;
 
-    public String getClassForPageName()
-    {
-      return resources.getPageName().equalsIgnoreCase(pageName)
-             ? "current_page_item"
-             : null;
+    public String getClassForPageName() {
+        return resources.getPageName().equalsIgnoreCase(pageName)
+                ? "current_page_item"
+                : null;
     }
 
-    public String[] getPageNames()
-    {
-      return new String[] { "Index", "About", "Contact" , "BrowseProducts" , "AddProduct" , "Register" };
+    public String[] getPageNames() {
+        return new String[]{"Index", "About", "Contact", "BrowseProducts",
+                "AddProduct", "Register", "CostumerInfo" , "LogOut"};
     }
 }

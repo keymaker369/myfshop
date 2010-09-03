@@ -1,5 +1,6 @@
 package org.seke.fs;
 
+import java.util.Collection;
 import java.util.List;
 
 /**
@@ -15,9 +16,11 @@ public interface Order {
 
     void setCommitDate(String commitDate);
 
+    List<OrdersItem> getOrdersItems();
+
+    void setOrdersItems(List<OrdersItem> ordersItems);
+
     Costumer getCostumer();
 
     void setCostumer(Costumer costumer);
-
-    List<OrdersItem> getOrdersItems();
 }

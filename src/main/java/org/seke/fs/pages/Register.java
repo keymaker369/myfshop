@@ -5,6 +5,7 @@ import org.apache.tapestry5.annotations.Persist;
 import org.apache.tapestry5.annotations.Property;
 import org.apache.tapestry5.ioc.annotations.Inject;
 import org.seke.fs.Costumer;
+import org.seke.fs.Order;
 import org.seke.fs.Product;
 import org.seke.fs.beans.CostumerBean;
 import org.seke.fs.beans.ProductBean;
@@ -12,6 +13,8 @@ import org.seke.fs.services.CostumersService;
 import org.seke.fs.services.ProductsService;
 import org.seke.fs.spring.ApplicationContextProviderSingleton;
 import org.springframework.context.ApplicationContext;
+
+import java.util.LinkedList;
 
 /**
  * Created by IntelliJ IDEA.
@@ -68,6 +71,7 @@ public class Register {
         registeringCostumer.setFirstName(firstName);
         registeringCostumer.setLastName(lastName);
         registeringCostumer.setEmail(email);
+        //registeringCostumer.setOrders(new LinkedList<Order>());
         System.out.println(username+password+firstName+lastName+email);
         Product p = new ProductBean();
         p.setTitle("rhwrh");

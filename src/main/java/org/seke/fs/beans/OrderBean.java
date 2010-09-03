@@ -6,6 +6,7 @@ import org.seke.fs.Order;
 import org.seke.fs.OrdersItem;
 
 import javax.persistence.*;
+import java.util.Collection;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -52,16 +53,22 @@ public class OrderBean implements Order, Identifiable {
         this.commitDate = commitDate;
     }
 
-    public Costumer getCostumer() {
-        return costumer;
-    }
-
-    public void setCostumer(Costumer costumer) {
-        this.costumer = costumer;
-    }
-
     public List<OrdersItem> getOrdersItems(){
         return ordersItems;
+    }
+
+    public void setOrdersItems(List<OrdersItem> ordersItems) {
+        this.ordersItems = ordersItems;
+    }
+
+    @Override
+    public Costumer getCostumer() {
+        return costumer;  //To change body of implemented methods use File | Settings | File Templates.
+    }
+
+    @Override
+    public void setCostumer(Costumer costumer) {
+        this.costumer = costumer;
     }
 
 }

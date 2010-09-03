@@ -1,10 +1,15 @@
 package org.seke.fs.pages;
 
 import org.apache.tapestry5.annotations.OnEvent;
+import org.apache.tapestry5.annotations.Persist;
+import org.apache.tapestry5.annotations.SessionState;
 import org.apache.tapestry5.annotations.SetupRender;
 import org.apache.tapestry5.ioc.annotations.Inject;
 import org.seke.fs.Costumer;
+import org.seke.fs.beans.CostumerBean;
 import org.seke.fs.services.CostumersService;
+import org.seke.fs.spring.ApplicationContextProviderSingleton;
+import org.springframework.context.ApplicationContext;
 
 import java.util.Date;
 
@@ -13,6 +18,9 @@ import java.util.Date;
  */
 public class Index {
 
+    @SessionState
+    private Costumer costumer;
+    
     private String username;
     private String password;
 
@@ -35,20 +43,18 @@ public class Index {
         this.password = password;
     }
 
-    public Date getCurrentTime() {
-        return new Date();
-    }
-    
-	@SetupRender
-	public void createObject() {
-	    //System.out.println("!!!!!!!zika zikic!!!!!!!!!!!!!!!!!!!!!!!");
-	}
-
     @OnEvent(value = "submit", component = "fLogIn")
-    void logIn(){
+    void logIn() {
+        if (costumersService.isCostumerExist(username, password)) {
+            costumer = costumersService.retrieve(username);
+        }
+        System.out.println("<----------------stiso dugme za login---------------->");
+        //return null;
+    }
 
-        Costumer logingCostumer = costumersService.retrieve(username);
-        System.out.println(logingCostumer.getPassword());
-
+    @OnEvent(value = "submit", component = "fLogOut")
+    void logOut() {
+        costumer = null;
+        System.out.println("<----------------stiso dugme za logout---------------->");
     }
 }

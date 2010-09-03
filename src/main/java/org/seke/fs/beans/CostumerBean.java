@@ -5,6 +5,7 @@ import org.seke.fs.Identifiable;
 import org.seke.fs.Order;
 
 import javax.persistence.*;
+import java.util.Collection;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -93,6 +94,10 @@ public class CostumerBean implements Costumer, Identifiable {
 
     public List<Order> getOrders() {
         return orders;
+    }
+
+    public void setOrders(List<Order> orders) {
+        this.orders = orders;
     }
 
     public long getId() {

@@ -6,6 +6,7 @@ import org.hibernate.SessionFactory;
 import org.seke.fs.Product;
 import org.seke.fs.beans.ProductBean;
 import org.seke.fs.services.ProductsService;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.io.Serializable;
 import java.util.Collection;
@@ -19,26 +20,36 @@ import java.util.Collection;
  */
 public class ProductsServiceImpl implements ProductsService {
 
-    private final SessionFactory session;
+    private SessionFactory sessionFactory;
 
-    public ProductsServiceImpl(SessionFactory session) {
-        this.session = session;
+    public SessionFactory getSessionFactory() {
+        return sessionFactory;
     }
 
-    @Override
+    public void setSessionFactory(SessionFactory sessionFactory) {
+        this.sessionFactory = sessionFactory;
+    }
+
+    private Session getSession() {
+        if (sessionFactory.isClosed())
+            return sessionFactory.openSession();
+        else return sessionFactory.getCurrentSession();
+    }
+
+    @Transactional
     public Collection<Product> retrieve() {
-        Criteria criteria = session.openSession().createCriteria(ProductBean.class);
+        Criteria criteria = getSession().createCriteria(ProductBean.class);
         return criteria.list();
     }
 
-    @Override
+    @Transactional
     public Product retrieve(Serializable id) {
-        return (Product) session.openSession().get(ProductBean.class, id);
+        return (Product) getSession().get(ProductBean.class, id);
     }
 
-    @Override
+    @Transactional
     public Product save(Product product) {
-        return (Product) session.openSession().get(ProductBean.class, session.openSession().save(product));
+        return (Product) getSession().get(ProductBean.class, getSession().save(product));
     }
 
 }
