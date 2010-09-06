@@ -18,7 +18,9 @@ public interface ProductsService {
     @CommitAfter
     Product save(Product product);
 
+    @CommitAfter
     Product retrieve(Serializable id);
 
+    @CommitAfter
     Collection<Product> retrieve();
 }

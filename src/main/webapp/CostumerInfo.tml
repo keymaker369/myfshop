@@ -1,4 +1,5 @@
-<html xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd">
+<html xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd"
+      xmlns:p="tapestry:parameter">
 <head>
     <title>Hello World Page</title>
 </head>
@@ -22,12 +23,17 @@
     </p>
 
     <h3>Orders:</h3>
-    <ul t:type="Loop" t:source="costumer.getOrders()" t:value="currentOrder">
-        <li>
-            Commit date:${currentOrder.commitDate}
-            Numer of items:${currentOrder.ordersItems.size()}
-        </li>
-    </ul>
+    <t:if test="costumer.getOrders()">
+        <ul t:type="Loop" t:source="costumer.getOrders()" t:value="currentOrder">
+            <li>
+                Commit date:${currentOrder.commitDate}
+                Numer of items:${currentOrder.ordersItems.size()}
+            </li>
+        </ul>
+        <p:else>
+            ${costumer.getUsername()}, you do not have any orders.
+        </p:else>
+    </t:if>
 </t:if>
 <p>
     [

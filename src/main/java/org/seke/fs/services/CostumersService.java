@@ -15,6 +15,7 @@ public interface CostumersService {
     @CommitAfter
     Costumer register(Costumer costumer);
 
+    @CommitAfter
     Costumer retrieve(String username);
 
     boolean isCostumerExist(String username, String password);
