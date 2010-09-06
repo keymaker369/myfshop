@@ -63,7 +63,7 @@ public class OrderBean implements Order, Identifiable {
 
     @Override
     public Costumer getCostumer() {
-        return costumer;  //To change body of implemented methods use File | Settings | File Templates.
+        return costumer;
     }
 
     @Override
