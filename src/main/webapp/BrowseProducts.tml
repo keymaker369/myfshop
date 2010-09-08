@@ -13,6 +13,11 @@
             Price: ${currentProduct.price}
         </a>
     </li>
+    <li>
+        [ <a t:type="PageLink" t:page="RemoveProduct" t:context="currentProductId">remove</a> ]
+        [ <a t:type="PageLink" t:page="AlterProduct" t:context="currentProductId">alter</a> ]
+        [ <a t:type="PageLink" t:page="ReactivateProduct" t:context="currentProductId">reactivate</a> ]
+    </li>
 </ul>
 <p>
     [

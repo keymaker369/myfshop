@@ -42,7 +42,6 @@ public class AddProduct {
 
     @OnEvent(value = "submit", component = "fAddProduct")
     Object saveProduct() {
-        System.out.println("Stiso dugme add product!!!!!!!!!!!!!!!!!!!!!");
         productsService.save(product);
         return congratulations;
     }

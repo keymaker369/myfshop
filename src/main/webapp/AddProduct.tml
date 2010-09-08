@@ -8,7 +8,6 @@
 </t:zone>
 <t:block id="edit">
     <h1>AddProduct</h1>
-
     <t:form t:id="fAddProduct" t:zone="addZone">
 
         <p>

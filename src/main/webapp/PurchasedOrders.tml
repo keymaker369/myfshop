@@ -1,29 +1,22 @@
 <html xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd"
       xmlns:p="tapestry:parameter">
 <head>
-    <title>Hello World Page</title>
+    <title>Purchased orders</title>
 </head>
 <body>
-<h1>Costumer Info</h1>
+<h1>Purchased orders</h1>
 <t:if t:test="costumerExists">
-    <p>
-        Username: ${costumer.username}
-    </p>
-
-    <p>
-        First name: ${costumer.firstName}
-    </p>
-
-    <p>
-        Last name: ${costumer.getLastName()}
-    </p>
-
-    <p>
-        email: ${costumer.getEmail()}
-    </p>
-
-    <t:pagelink page="PurchasedOrders">Purchased orders</t:pagelink>
-
+    <t:if test="costumer.getOrders()">
+        <ul t:type="Loop" t:source="costumer.getOrders()" t:value="currentOrder">
+            <li>
+                Commit date:${currentOrder.commitDate}
+                <!--Numer of items:${currentOrder.ordersItems.size()}-->
+            </li>
+        </ul>
+        <p:else>
+            ${costumer.getUsername()}, you do not have any orders.
+        </p:else>
+    </t:if>
 </t:if>
 <p>
     [

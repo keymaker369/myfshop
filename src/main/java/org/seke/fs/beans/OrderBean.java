@@ -27,10 +27,7 @@ public class OrderBean implements Order, Identifiable {
     @Basic
     private String commitDate;
 
-    @ManyToOne(targetEntity=CostumerBean.class)
-    private Costumer costumer;
-
-    @OneToMany(targetEntity=OrdersItemBean.class,cascade=CascadeType.ALL)
+    @OneToMany(targetEntity=OrdersItemBean.class)
     private List<OrdersItem> ordersItems = new LinkedList<OrdersItem>();
 
     public OrderBean() {
@@ -61,14 +58,14 @@ public class OrderBean implements Order, Identifiable {
         this.ordersItems = ordersItems;
     }
 
-    @Override
-    public Costumer getCostumer() {
-        return costumer;
-    }
-
-    @Override
-    public void setCostumer(Costumer costumer) {
-        this.costumer = costumer;
-    }
+//    @Override
+//    public Costumer getCostumer() {
+//        return costumer;
+//    }
+//
+//    @Override
+//    public void setCostumer(Costumer costumer) {
+//        this.costumer = costumer;
+//    }
 
 }

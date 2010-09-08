@@ -1,18 +1,19 @@
 package org.seke.fs.pages;
 
-import org.apache.tapestry5.annotations.OnEvent;
-import org.apache.tapestry5.annotations.Persist;
-import org.apache.tapestry5.annotations.Property;
-import org.apache.tapestry5.annotations.SessionState;
+import org.apache.tapestry5.Block;
+import org.apache.tapestry5.annotations.*;
 import org.apache.tapestry5.ioc.annotations.Inject;
 import org.seke.fs.*;
 import org.seke.fs.beans.OrderBean;
 import org.seke.fs.beans.ProductBean;
 import org.seke.fs.services.CostumersService;
+import org.seke.fs.services.OrdersItemsService;
 import org.seke.fs.services.OrdersService;
 import org.seke.fs.services.ProductsService;
 
+import java.io.Serializable;
 import java.util.Collection;
+import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -28,6 +29,8 @@ public class Cart {
     @SessionState
     private Costumer costumer;
 
+    private Costumer tempCastumer;
+
     @Persist
     private List<OrdersItem> ordersItemsInChart;
 
@@ -35,13 +38,33 @@ public class Cart {
     private OrdersService ordersServce;
 
     @Inject
-    private CostumersService cs;
+    private CostumersService costumersService;
+
+    @Inject
+    private OrdersItemsService ois;
 
     @Property
     private OrdersItem currentItem;
 
+    @Property
+    @Inject
+    private Block edit;
+
+    @Property
+    @Inject
+    private Block congratulations;
+
+//    @InjectPage
+//    private Congratulations congratulations;
+
     public List<OrdersItem> getOrdersItemsInChart() {
         return ordersItemsInChart;
+    }
+
+    private boolean costumerExists;
+
+    public boolean getCostumerExists() {
+        return costumerExists;
     }
 
     public void setOrdersItemsInChart(List<OrdersItem> ordersItemsInChart) {
@@ -53,17 +76,26 @@ public class Cart {
     }
 
     @OnEvent(value = "submit", component = "fPurchaseOrder")
-    void purchaseOrder() {
+    Object purchaseOrder() {
         Order order = new OrderBean();
         order.setOrdersItems(ordersItemsInChart);
-        order.setCostumer(costumer);
         order.setCommitDate("neki datum");
-        List<Order> list = new LinkedList<Order>();
-        list.add(order);
-        costumer.setOrders(list);
-        cs.updateCostumersData(costumer);
+        tempCastumer.getOrders().add(order);
+        costumersService.updateCostumersData(tempCastumer);
         ordersItemsInChart = null;
-        //System.out.println("<----------------stiso dugme za Purchase order---------------->");
-        //return null;
+        return congratulations;
+    }
+
+    void onActivate(long id) {
+        if (costumerExists) {
+            tempCastumer = costumersService.retrieve(costumer.getUsername());
+            //Costumer c1 = costumer;
+            System.out.println("activate");
+        }
+    }
+
+    long onPassivate() {
+        System.out.println("passivate");
+        return 36;
     }
 }

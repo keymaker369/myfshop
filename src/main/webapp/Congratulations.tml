@@ -1,30 +1,18 @@
-<html xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd"
-      xmlns:p="tapestry:parameter">
+<html xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd" xmlns:p="tapestry:parameter">
 <head>
     <title>Hello World Page</title>
 </head>
 <body>
-<h1>Costumer Info</h1>
-<t:if t:test="costumerExists">
-    <p>
-        Username: ${costumer.username}
-    </p>
+<p>
+    You have purchased your order!
+</p>
 
-    <p>
-        First name: ${costumer.firstName}
-    </p>
+<p>
+    <a t:type="PageLink" t:page="PurchasedOrders">See what you ordered</a>
+    or
+    <a t:type="PageLink" t:page="BrowseProducts">buy more</a>
+</p>
 
-    <p>
-        Last name: ${costumer.getLastName()}
-    </p>
-
-    <p>
-        email: ${costumer.getEmail()}
-    </p>
-
-    <t:pagelink page="PurchasedOrders">Purchased orders</t:pagelink>
-
-</t:if>
 <p>
     [
     <t:pagelink page="Index">Index</t:pagelink>

@@ -1,23 +1,44 @@
-<html xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd">
+<html xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd" xmlns:p="tapestry:parameter">
 <head>
     <title>Hello World Page</title>
 </head>
 <body>
 <h1>Cart</h1>
-<ul t:type="Loop" t:source="ordersItemsInChart" t:value="currentItem">
-    <li>
-        Product:${currentItemId}
-        Title:${currentItem.product.title}
-        Wonted amount: ${currentItem.amount}
-        Price: ${currentItem.price}
-    </li>
-</ul>
-<p>
-    <t:form t:id="fPurchaseOrder">
-        <input type="submit" name="bPurchaseOrder" id="bPurchaseOrder" value="Purchase Order"/>
-    </t:form>
-</p>
+<t:zone t:id="addZone">
+    <t:delegate to="edit"/>
+</t:zone>
+<t:block id="edit">
+    <t:if t:test="ordersItemsInChart">
 
+        <ul t:type="Loop" t:source="ordersItemsInChart" t:value="currentItem">
+            <li>
+                Product:${currentItemId}
+                Title:${currentItem.product.title}
+                Wonted amount: ${currentItem.amount}
+                Price: ${currentItem.price}
+            </li>
+        </ul>
+        <t:form t:id="fPurchaseOrder" t:zone="addZone">
+            <p>
+                <input type="submit" name="bPurchaseOrder" id="bPurchaseOrder" value="Purchase Order"/>
+            </p>
+        </t:form>
+        <p:else>
+            Your cart is empty.
+        </p:else>
+    </t:if>
+</t:block>
+<t:block id="congratulations">
+    <p>
+        You have purchased your order!
+    </p>
+
+    <p>
+        <a t:type="PageLink" t:page="PurchasedOrders">See what you ordered</a>
+        or
+        <a t:type="PageLink" t:page="BrowseProducts">buy more</a>
+    </p>
+</t:block>
 <p>
     [
     <t:pagelink page="Index">Index</t:pagelink>

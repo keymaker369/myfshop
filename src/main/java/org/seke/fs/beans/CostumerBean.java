@@ -38,7 +38,7 @@ public class CostumerBean implements Costumer, Identifiable {
     @Basic
     private String email;
 
-    @OneToMany(targetEntity=OrderBean.class,cascade= CascadeType.ALL)
+    @OneToMany(targetEntity=OrderBean.class,cascade = CascadeType.ALL)
     private List<Order> orders = new LinkedList<Order>();
 
     public CostumerBean() {

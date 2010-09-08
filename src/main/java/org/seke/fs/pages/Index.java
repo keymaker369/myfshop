@@ -1,17 +1,10 @@
 package org.seke.fs.pages;
 
 import org.apache.tapestry5.annotations.OnEvent;
-import org.apache.tapestry5.annotations.Persist;
 import org.apache.tapestry5.annotations.SessionState;
-import org.apache.tapestry5.annotations.SetupRender;
 import org.apache.tapestry5.ioc.annotations.Inject;
 import org.seke.fs.Costumer;
-import org.seke.fs.beans.CostumerBean;
 import org.seke.fs.services.CostumersService;
-import org.seke.fs.spring.ApplicationContextProviderSingleton;
-import org.springframework.context.ApplicationContext;
-
-import java.util.Date;
 
 /**
  * Start page of application fs.
@@ -20,7 +13,7 @@ public class Index {
 
     @SessionState
     private Costumer costumer;
-    
+
     private String username;
     private String password;
 
@@ -57,4 +50,5 @@ public class Index {
         costumer = null;
         System.out.println("<----------------stiso dugme za logout---------------->");
     }
+
 }
