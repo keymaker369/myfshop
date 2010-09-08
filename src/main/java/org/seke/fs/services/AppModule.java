@@ -34,29 +34,30 @@ public class AppModule {
     }
 
     public static void bind(ServiceBinder binder) {
-//        binder.bind(ProductsService.class, ProductsServiceImpl.class);
-//        binder.bind(CostumersService.class, CostumersServiceImpl.class);
-//        binder.bind(OrdersService.class, OrdersServiceImpl.class);
+        binder.bind(ProductsService.class, ProductsServiceImpl.class);
+        binder.bind(CostumersService.class, CostumersServiceImpl.class);
+        binder.bind(OrdersService.class, OrdersServiceImpl.class);
+        binder.bind(OrdersItemsService.class, OrdersItemsServiceImpl.class);
     }
 
-//    public static void contributeHibernateEntityPackageManager(
-//            Configuration<String> configuration) {
-//        configuration.add("org.seke.fs.beans");
-//    }
+    public static void contributeHibernateEntityPackageManager(
+            Configuration<String> configuration) {
+        configuration.add("org.seke.fs.beans");
+    }
 
-//    @Match({"*Costumers", "*Products"})
-//    public static <T> T decorateTransactionally(
-//            HibernateTransactionDecorator decorator, Class<T> serviceInterface,
-//            T delegate, String serviceId) {
-//        return decorator.build(serviceInterface, delegate, serviceId);
-//    }
-//
-//    @Match({"*Service"})
-//    public static void adviseTransactions(
-//            HibernateTransactionAdvisor advisor, MethodAdviceReceiver receiver) {
-//        advisor.addTransactionCommitAdvice(receiver);
-//    }
-//
+    @Match({"*Costumers", "*Products", "Orders", "OrdersItems"})
+    public static <T> T decorateTransactionally(
+            HibernateTransactionDecorator decorator, Class<T> serviceInterface,
+            T delegate, String serviceId) {
+        return decorator.build(serviceInterface, delegate, serviceId);
+    }
+
+    @Match({"*Service"})
+    public static void adviseTransactions(
+            HibernateTransactionAdvisor advisor, MethodAdviceReceiver receiver) {
+        advisor.addTransactionCommitAdvice(receiver);
+    }
+
 //
 //
 //    public static Costumer buildCostumer() {

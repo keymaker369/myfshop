@@ -11,12 +11,11 @@ import org.seke.fs.services.CostumersService;
 /**
  * Created by IntelliJ IDEA.
  * User: nenad
- * Date: Aug 29, 2010
- * Time: 1:52:03 PM
+ * Date: Sep 8, 2010
+ * Time: 2:43:14 AM
  * To change this template use File | Settings | File Templates.
  */
-public class CostumerInfo {
-
+public class PurchasedOrders {
     @SessionState
     private Costumer costumer;
 
@@ -44,13 +43,11 @@ public class CostumerInfo {
         this.costumerExists = costumerExists;
     }
 
-//    @SetupRender
-//    void setup() {
-//        if (costumerExists) {
-//            Costumer c2 = costumer;
-//            costumer = costumersService.retrieve(costumer.getUsername());
-//            Costumer c1 = costumer;
-//            System.out.println("kraj");
-//        }
-//    }
+    @SetupRender
+    void setup() {
+        if (costumerExists) {
+            costumer = costumersService.retrieve(costumer.getUsername());
+            System.out.println("endOfSetup");
+        }
+    }
 }

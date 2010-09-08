@@ -3,9 +3,14 @@ package org.seke.fs.hibernate;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.seke.fs.Costumer;
+import org.seke.fs.Order;
+import org.seke.fs.OrdersItem;
 import org.seke.fs.beans.CostumerBean;
 import org.seke.fs.services.CostumersService;
 import org.springframework.transaction.annotation.Transactional;
+
+import javax.swing.text.html.HTMLDocument;
+import java.util.Iterator;
 
 /**
  * Created by IntelliJ IDEA.
@@ -45,8 +50,8 @@ public class CostumersServiceImpl implements CostumersService {
     }
 
     @Transactional
-    public boolean isCostumerExist(String username,String password) {
-        Object costumer = getSession().createQuery("from CostumerBean where username = '" + username + "' and password = '"+password+"'").uniqueResult();
+    public boolean isCostumerExist(String username, String password) {
+        Object costumer = getSession().createQuery("from CostumerBean where username = '" + username + "' and password = '" + password + "'").uniqueResult();
         if (costumer == null)
             return false;
         else
@@ -54,7 +59,16 @@ public class CostumersServiceImpl implements CostumersService {
     }
 
     @Transactional
-    public void updateCostumersData(Costumer costumer){
-        getSession().saveOrUpdate(costumer);
+    public void updateCostumersData(Costumer costumer) {
+        Iterator it = costumer.getOrders().iterator();
+        while (it.hasNext()) {
+            Order curentOrder = (Order) it.next();
+            Iterator it1 = curentOrder.getOrdersItems().iterator();
+            while (it1.hasNext()) {
+                getSession().save((OrdersItem) it1.next());    
+            }
+            getSession().save(curentOrder);
+        }
+        getSession().update(costumer);
     }
 }

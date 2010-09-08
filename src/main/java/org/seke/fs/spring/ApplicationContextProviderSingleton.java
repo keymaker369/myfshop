@@ -18,7 +18,7 @@ public class ApplicationContextProviderSingleton implements
 
     public String[] getContextLocations() {
         String[] contextLocations = {
-                "context.xml",
+                "WEB-INF/context.xml",
         };
         return contextLocations;
     }

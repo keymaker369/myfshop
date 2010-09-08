@@ -19,8 +19,8 @@ public interface Order {
     List<OrdersItem> getOrdersItems();
 
     void setOrdersItems(List<OrdersItem> ordersItems);
-
-    Costumer getCostumer();
-
-    void setCostumer(Costumer costumer);
+//
+//    Costumer getCostumer();
+//
+//    void setCostumer(Costumer costumer);
 }
