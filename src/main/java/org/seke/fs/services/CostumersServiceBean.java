@@ -44,4 +44,9 @@ public class CostumersServiceBean implements CostumersService {
     public void updateCostumersData(Costumer costumer) {
         //To change body of implemented methods use File | Settings | File Templates.
     }
+
+    @Override
+    public void saveOrUpdateCostumer(Costumer costumer) {
+        //To change body of implemented methods use File | Settings | File Templates.
+    }
 }

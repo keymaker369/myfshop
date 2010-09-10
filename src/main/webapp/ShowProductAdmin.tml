@@ -1,18 +1,16 @@
-<html t:type="layout" title="Purchased orders"
+<html t:type="layout" title="Show Product admin page"
       xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd"
       xmlns:p="tapestry:parameter">
-<t:if t:test="costumerExists">
-    <t:if test="costumer.getOrders()">
-        <ul t:type="Loop" t:source="costumer.getOrders()" t:value="currentOrder">
-            <li>
-                Commit date:${currentOrder.commitDate}
-                <!--Numer of items:${currentOrder.ordersItems.size()}-->
-            </li>
-        </ul>
-        <p:else>
-            ${costumer.getUsername()}, you do not have any orders.
-        </p:else>
-    </t:if>
+<t:if test="product">
+    <ul>
+        <li>Title: ${product.title}</li>
+        <li>Amount in stock: ${product.amountInStock}</li>
+        <li>Price: ${product.price}</li>
+        <li>Activity: ${product.active}</li>
+    </ul>
+    <p:else>
+        Unknown product.
+    </p:else>
 </t:if>
 <p>
     [

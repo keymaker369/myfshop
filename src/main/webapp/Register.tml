@@ -1,9 +1,6 @@
-<html xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd">
-<head>
-    <title>Hello World Page</title>
-</head>
-<body>
-<h1>Registration page</h1>
+<html t:type="layout" title="Registration page"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd"
+      xmlns:p="tapestry:parameter">
 <t:form t:id="fRegister">
     <p>
         <t:label for="tfUsername">username:</t:label>
@@ -25,7 +22,10 @@
         <t:label for="tfEmail">email:</t:label>
         <t:textfield t:id="tfEmail" t:value="email"/>
     </p>
-
+    <p>
+        <t:label for="type">type:</t:label>
+        <t:select t:id="type" model="literal:costumer,administrator"/>
+    </p>
     <p>
         <input type="submit" name="bRegister" id="bRegister" value="Register"/>
     </p>
@@ -47,5 +47,4 @@
     <t:pagelink page="Register">Register</t:pagelink>
     ]
 </p>
-</body>
 </html>

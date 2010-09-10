@@ -35,6 +35,10 @@ public class AddProduct {
     @Inject
     private ProductsService productsService;
 
+    @Property
+    @Persist("flash")
+    private String activity;
+
     @SetupRender
     public void createObject() {
         product = new ProductBean();
@@ -42,11 +46,21 @@ public class AddProduct {
 
     @OnEvent(value = "submit", component = "fAddProduct")
     Object saveProduct() {
+        product.setActivity(Boolean.parseBoolean(activity));
         productsService.save(product);
+        System.out.println("<--------------------" + activity + "------------------->");
         return congratulations;
     }
 
     public long getId() {
         return Identifiable.class.cast(product).getId();
+    }
+
+    public String getYes() {
+        return "true";
+    }
+
+    public String getNo() {
+        return "false";
     }
 }

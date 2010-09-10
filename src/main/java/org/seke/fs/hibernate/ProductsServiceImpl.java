@@ -43,6 +43,11 @@ public class ProductsServiceImpl implements ProductsService {
     }
 
     @Transactional
+    public void updateProduct(Product product) {
+        getSession().update(product);
+    }
+
+    @Transactional
     public Product retrieve(Serializable id) {
         return (Product) getSession().get(ProductBean.class, id);
     }

@@ -3,7 +3,9 @@ package org.seke.fs.pages;
 import org.apache.tapestry5.annotations.InjectPage;
 import org.apache.tapestry5.annotations.OnEvent;
 import org.apache.tapestry5.annotations.Property;
+import org.apache.tapestry5.annotations.SessionState;
 import org.apache.tapestry5.ioc.annotations.Inject;
+import org.seke.fs.Costumer;
 import org.seke.fs.Identifiable;
 import org.seke.fs.OrdersItem;
 import org.seke.fs.Product;
@@ -38,6 +40,12 @@ public class ShowProduct {
     public void onActivate(long id) {
         product = productsService.retrieve(id);
     }
+
+    @Property
+    private boolean costumerExists;
+
+    @SessionState
+    private Costumer costumer;
 
     long onPassivate() {
         return Identifiable.class.cast(product).getId();

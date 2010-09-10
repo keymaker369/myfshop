@@ -1,18 +1,17 @@
-<html xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd" xmlns:p="tapestry:parameter">
-<head>
-    <title>Hello World Page</title>
-</head>
-<body>
-<h1>ShowProduct</h1>
+<html t:type="layout" title="ShowProduct"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd"
+      xmlns:p="tapestry:parameter">
 <t:if test="product">
     <ul>
         <li>Title: ${product.title}</li>
         <li>Amount in stock: ${product.amountInStock}</li>
         <li>Price: ${product.price}</li>
-        <t:form t:id="fAddToCart">
-            <t:textfield t:id="tfWontedAmount" t:value="wontedAmount"/>
-            <input type="submit" name="bInsertInCart" id="bInsertInCart" value="Add to cart"/>
-        </t:form>
+        <t:if t:test="costumerExists">
+            <t:form t:id="fAddToCart">
+                <t:textfield t:id="tfWontedAmount" t:value="wontedAmount"/>
+                <input type="submit" name="bInsertInCart" id="bInsertInCart" value="Add to cart"/>
+            </t:form>
+        </t:if>
     </ul>
     <p:else>
         Unknown product.
@@ -38,5 +37,4 @@
     <t:pagelink page="Cart">Cart</t:pagelink>
     ]
 </p>
-</body>
 </html>

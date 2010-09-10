@@ -17,5 +17,9 @@ public interface Product {
     double getPrice();
 
     void setPrice(double price);
+
+    boolean isActive();
+
+    void setActivity(boolean active);
 }
 

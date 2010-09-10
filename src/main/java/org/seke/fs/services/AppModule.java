@@ -58,8 +58,6 @@ public class AppModule {
         advisor.addTransactionCommitAdvice(receiver);
     }
 
-//
-//
 //    public static Costumer buildCostumer() {
 //        return new CostumerBean();
 //    }

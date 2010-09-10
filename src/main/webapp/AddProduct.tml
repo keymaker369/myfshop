@@ -1,8 +1,6 @@
-<html xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd">
-<head>
-    <title>Hello World Page</title>
-</head>
-<body>
+<html t:type="layout" title="Add Product"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd"
+      xmlns:p="tapestry:parameter">
 <t:zone t:id="addZone">
     <t:delegate to="edit"/>
 </t:zone>
@@ -24,6 +22,15 @@
         <p>
             <t:label for="tfPrice">Price:</t:label>
             <t:textfield t:id="tfPrice" value="product.price" t:validate="required,minlength=1"/>
+        </p>
+        <p>
+            <t:label for="activity">Is active?</t:label>
+            <t:radiogroup t:id="activity" >
+                <t:radio t:id="Yes" />
+                <t:label for="Yes"/>
+                <t:radio t:id="No" />
+                <t:label for="No"/> (If nothing is selected, product is inactive.)
+            </t:radiogroup>
         </p>
         <p>
             <input type="submit" id="add" value="Add"/>
@@ -60,5 +67,4 @@
     <t:pagelink page="Register">Register</t:pagelink>
     ]
 </p>
-</body>
 </html>

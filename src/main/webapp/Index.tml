@@ -1,9 +1,6 @@
-<html xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd">
-<head>
-    <title>Hello World Page</title>
-</head>
-<body>
-<h1>Home Page</h1>
+<html t:type="layout" title="Home Page"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd"
+      xmlns:p="tapestry:parameter">
 <t:form t:id="fLogIn">
     <p>
         <t:label for="tfUsername">username:</t:label>
@@ -21,6 +18,9 @@
 <p>
     [
     <t:pagelink page="Index">Index</t:pagelink>
+    ]
+    [
+    <t:pagelink page="BrowseProductsAdmin">BrowseProductsAdmin</t:pagelink>
     ]
     [
     <t:pagelink page="AddProduct">AddProduct</t:pagelink>
@@ -43,5 +43,4 @@
         <input type="submit" name="bLogOut" id="bLogOut" value="LogOut"/>
     </p>
 </t:form>
-</body>
 </html>

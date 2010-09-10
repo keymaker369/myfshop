@@ -1,33 +1,28 @@
 package org.seke.fs.pages;
 
-import org.apache.tapestry5.Block;
+import org.apache.tapestry5.annotations.InjectPage;
 import org.apache.tapestry5.annotations.OnEvent;
-import org.apache.tapestry5.annotations.Persist;
 import org.apache.tapestry5.annotations.Property;
 import org.apache.tapestry5.ioc.annotations.Inject;
 import org.seke.fs.Identifiable;
+import org.seke.fs.OrdersItem;
 import org.seke.fs.Product;
+import org.seke.fs.beans.OrdersItemBean;
 import org.seke.fs.services.ProductsService;
+
+import java.util.LinkedList;
+import java.util.List;
 
 /**
  * Created by IntelliJ IDEA.
  * User: nenad
- * Date: Sep 8, 2010
- * Time: 4:43:03 AM
+ * Date: Sep 9, 2010
+ * Time: 10:37:22 PM
  * To change this template use File | Settings | File Templates.
  */
-public class AlterProduct {
+public class ShowProductAdmin {
 
     @Property
-    @Inject
-    private Block edit;
-
-    @Property
-    @Inject
-    private Block congratulations;
-
-    @Property
-    @Persist("flash")
     private Product product;
 
     @Inject
@@ -41,14 +36,4 @@ public class AlterProduct {
         return Identifiable.class.cast(product).getId();
     }
 
-    public long getId() {
-        return Identifiable.class.cast(product).getId();
-    }
-
-    @OnEvent(value = "submit", component = "fAlterProduct")
-    Object saveProduct() {
-        productsService.save(product);
-        System.out.println("<--------------------Product altered------------------->");
-        return congratulations;
-    }
 }
