@@ -28,6 +28,9 @@ public class ProductBean implements Product,Identifiable {
     @Basic
     private double price;
 
+    @Basic
+    private boolean active;
+
 	public ProductBean() {
 	}
 
@@ -64,4 +67,14 @@ public class ProductBean implements Product,Identifiable {
 	public void setPrice(double price) {
 		this.price = price;
 	}
+
+    @Override
+    public boolean isActive() {
+        return active;
+    }
+
+    @Override
+    public void setActivity(boolean active) {
+        this.active = active;
+    }
 }

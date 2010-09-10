@@ -35,5 +35,9 @@ public interface Costumer {
     List<Order> getOrders();
 
     void setOrders(List<Order> orders);
+
+    public String getType();
+
+    public void setType(String type);
     
 }

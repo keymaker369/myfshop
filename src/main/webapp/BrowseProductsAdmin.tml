@@ -1,14 +1,25 @@
-<html t:type="layout" title="RBrowse Products"
+<html t:type="layout" title="Browse Products admin page"
       xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd"
       xmlns:p="tapestry:parameter">
 <ul t:type="Loop" t:source="productsService.retrieve()" t:value="currentProduct">
     <li>
-        <a t:type="PageLink" t:page="ShowProduct" t:context="currentProductId">
+        <a t:type="PageLink" t:page="ShowProductAdmin" t:context="currentProductId">
             Product:${currentProductId}
             Title:${currentProduct.title}
             Amount in stock: ${currentProduct.amountInStock}
             Price: ${currentProduct.price}
+            Activity:${currentProduct.isActive()}
         </a>
+    </li>
+    <li>
+        <t:if test="currentProduct.active">
+            [ <a t:type="PageLink" t:page="RemoveProduct" t:context="currentProductId">deactivate</a> ]
+            <p:else>
+                [ <a t:type="PageLink" t:page="ReactivateProduct" t:context="currentProductId">reactivate</a> ]
+            </p:else>
+        </t:if>
+        [ <a t:type="PageLink" t:page="AlterProduct" t:context="currentProductId">alter</a> ]
+
     </li>
 </ul>
 <p>

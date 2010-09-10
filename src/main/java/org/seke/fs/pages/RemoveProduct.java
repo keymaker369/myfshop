@@ -1,5 +1,7 @@
 package org.seke.fs.pages;
 
+import org.apache.tapestry5.Block;
+import org.apache.tapestry5.annotations.InjectPage;
 import org.apache.tapestry5.annotations.OnEvent;
 import org.apache.tapestry5.annotations.Property;
 import org.apache.tapestry5.ioc.annotations.Inject;
@@ -22,6 +24,19 @@ public class RemoveProduct {
     @Inject
     private ProductsService productsService;
 
+    @InjectPage
+    private BrowseProductsAdmin browseProductsAdmin;
+
+    private Object returningPage;
+
+    @Property
+    @Inject
+    private Block edit;
+
+    @Property
+    @Inject
+    private Block congratulations;
+
     public void onActivate(long id) {
         product = productsService.retrieve(id);
     }
@@ -30,18 +45,22 @@ public class RemoveProduct {
         return Identifiable.class.cast(product).getId();
     }
 
-    @OnEvent(value = "submit", component = "fRemoveProduct")
-    void saveProduct() {
+    @OnEvent(value = "submit", component = "fDisableProduct")
+    Object saveProduct() {
+        System.out.println("Pressed submit button");
+        return returningPage;
     }
-
-    @OnEvent(component = "yesButton")
-    void onYesButton() {
+    
+    void onSelectedFromYesButton() {
+        product.setActivity(false);
+        productsService.updateProduct(product);
+        returningPage = congratulations;
         System.out.println("Product is disabled");
     }
 
-    @OnEvent(component = "noButton")
-    void onNoButton() {
+    void onSelectedFromNoButton() {
         System.out.println("disabling product canceled!");
+        returningPage = browseProductsAdmin;
     }
 
 }

@@ -38,6 +38,9 @@ public class CostumerBean implements Costumer, Identifiable {
     @Basic
     private String email;
 
+    @Basic
+    private String type;
+
     @OneToMany(targetEntity=OrderBean.class,cascade = CascadeType.ALL)
     private List<Order> orders = new LinkedList<Order>();
 
@@ -98,6 +101,16 @@ public class CostumerBean implements Costumer, Identifiable {
 
     public void setOrders(List<Order> orders) {
         this.orders = orders;
+    }
+
+    @Override
+    public String getType() {
+        return type;
+    }
+
+    @Override
+    public void setType(String type) {
+        this.type = type;
     }
 
     public long getId() {

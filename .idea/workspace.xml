@@ -37,34 +37,6 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
-    <line_breakpoints>
-      <breakpoint url="file://$PROJECT_DIR$/src/main/java/org/seke/fs/pages/Cart.java" line="97" class="org.seke.fs.pages.Cart" package="org.seke.fs.pages">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="false" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/main/java/org/seke/fs/pages/Cart.java" line="98" class="org.seke.fs.pages.Cart" package="org.seke.fs.pages">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="false" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-    </line_breakpoints>
     <breakpoint_any>
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -123,66 +95,10 @@
   <component name="FileColors" enabled="true" enabledForTabs="true" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ShowProduct.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/seke/fs/pages/ShowProduct.java">
+      <file leaf-file-name="Index.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/seke/fs/pages/Index.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="29" selection-start="1068" selection-end="1085" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AddProduct.tml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/AddProduct.tml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="45" selection-start="1027" selection-end="1027" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AddProduct.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/seke/fs/pages/AddProduct.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="44" column="24" selection-start="1087" selection-end="1087" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ReactivateProduct.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/seke/fs/pages/ReactivateProduct.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="13" selection-start="199" selection-end="199" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ReactivateProduct.tml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/ReactivateProduct.tml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RemoveProduct.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/seke/fs/pages/RemoveProduct.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="13" selection-start="864" selection-end="864" vertical-scroll-proportion="0.5922039">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RemoveProduct.tml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/RemoveProduct.tml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="28" selection-start="199" selection-end="213" vertical-scroll-proportion="0.0">
+            <state line="11" column="13" selection-start="313" selection-end="313" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -191,25 +107,61 @@
       <file leaf-file-name="CostumerInfo.tml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/CostumerInfo.tml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="30" selection-start="483" selection-end="483" vertical-scroll-proportion="0.0">
+            <state line="20" column="9" selection-start="432" selection-end="432" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PurchasedOrders.tml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/PurchasedOrders.tml">
+      <file leaf-file-name="Layout.tml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/org/seke/fs/components/Layout.tml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="6" selection-start="75" selection-end="103" vertical-scroll-proportion="0.0">
+            <state line="38" column="60" selection-start="1391" selection-end="1391" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CostumerInfo.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/seke/fs/pages/CostumerInfo.java">
+      <file leaf-file-name="Layout.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/seke/fs/components/Layout.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="54" column="7" selection-start="1076" selection-end="1355" vertical-scroll-proportion="0.0">
+            <state line="54" column="24" selection-start="1452" selection-end="1452" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Cart.tml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/Cart.tml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="3" column="1" selection-start="141" selection-end="141" vertical-scroll-proportion="0.07822086">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Index.tml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/Index.tml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="33" column="10" selection-start="907" selection-end="907" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Register.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/seke/fs/pages/Register.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="76" column="40" selection-start="2013" selection-end="2013" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Register.tml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/Register.tml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="26" column="46" selection-start="926" selection-end="926" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -229,22 +181,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
+        <option value="$PROJECT_DIR$/src/main/webapp/LogOut.tml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/Index.tml" />
+        <option value="$PROJECT_DIR$/src/main/java/org/seke/fs/Costumer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/seke/fs/beans/CostumerBean.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/seke/fs/services/CostumersService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/seke/fs/services/CostumersServiceBean.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/seke/fs/hibernate/CostumersServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/seke/fs/pages/Index.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/context.xml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/org/seke/fs/pages/PurchasedOrders.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/PurchasedOrders.tml" />
+        <option value="$PROJECT_DIR$/src/main/java/org/seke/fs/services/AppModule.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/seke/fs/pages/Register.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/Register.tml" />
+        <option value="$PROJECT_DIR$/src/main/java/org/seke/fs/pages/ShowProduct.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/ShowProduct.tml" />
         <option value="$PROJECT_DIR$/src/main/webapp/CostumerInfo.tml" />
-        <option value="$PROJECT_DIR$/src/main/java/org/seke/fs/pages/CostumerInfo.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/seke/fs/pages/AddProduct.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/AddProduct.tml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/Congratulations.tml" />
-        <option value="$PROJECT_DIR$/src/main/java/org/seke/fs/pages/Cart.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/org/seke/fs/components/Layout.tml" />
+        <option value="$PROJECT_DIR$/src/main/java/org/seke/fs/components/Layout.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/Cart.tml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/BrowseProducts.tml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/RemoveProduct.tml" />
-        <option value="$PROJECT_DIR$/src/main/java/org/seke/fs/pages/RemoveProduct.java" />
       </list>
     </option>
   </component>
@@ -314,99 +266,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="TapestryProjectView">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="com.intellij.tapestry.intellij.view.nodes.RootNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fs" />
-              <option name="myItemType" value="com.intellij.tapestry.intellij.view.nodes.ModuleNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="com.intellij.tapestry.intellij.view.nodes.RootNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fs" />
-              <option name="myItemType" value="com.intellij.tapestry.intellij.view.nodes.ModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="org" />
-              <option name="myItemType" value="com.intellij.tapestry.intellij.view.nodes.PackageNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="seke" />
-              <option name="myItemType" value="com.intellij.tapestry.intellij.view.nodes.PackageNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fs" />
-              <option name="myItemType" value="com.intellij.tapestry.intellij.view.nodes.LibraryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="com.intellij.tapestry.intellij.view.nodes.RootNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fs" />
-              <option name="myItemType" value="com.intellij.tapestry.intellij.view.nodes.ModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="org" />
-              <option name="myItemType" value="com.intellij.tapestry.intellij.view.nodes.PackageNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="seke" />
-              <option name="myItemType" value="com.intellij.tapestry.intellij.view.nodes.PackageNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fs" />
-              <option name="myItemType" value="com.intellij.tapestry.intellij.view.nodes.LibraryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pages" />
-              <option name="myItemType" value="com.intellij.tapestry.intellij.view.nodes.PagesNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="com.intellij.tapestry.intellij.view.nodes.RootNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fs" />
-              <option name="myItemType" value="com.intellij.tapestry.intellij.view.nodes.ModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="org" />
-              <option name="myItemType" value="com.intellij.tapestry.intellij.view.nodes.PackageNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="seke" />
-              <option name="myItemType" value="com.intellij.tapestry.intellij.view.nodes.PackageNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fs" />
-              <option name="myItemType" value="com.intellij.tapestry.intellij.view.nodes.LibraryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pages" />
-              <option name="myItemType" value="com.intellij.tapestry.intellij.view.nodes.PagesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AddProduct" />
-              <option name="myItemType" value="com.intellij.tapestry.intellij.view.nodes.PageNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="Favorites" />
       <pane id="PackagesPane">
         <subPane>
           <PATH>
@@ -1035,6 +894,99 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Favorites" />
+      <pane id="TapestryProjectView">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="com.intellij.tapestry.intellij.view.nodes.RootNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fs" />
+              <option name="myItemType" value="com.intellij.tapestry.intellij.view.nodes.ModuleNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="com.intellij.tapestry.intellij.view.nodes.RootNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fs" />
+              <option name="myItemType" value="com.intellij.tapestry.intellij.view.nodes.ModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="org" />
+              <option name="myItemType" value="com.intellij.tapestry.intellij.view.nodes.PackageNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="seke" />
+              <option name="myItemType" value="com.intellij.tapestry.intellij.view.nodes.PackageNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fs" />
+              <option name="myItemType" value="com.intellij.tapestry.intellij.view.nodes.LibraryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="com.intellij.tapestry.intellij.view.nodes.RootNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fs" />
+              <option name="myItemType" value="com.intellij.tapestry.intellij.view.nodes.ModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="org" />
+              <option name="myItemType" value="com.intellij.tapestry.intellij.view.nodes.PackageNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="seke" />
+              <option name="myItemType" value="com.intellij.tapestry.intellij.view.nodes.PackageNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fs" />
+              <option name="myItemType" value="com.intellij.tapestry.intellij.view.nodes.LibraryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pages" />
+              <option name="myItemType" value="com.intellij.tapestry.intellij.view.nodes.PagesNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="com.intellij.tapestry.intellij.view.nodes.RootNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fs" />
+              <option name="myItemType" value="com.intellij.tapestry.intellij.view.nodes.ModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="org" />
+              <option name="myItemType" value="com.intellij.tapestry.intellij.view.nodes.PackageNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="seke" />
+              <option name="myItemType" value="com.intellij.tapestry.intellij.view.nodes.PackageNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fs" />
+              <option name="myItemType" value="com.intellij.tapestry.intellij.view.nodes.LibraryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pages" />
+              <option name="myItemType" value="com.intellij.tapestry.intellij.view.nodes.PagesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AddProduct" />
+              <option name="myItemType" value="com.intellij.tapestry.intellij.view.nodes.PageNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1062,14 +1014,14 @@
       <recent name="C:\Users\nenad\IdeaProjects\myfshop\src\main\webapp\WEB-INF" />
       <recent name="C:\Users\nenad\IdeaProjects\myfshop\src\main\java\org\seke\fs\spring" />
     </key>
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="org.seke.fs" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\nenad\IdeaProjects\myfshop\src\main\webapp\WEB-INF" />
       <recent name="C:\Users\nenad\IdeaProjects\myfshop\src\main\webapp" />
+      <recent name="C:\Users\nenad\IdeaProjects\myfshop\src\main\webapp\WEB-INF" />
       <recent name="C:\Users\nenad\IdeaProjects\myfshop\src\main\java\org\seke\fs\pages" />
       <recent name="D:\java\ideaProjects\myfshop\src\main\webapp" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="org.seke.fs" />
     </key>
   </component>
   <component name="RunManager" selected="Maven.jettyDebug">
@@ -1696,6 +1648,7 @@
     <frame x="-8" y="-8" width="1168" height="850" extended-state="6" />
     <editor active="true" />
     <layout>
+      <window_info id="Documentation" active="false" anchor="right" auto_hide="true" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" x="160" y="229" width="578" height="409" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1711,10 +1664,9 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23684211" sideWeight="0.66549706" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39871088" sideWeight="0.99764705" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30852994" sideWeight="0.55586594" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33030853" sideWeight="0.55586594" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32658958" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Documentation" active="false" anchor="right" auto_hide="true" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" x="160" y="229" width="578" height="409" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.325419" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32618025" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -1795,103 +1747,117 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/Congratulations.tml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/seke/fs/hibernate/CostumersServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="35" selection-start="201" selection-end="201" vertical-scroll-proportion="0.20858896" />
+        <state line="76" column="42" selection-start="2408" selection-end="2408" vertical-scroll-proportion="0.7653374">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/seke/fs/services/CostumersService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="16" selection-start="569" selection-end="569" vertical-scroll-proportion="0.5691412">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/seke/fs/services/AppModule.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="47" column="8" selection-start="1967" selection-end="1967" vertical-scroll-proportion="1.1889881">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/seke/fs/pages/Cart.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="12" selection-start="853" selection-end="853" vertical-scroll-proportion="0.49025488" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/seke/fs/pages/PurchasedOrders.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="42" selection-start="1253" selection-end="1253" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/seke/fs/pages/BrowseProducts.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="13" selection-start="408" selection-end="408" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/seke/fs/pages/ReactivateProduct.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="13" selection-start="199" selection-end="199" vertical-scroll-proportion="0.0" />
+        <state line="26" column="13" selection-start="747" selection-end="747" vertical-scroll-proportion="-0.94032025">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/seke/fs/pages/CostumerInfo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="7" selection-start="1076" selection-end="1355" vertical-scroll-proportion="0.0">
+        <state line="17" column="13" selection-start="511" selection-end="511" vertical-scroll-proportion="-0.11353712">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/seke/fs/pages/AlterProduct.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/Index.tml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="13" selection-start="199" selection-end="199" vertical-scroll-proportion="0.23647605">
+        <state line="33" column="10" selection-start="907" selection-end="907" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/CostumerInfo.tml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/seke/fs/pages/Register.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="30" selection-start="483" selection-end="483" vertical-scroll-proportion="0.0">
+        <state line="76" column="40" selection-start="2013" selection-end="2013" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/PurchasedOrders.tml">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/Register.tml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="6" selection-start="75" selection-end="103" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/ReactivateProduct.tml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/BrowseProducts.tml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="56" selection-start="770" selection-end="787" vertical-scroll-proportion="0.46932516">
+        <state line="26" column="46" selection-start="926" selection-end="926" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/AddProduct.tml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/seke/fs/Costumer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="45" selection-start="1027" selection-end="1027" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/seke/fs/pages/AddProduct.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="24" selection-start="1087" selection-end="1087" vertical-scroll-proportion="0.0">
+        <state line="12" column="17" selection-start="251" selection-end="251" vertical-scroll-proportion="0.28035983">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/seke/fs/pages/ShowProduct.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="29" selection-start="1068" selection-end="1085" vertical-scroll-proportion="0.0">
+        <state line="46" column="17" selection-start="1117" selection-end="1117" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/RemoveProduct.tml">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/ShowProduct.tml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="28" selection-start="199" selection-end="213" vertical-scroll-proportion="0.0">
+        <state line="7" column="40" selection-start="318" selection-end="318" vertical-scroll-proportion="0.17708333">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/seke/fs/pages/RemoveProduct.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/seke/fs/pages/Index.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="13" selection-start="864" selection-end="864" vertical-scroll-proportion="0.5922039">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="11" column="13" selection-start="313" selection-end="313" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/CostumerInfo.tml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="9" selection-start="432" selection-end="432" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/org/seke/fs/components/Layout.tml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="60" selection-start="1391" selection-end="1391" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/seke/fs/components/Layout.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="54" column="24" selection-start="1452" selection-end="1452" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/Cart.tml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="1" selection-start="141" selection-end="141" vertical-scroll-proportion="0.07822086">
+          <folding />
         </state>
       </provider>
     </entry>

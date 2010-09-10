@@ -40,6 +40,9 @@ public class Register {
     @Property
     private String email;
 
+    @Property
+    private String type;
+
     @Inject
     private CostumersService costumersService;
 
@@ -71,6 +74,7 @@ public class Register {
         registeringCostumer.setFirstName(firstName);
         registeringCostumer.setLastName(lastName);
         registeringCostumer.setEmail(email);
+        registeringCostumer.setType(type);
         //registeringCostumer.setOrders(new LinkedList<Order>());
         System.out.println(username+password+firstName+lastName+email);
         Product p = new ProductBean();

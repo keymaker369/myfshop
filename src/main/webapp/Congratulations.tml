@@ -1,8 +1,6 @@
-<html xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd" xmlns:p="tapestry:parameter">
-<head>
-    <title>Hello World Page</title>
-</head>
-<body>
+<html t:type="layout" title="Congratulations"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd"
+      xmlns:p="tapestry:parameter">
 <p>
     You have purchased your order!
 </p>
@@ -33,5 +31,4 @@
     <t:pagelink page="Cart">Cart</t:pagelink>
     ]
 </p>
-</body>
 </html>

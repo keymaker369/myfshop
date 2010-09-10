@@ -31,6 +31,11 @@ public class ProductsServiceBean implements ProductsService {
         return products.values();
     }
 
+    @Override
+    public void updateProduct(Product product) {
+        //To change body of implemented methods use File | Settings | File Templates.
+    }
+
     public Product save(Product product) {
         assert product != null;
 		assert Character.isUpperCase(product.getTitle().charAt(0));

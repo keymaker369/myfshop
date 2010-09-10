@@ -20,6 +20,8 @@ public interface CostumersService {
     boolean isCostumerExist(String username, String password);
 
     @CommitAfter
-    public void updateCostumersData(Costumer costumer);
+    void updateCostumersData(Costumer costumer);
 
+    @CommitAfter
+    public void saveOrUpdateCostumer(Costumer costumer);
 }

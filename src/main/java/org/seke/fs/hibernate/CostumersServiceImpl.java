@@ -71,4 +71,9 @@ public class CostumersServiceImpl implements CostumersService {
         }
         getSession().update(costumer);
     }
+
+    @Override
+    public void saveOrUpdateCostumer(Costumer costumer) {
+        getSession().saveOrUpdate(costumer);
+    }
 }

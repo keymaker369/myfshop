@@ -1,10 +1,6 @@
-<html xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd"
+<html t:type="layout" title="Costumer Info"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd"
       xmlns:p="tapestry:parameter">
-<head>
-    <title>Hello World Page</title>
-</head>
-<body>
-<h1>Costumer Info</h1>
 <t:if t:test="costumerExists">
     <p>
         Username: ${costumer.username}
@@ -20,6 +16,9 @@
 
     <p>
         email: ${costumer.getEmail()}
+    </p>
+    <p>
+        type: ${costumer.getType()}
     </p>
 
     <t:pagelink page="PurchasedOrders">Purchased orders</t:pagelink>
@@ -45,5 +44,4 @@
     <t:pagelink page="Cart">Cart</t:pagelink>
     ]
 </p>
-</body>
 </html>

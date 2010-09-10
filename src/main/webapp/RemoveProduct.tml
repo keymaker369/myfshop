@@ -1,31 +1,44 @@
-<html xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd"
+<html t:type="layout" title="Remove product"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd"
       xmlns:p="tapestry:parameter">
-<head>
-    <title>Remove product</title>
-</head>
-<body>
-<h1>Remove product</h1>
-<t:form t:id="fRemoveProduct">
+<t:zone t:id="addZone">
+    <t:delegate to="edit"/>
+</t:zone>
+<t:block id="edit">
+    <t:form t:id="fDisableProduct" t:zone="addZone">
+        <h1>Remove product</h1>
+
+        <p>
+            Title: ${product.title}
+        </p>
+
+        <p>
+            Price: ${product.price}
+        </p>
+
+        <p>
+            Amount in stock: ${product.amountInStock}
+        </p>
+
+        <p>
+            Do you really wont to disable this product?
+            Product will stay in database in case you consider reactivating it.
+        </p>
+        <input type="submit" id="yesId" value="yes" t:type="submit" t:id="yesButton"/>
+        <input type="submit" id="noId" value="no" t:type="submit" t:id="noButton"/>
+
+    </t:form>
+</t:block>
+<t:block id="congratulations">
     <p>
-        Title: ${product.title}
+        You have successfully disabled product: ${product.title}
     </p>
 
     <p>
-        Price: ${product.price}
+        Continue
+        <a t:type="PageLink" t:page="BrowseProductsAdmin">browsing products</a>
     </p>
-
-    <p>
-        Amount in stock: ${product.amountInStock}
-    </p>
-
-    <p>
-        Do you really wont to remove this product?
-        Product will stay in database in case you consider reactivating it.
-    </p>
-    <input type="submit" id="yesId" value="yes" t:type="submit" t:id="yesButton"/>
-    <input type="submit" id="noId" value="no" t:type="submit" t:id="noButton"/>
-
-</t:form>
+</t:block>
 <p>
     [
     <t:pagelink page="Index">Index</t:pagelink>
@@ -46,5 +59,4 @@
     <t:pagelink page="Cart">Cart</t:pagelink>
     ]
 </p>
-</body>
 </html>
