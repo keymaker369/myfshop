@@ -1,6 +1,5 @@
 package org.seke.fs;
 
-import java.util.Collection;
 import java.util.List;
 
 /**
@@ -20,7 +19,7 @@ public interface Order {
 
     void setOrdersItems(List<OrdersItem> ordersItems);
 //
-//    Costumer getCostumer();
+//    User getUser();
 //
-//    void setCostumer(Costumer costumer);
+//    void setUser(User user);
 }

@@ -1,46 +1,28 @@
 <html t:type="layout" title="Home Page"
       xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd"
       xmlns:p="tapestry:parameter">
-<t:form t:id="fLogIn">
-    <p>
-        <t:label for="tfUsername">username:</t:label>
-        <t:textfield t:id="tfUsername" t:value="username"/>
-    </p>
-    <p>
-        <t:label for="tfPassword">password:</t:label>
-        <t:textfield t:id="tfPassword" t:value="password"/>
-    </p>
 
-    <p>
-        <input type="submit" name="bLogIn" id="bLogIn" value="LogIn"/>
-    </p>
-</t:form>
-<p>
-    [
-    <t:pagelink page="Index">Index</t:pagelink>
-    ]
-    [
-    <t:pagelink page="BrowseProductsAdmin">BrowseProductsAdmin</t:pagelink>
-    ]
-    [
-    <t:pagelink page="AddProduct">AddProduct</t:pagelink>
-    ]
-    [
-    <t:pagelink page="BrowseProducts">BrowseProduct</t:pagelink>
-    ]
-    [
-    <t:pagelink page="CostumerInfo">CostumerInfo</t:pagelink>
-    ]
-    [
-    <t:pagelink page="Register">Register</t:pagelink>
-    ]
-    [
-    <t:pagelink page="Cart">Cart</t:pagelink>
-    ]
-</p>
-<t:form t:id="fLogOut">
-    <p>
-        <input type="submit" name="bLogOut" id="bLogOut" value="LogOut"/>
-    </p>
-</t:form>
+<t:if t:test="userExists">
+    <p>You are loged in ${user.getFirstName()} ${user.getLastName()}</p>
+    <p:else>
+
+        <t:form t:id="fLogIn">
+            <p>
+                <t:label for="tfUsername">username:</t:label>
+                <t:textfield t:id="tfUsername" t:value="username"/>
+            </p>
+            <p>
+                <t:label for="tfPassword">password:</t:label>
+                <t:textfield t:id="tfPassword" t:value="password"/>
+            </p>
+
+            <p>
+                <input type="submit" name="bLogIn" id="bLogIn" value="LogIn"/>
+            </p>
+        </t:form>
+        <p>${message}</p>
+    </p:else>
+</t:if>
+
+
 </html>

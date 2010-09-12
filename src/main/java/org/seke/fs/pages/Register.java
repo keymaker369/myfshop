@@ -1,20 +1,16 @@
 package org.seke.fs.pages;
 
+import org.apache.tapestry5.Block;
 import org.apache.tapestry5.annotations.OnEvent;
 import org.apache.tapestry5.annotations.Persist;
 import org.apache.tapestry5.annotations.Property;
 import org.apache.tapestry5.ioc.annotations.Inject;
-import org.seke.fs.Costumer;
-import org.seke.fs.Order;
-import org.seke.fs.Product;
-import org.seke.fs.beans.CostumerBean;
-import org.seke.fs.beans.ProductBean;
-import org.seke.fs.services.CostumersService;
+import org.seke.fs.User;
+import org.seke.fs.beans.UserBean;
 import org.seke.fs.services.ProductsService;
+import org.seke.fs.services.UsersService;
 import org.seke.fs.spring.ApplicationContextProviderSingleton;
 import org.springframework.context.ApplicationContext;
-
-import java.util.LinkedList;
 
 /**
  * Created by IntelliJ IDEA.
@@ -44,18 +40,18 @@ public class Register {
     private String type;
 
     @Inject
-    private CostumersService costumersService;
+    private UsersService usersService;
 
     @Inject
     private ProductsService productsService;
 
-//    @Property
-//    @Inject
-//    private Block congratulations;
-//
-//    @Property
-//    @Inject
-//    private Block edit;
+    @Property
+    @Inject
+    private Block edit;
+
+    @Property
+    @Inject
+    private Block congratulations;
 
     private ApplicationContext applicationContext() {
         return new ApplicationContextProviderSingleton().getContext();
@@ -63,27 +59,18 @@ public class Register {
 
     @Property
     @Persist("flash")
-    private Costumer registeringCostumer;
+    private User registeringUser;
 
     @OnEvent(value = "submit", component = "fRegister")
-    void registerCostumer() {
-        registeringCostumer = new CostumerBean();
-        //Costumer registeringCoastumer = new CostumerBean();
-        registeringCostumer.setUsername(username);
-        registeringCostumer.setPassword(password);
-        registeringCostumer.setFirstName(firstName);
-        registeringCostumer.setLastName(lastName);
-        registeringCostumer.setEmail(email);
-        registeringCostumer.setType(type);
-        //registeringCostumer.setOrders(new LinkedList<Order>());
-        System.out.println(username+password+firstName+lastName+email);
-        Product p = new ProductBean();
-        p.setTitle("rhwrh");
-        p.setAmountInStock(31);
-        p.setPrice(3135);
-        //productsService.save(p);
-        
-        costumersService.register(registeringCostumer);
-        //return congratulations;
+    Object registerUser() {
+        registeringUser = new UserBean();
+        registeringUser.setUsername(username);
+        registeringUser.setPassword(password);
+        registeringUser.setFirstName(firstName);
+        registeringUser.setLastName(lastName);
+        registeringUser.setEmail(email);
+        registeringUser.setType(type);
+        usersService.register(registeringUser);
+        return congratulations;
     }
 }

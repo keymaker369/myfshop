@@ -1,6 +1,7 @@
 package org.seke.fs.pages;
 
 import org.apache.tapestry5.Block;
+import org.apache.tapestry5.annotations.InjectPage;
 import org.apache.tapestry5.annotations.OnEvent;
 import org.apache.tapestry5.annotations.Persist;
 import org.apache.tapestry5.annotations.Property;
@@ -33,6 +34,11 @@ public class AlterProduct {
     @Inject
     private ProductsService productsService;
 
+    @InjectPage
+    private BrowseProductsAdmin browseProductsAdmin;
+
+    private Object returningPage;
+
     public void onActivate(long id) {
         product = productsService.retrieve(id);
     }
@@ -47,8 +53,17 @@ public class AlterProduct {
 
     @OnEvent(value = "submit", component = "fAlterProduct")
     Object saveProduct() {
+        return returningPage;
+    }
+
+    void onSelectedFromYesButton() {
         productsService.save(product);
         System.out.println("<--------------------Product altered------------------->");
-        return congratulations;
+        returningPage = congratulations;
+    }
+
+    void onSelectedFromNoButton() {
+        System.out.println("Activating product canceled!");
+        returningPage = browseProductsAdmin;
     }
 }

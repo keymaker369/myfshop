@@ -4,9 +4,9 @@ import org.apache.tapestry5.annotations.Property;
 import org.apache.tapestry5.annotations.SessionState;
 import org.apache.tapestry5.annotations.SetupRender;
 import org.apache.tapestry5.ioc.annotations.Inject;
-import org.seke.fs.Costumer;
 import org.seke.fs.Order;
-import org.seke.fs.services.CostumersService;
+import org.seke.fs.User;
+import org.seke.fs.services.UsersService;
 
 /**
  * Created by IntelliJ IDEA.
@@ -17,36 +17,36 @@ import org.seke.fs.services.CostumersService;
  */
 public class PurchasedOrders {
     @SessionState
-    private Costumer costumer;
+    private User user;
 
     @Inject
-    private CostumersService costumersService;
+    private UsersService usersService;
 
     @Property
     private Order currentOrder;
 
-    public Costumer getCostumer() {
-        return costumer;
+    public User getUser() {
+        return user;
     }
 
-    public void setCostumer(Costumer costumer) {
-        this.costumer = costumer;
+    public void setUser(User user) {
+        this.user = user;
     }
 
-    private boolean costumerExists;
+    private boolean userExists;
 
-    public boolean getCostumerExists() {
-        return costumerExists;
+    public boolean getUserExists() {
+        return userExists;
     }
 
-    public void setCostumerExists(boolean costmerExists) {
-        this.costumerExists = costumerExists;
+    public void setUserExists(boolean costmerExists) {
+        this.userExists = userExists;
     }
 
     @SetupRender
     void setup() {
-        if (costumerExists) {
-            costumer = costumersService.retrieve(costumer.getUsername());
+        if (userExists) {
+            user = usersService.retrieve(user.getUsername());
             System.out.println("endOfSetup");
         }
     }

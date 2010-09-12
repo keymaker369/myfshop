@@ -7,18 +7,9 @@
     http://www.springframework.org/schema/tx
     http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
 
-    <!--<bean id="hibernateTemplate"-->
-    <!--class="org.springframework.orm.hibernate3.HibernateTemplate">-->
-    <!--<property name="sessionFactory" ref="sessionFactory"/>-->
-    <!--</bean>-->
 
-    <!--<bean id="org.seke.fs.Costumer"-->
-    <!--class="org.seke.fs.beans.CostumerBean"-->
-    <!--scope="prototype">-->
-    <!--</bean>-->
-
-    <bean id="org.seke.fs.services.CostumersService"
-          class="org.seke.fs.hibernate.CostumersServiceImpl">
+    <bean id="org.seke.fs.services.UsersService"
+          class="org.seke.fs.hibernate.UsersServiceImpl">
         <!--scope="singleton">-->
         <property name="sessionFactory">
             <ref bean="sessionFactory"/>
@@ -51,7 +42,7 @@
         </property>
         <property name="annotatedClasses">
             <list>
-                <value>org.seke.fs.beans.CostumerBean</value>
+                <value>org.seke.fs.beans.UserBean</value>
                 <value>org.seke.fs.beans.OrderBean</value>
                 <value>org.seke.fs.beans.OrdersItemBean</value>
                 <value>org.seke.fs.beans.ProductBean</value>

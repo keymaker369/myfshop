@@ -1,12 +1,10 @@
 package org.seke.fs.beans;
 
-import org.seke.fs.Costumer;
 import org.seke.fs.Identifiable;
 import org.seke.fs.Order;
 import org.seke.fs.OrdersItem;
 
 import javax.persistence.*;
-import java.util.Collection;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -59,13 +57,13 @@ public class OrderBean implements Order, Identifiable {
     }
 
 //    @Override
-//    public Costumer getCostumer() {
-//        return costumer;
+//    public User getUser() {
+//        return user;
 //    }
 //
 //    @Override
-//    public void setCostumer(Costumer costumer) {
-//        this.costumer = costumer;
+//    public void setUser(User user) {
+//        this.user = user;
 //    }
 
 }

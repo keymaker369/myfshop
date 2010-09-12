@@ -9,14 +9,6 @@ import org.apache.tapestry5.ioc.MappedConfiguration;
 import org.apache.tapestry5.ioc.MethodAdviceReceiver;
 import org.apache.tapestry5.ioc.ServiceBinder;
 import org.apache.tapestry5.ioc.annotations.Match;
-import org.seke.fs.Costumer;
-import org.seke.fs.Order;
-import org.seke.fs.OrdersItem;
-import org.seke.fs.Product;
-import org.seke.fs.beans.CostumerBean;
-import org.seke.fs.beans.OrderBean;
-import org.seke.fs.beans.OrdersItemBean;
-import org.seke.fs.beans.ProductBean;
 import org.seke.fs.hibernate.*;
 
 /**
@@ -35,7 +27,7 @@ public class AppModule {
 
     public static void bind(ServiceBinder binder) {
         binder.bind(ProductsService.class, ProductsServiceImpl.class);
-        binder.bind(CostumersService.class, CostumersServiceImpl.class);
+        binder.bind(UsersService.class, UsersServiceImpl.class);
         binder.bind(OrdersService.class, OrdersServiceImpl.class);
         binder.bind(OrdersItemsService.class, OrdersItemsServiceImpl.class);
     }
@@ -45,7 +37,7 @@ public class AppModule {
         configuration.add("org.seke.fs.beans");
     }
 
-    @Match({"*Costumers", "*Products", "Orders", "OrdersItems"})
+    @Match({"*Users", "*Products", "Orders", "OrdersItems"})
     public static <T> T decorateTransactionally(
             HibernateTransactionDecorator decorator, Class<T> serviceInterface,
             T delegate, String serviceId) {
@@ -58,8 +50,8 @@ public class AppModule {
         advisor.addTransactionCommitAdvice(receiver);
     }
 
-//    public static Costumer buildCostumer() {
-//        return new CostumerBean();
+//    public static User buildUser() {
+//        return new UserBean();
 //    }
 //
 //    public static Order buildOrder(){

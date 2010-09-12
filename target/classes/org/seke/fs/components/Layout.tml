@@ -26,15 +26,15 @@ Description: A Web 2.0 design with fluid width suitable for blogs and small webs
         </h1>
     </div>
     <div id="menu">
-        <t:if t:test="costumerExists">
-            <t:if t:test="costumer.getType().equals(costumerString)">
+        <t:if t:test="userExists">
+            <t:if t:test="user.getType().equals(costumerString)">
                 <ul>
                     <li t:type="loop" source="costumerPageNames" value="pageName" class="prop:classForPageName">
                         <t:pagelink page="prop:pageName">${pageName}</t:pagelink>
                     </li>
                 </ul>
             </t:if>
-            <t:if t:test="costumer.getType().equals(adminString)">
+            <t:if t:test="user.getType().equals(adminString)">
                 <ul>
                     <li t:type="loop" source="adminPageNames" value="pageName" class="prop:classForPageName">
                         <t:pagelink page="prop:pageName">${pageName}</t:pagelink>

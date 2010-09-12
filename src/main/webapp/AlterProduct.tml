@@ -1,4 +1,4 @@
-<html t:type="layout" title="lter product"
+<html t:type="layout" title="Alter product"
       xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd"
       xmlns:p="tapestry:parameter">
 <t:zone t:id="addZone">
@@ -22,7 +22,8 @@
             <t:textfield t:id="tfPrice" value="product.price" t:validate="required,minlength=1"/>
         </p>
         <p>
-            <input type="submit" id="alter" value="alter"/>
+            <input type="submit" id="yesId" value="yes" t:type="submit" t:id="yesButton"/>
+            <input type="submit" id="noId" value="no" t:type="submit" t:id="noButton"/>
         </p>
 
     </t:form>
@@ -37,24 +38,4 @@
         <a t:type="PageLink" t:page="BrowseProductsAdmin">browsing products</a>
     </p>
 </t:block>
-<p>
-    [
-    <t:pagelink page="Index">Index</t:pagelink>
-    ]
-    [
-    <t:pagelink page="AddProduct">AddProduct</t:pagelink>
-    ]
-    [
-    <t:pagelink page="BrowseProducts">BrowseProduct</t:pagelink>
-    ]
-    [
-    <t:pagelink page="CostumerInfo">CostumerInfo</t:pagelink>
-    ]
-    [
-    <t:pagelink page="Register">Register</t:pagelink>
-    ]
-    [
-    <t:pagelink page="Cart">Cart</t:pagelink>
-    ]
-</p>
 </html>
