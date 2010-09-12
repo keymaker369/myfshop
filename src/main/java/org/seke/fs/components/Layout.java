@@ -4,7 +4,7 @@ import org.apache.tapestry5.*;
 import org.apache.tapestry5.annotations.*;
 import org.apache.tapestry5.ioc.annotations.*;
 import org.apache.tapestry5.BindingConstants;
-import org.seke.fs.Costumer;
+import org.seke.fs.User;
 
 /**
  * Layout component for pages of application fs.
@@ -34,10 +34,10 @@ public class Layout {
 
     @SessionState
     @Property
-    private Costumer costumer;
+    private User user;
 
     @Property
-    private boolean costumerExists;
+    private boolean userExists;
 
     public String getClassForPageName() {
         return resources.getPageName().equalsIgnoreCase(pageName)
@@ -52,12 +52,12 @@ public class Layout {
 
     public String[] getCostumerPageNames() {
         return new String[]{"Index", "About", "Contact", "BrowseProducts",
-                "Cart", "CostumerInfo", "LogOut"};
+                "Cart", "PurchasedOrders", "UserInfo", "LogOut"};
     }
 
     public String[] getAdminPageNames() {
         return new String[]{"Index", "About", "Contact", "BrowseProductsAdmin",
-                "AddProduct", "CostumerInfo", "LogOut"};
+                "AddProduct", "UserInfo", "LogOut"};
     }
 
 

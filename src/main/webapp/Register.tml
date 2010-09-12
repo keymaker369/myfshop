@@ -1,50 +1,48 @@
 <html t:type="layout" title="Registration page"
       xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd"
       xmlns:p="tapestry:parameter">
-<t:form t:id="fRegister">
+<t:zone t:id="addZone">
+    <t:delegate to="edit"/>
+</t:zone>
+<t:block id="edit">
+    <t:form t:id="fRegister" t:zone="addZone">
+        <p>
+            <t:label for="tfUsername">username:</t:label>
+            <t:textfield t:id="tfUsername" t:value="username"/>
+        </p>
+        <p>
+            <t:label for="tfPassword">password:</t:label>
+            <t:textfield t:id="tfPassword" t:value="password"/>
+        </p>
+        <p>
+            <t:label for="tfFirstName">first name:</t:label>
+            <t:textfield t:id="tfFirstName" t:value="firstName"/>
+        </p>
+        <p>
+            <t:label for="tfLastName">last name:</t:label>
+            <t:textfield t:id="tfLastName" t:value="lastName"/>
+        </p>
+        <p>
+            <t:label for="tfEmail">email:</t:label>
+            <t:textfield t:id="tfEmail" t:value="email"/>
+        </p>
+        <p>
+            <t:label for="type">type:</t:label>
+            <t:select t:id="type" model="literal:costumer,administrator"/>
+        </p>
+        <p>
+            <input type="submit" name="bRegister" id="bRegister" value="Register"/>
+        </p>
+    </t:form>
+</t:block>
+<t:block id="congratulations">
     <p>
-        <t:label for="tfUsername">username:</t:label>
-        <t:textfield t:id="tfUsername" t:value="username"/>
+        You have successfully registered!
     </p>
+
     <p>
-        <t:label for="tfPassword">password:</t:label>
-        <t:textfield t:id="tfPassword" t:value="password"/>
+        Continue
+        <a t:type="PageLink" t:page="Index">Login page</a>
     </p>
-    <p>
-        <t:label for="tfFirstName">first name:</t:label>
-        <t:textfield t:id="tfFirstName" t:value="firstName"/>
-    </p>
-    <p>
-        <t:label for="tfLastName">last name:</t:label>
-        <t:textfield t:id="tfLastName" t:value="lastName"/>
-    </p>
-    <p>
-        <t:label for="tfEmail">email:</t:label>
-        <t:textfield t:id="tfEmail" t:value="email"/>
-    </p>
-    <p>
-        <t:label for="type">type:</t:label>
-        <t:select t:id="type" model="literal:costumer,administrator"/>
-    </p>
-    <p>
-        <input type="submit" name="bRegister" id="bRegister" value="Register"/>
-    </p>
-</t:form>
-<p>
-    [
-    <t:pagelink page="Index">Index</t:pagelink>
-    ]
-    [
-    <t:pagelink page="AddProduct">AddProduct</t:pagelink>
-    ]
-    [
-    <t:pagelink page="BrowseProducts">BrowseProduct</t:pagelink>
-    ]
-    [
-    <t:pagelink page="CostumerInfo">CostumerInfo</t:pagelink>
-    ]
-    [
-    <t:pagelink page="Register">Register</t:pagelink>
-    ]
-</p>
+</t:block>
 </html>

@@ -1,8 +1,9 @@
 package org.seke.fs.pages;
 
+import org.apache.tapestry5.annotations.InjectPage;
 import org.apache.tapestry5.annotations.OnEvent;
 import org.apache.tapestry5.annotations.SessionState;
-import org.seke.fs.Costumer;
+import org.seke.fs.User;
 
 /**
  * Created by IntelliJ IDEA.
@@ -14,27 +15,31 @@ import org.seke.fs.Costumer;
 public class LogOut {
 
     @SessionState
-    private Costumer costumer;
+    private User user;
+
+    @InjectPage
+    private Index indexPage;
 
     @OnEvent(value = "submit", component = "fLogOut")
-    void logOut() {
-        costumer = null;        
+    Object logOut() {
+        user = null;
+        return indexPage;
     }
 
 //    void onActivate(String message) {
-//        costumer = null;
+//        user = null;
 //        System.out.println("<------------------on activate--------------------->");
 //
 //    }
 //
 //    String onPassivate() {
 //        System.out.println("<------------------on pasivate--------------------->");
-//        costumer = null;
+//        user = null;
 //        return null;
 //    }
 
 //    void onPrepare() {
 //        System.out.println("<------------------tu je--------------------->");
-//        costumer = null;
+//        user = null;
 //    }
 }

@@ -1,37 +1,17 @@
 <html t:type="layout" title="Purchased orders"
       xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd"
       xmlns:p="tapestry:parameter">
-<t:if t:test="costumerExists">
-    <t:if test="costumer.getOrders()">
-        <ul t:type="Loop" t:source="costumer.getOrders()" t:value="currentOrder">
+<t:if t:test="userExists">
+    <t:if test="user.getOrders()">
+        <ul t:type="Loop" t:source="user.getOrders()" t:value="currentOrder">
             <li>
                 Commit date:${currentOrder.commitDate}
                 <!--Numer of items:${currentOrder.ordersItems.size()}-->
             </li>
         </ul>
         <p:else>
-            ${costumer.getUsername()}, you do not have any orders.
+            ${user.getUsername()}, you do not have any orders.
         </p:else>
     </t:if>
 </t:if>
-<p>
-    [
-    <t:pagelink page="Index">Index</t:pagelink>
-    ]
-    [
-    <t:pagelink page="AddProduct">AddProduct</t:pagelink>
-    ]
-    [
-    <t:pagelink page="BrowseProducts">BrowseProduct</t:pagelink>
-    ]
-    [
-    <t:pagelink page="CostumerInfo">CostumerInfo</t:pagelink>
-    ]
-    [
-    <t:pagelink page="Register">Register</t:pagelink>
-    ]
-    [
-    <t:pagelink page="Cart">Cart</t:pagelink>
-    ]
-</p>
 </html>

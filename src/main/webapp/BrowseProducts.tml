@@ -1,34 +1,15 @@
-<html t:type="layout" title="RBrowse Products"
+<html t:type="layout" title="Browse Products"
       xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd"
       xmlns:p="tapestry:parameter">
 <ul t:type="Loop" t:source="productsService.retrieve()" t:value="currentProduct">
-    <li>
-        <a t:type="PageLink" t:page="ShowProduct" t:context="currentProductId">
-            Product:${currentProductId}
-            Title:${currentProduct.title}
-            Amount in stock: ${currentProduct.amountInStock}
-            Price: ${currentProduct.price}
-        </a>
-    </li>
+    <t:if test="currentProduct.active">
+        <li>
+            <a t:type="PageLink" t:page="ShowProduct" t:context="currentProductId">
+                Title:${currentProduct.title}
+                Amount in stock: ${currentProduct.amountInStock}
+                Price: ${currentProduct.price}
+            </a>
+        </li>
+    </t:if>
 </ul>
-<p>
-    [
-    <t:pagelink page="Index">Index</t:pagelink>
-    ]
-    [
-    <t:pagelink page="AddProduct">AddProduct</t:pagelink>
-    ]
-    [
-    <t:pagelink page="BrowseProducts">BrowseProduct</t:pagelink>
-    ]
-    [
-    <t:pagelink page="CostumerInfo">CostumerInfo</t:pagelink>
-    ]
-    [
-    <t:pagelink page="Register">Register</t:pagelink>
-    ]
-    [
-    <t:pagelink page="Cart">Cart</t:pagelink>
-    ]
-</p>
 </html>

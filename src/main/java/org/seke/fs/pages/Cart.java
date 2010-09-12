@@ -1,20 +1,21 @@
 package org.seke.fs.pages;
 
 import org.apache.tapestry5.Block;
-import org.apache.tapestry5.annotations.*;
+import org.apache.tapestry5.annotations.OnEvent;
+import org.apache.tapestry5.annotations.Persist;
+import org.apache.tapestry5.annotations.Property;
+import org.apache.tapestry5.annotations.SessionState;
 import org.apache.tapestry5.ioc.annotations.Inject;
-import org.seke.fs.*;
+import org.seke.fs.Identifiable;
+import org.seke.fs.Order;
+import org.seke.fs.OrdersItem;
+import org.seke.fs.User;
 import org.seke.fs.beans.OrderBean;
-import org.seke.fs.beans.ProductBean;
-import org.seke.fs.services.CostumersService;
 import org.seke.fs.services.OrdersItemsService;
 import org.seke.fs.services.OrdersService;
-import org.seke.fs.services.ProductsService;
+import org.seke.fs.services.UsersService;
 
-import java.io.Serializable;
-import java.util.Collection;
-import java.util.Iterator;
-import java.util.LinkedList;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -27,9 +28,9 @@ import java.util.List;
 public class Cart {
 
     @SessionState
-    private Costumer costumer;
+    private User user;
 
-    private Costumer tempCastumer;
+    private User tempCastumer;
 
     @Persist
     private List<OrdersItem> ordersItemsInChart;
@@ -38,7 +39,7 @@ public class Cart {
     private OrdersService ordersServce;
 
     @Inject
-    private CostumersService costumersService;
+    private UsersService usersService;
 
     @Inject
     private OrdersItemsService ois;
@@ -61,10 +62,10 @@ public class Cart {
         return ordersItemsInChart;
     }
 
-    private boolean costumerExists;
+    private boolean userExists;
 
-    public boolean getCostumerExists() {
-        return costumerExists;
+    public boolean getUserExists() {
+        return userExists;
     }
 
     public void setOrdersItemsInChart(List<OrdersItem> ordersItemsInChart) {
@@ -77,25 +78,13 @@ public class Cart {
 
     @OnEvent(value = "submit", component = "fPurchaseOrder")
     Object purchaseOrder() {
+        tempCastumer = usersService.retrieve(user.getUsername());
         Order order = new OrderBean();
         order.setOrdersItems(ordersItemsInChart);
-        order.setCommitDate("neki datum");
-        tempCastumer.getOrders().add(order);
-        costumersService.updateCostumersData(tempCastumer);
+        order.setCommitDate((new Date().toString()));
+        usersService.purchaseOrder(tempCastumer,order);
         ordersItemsInChart = null;
         return congratulations;
     }
 
-    void onActivate(long id) {
-        if (costumerExists) {
-            tempCastumer = costumersService.retrieve(costumer.getUsername());
-            //Costumer c1 = costumer;
-            System.out.println("activate");
-        }
-    }
-
-    long onPassivate() {
-        System.out.println("passivate");
-        return 36;
-    }
 }

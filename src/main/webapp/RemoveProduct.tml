@@ -39,24 +39,4 @@
         <a t:type="PageLink" t:page="BrowseProductsAdmin">browsing products</a>
     </p>
 </t:block>
-<p>
-    [
-    <t:pagelink page="Index">Index</t:pagelink>
-    ]
-    [
-    <t:pagelink page="AddProduct">AddProduct</t:pagelink>
-    ]
-    [
-    <t:pagelink page="BrowseProducts">BrowseProduct</t:pagelink>
-    ]
-    [
-    <t:pagelink page="CostumerInfo">CostumerInfo</t:pagelink>
-    ]
-    [
-    <t:pagelink page="Register">Register</t:pagelink>
-    ]
-    [
-    <t:pagelink page="Cart">Cart</t:pagelink>
-    ]
-</p>
 </html>
