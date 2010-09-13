@@ -9,10 +9,6 @@ package org.seke.fs;
  */
 public interface OrdersItem {
 
-    int getOrdersItemNumber();
-
-    void setOrdersItemNumber(int ordersItemNumber);
-
     int getAmount();
 
     void setAmount(int amount);

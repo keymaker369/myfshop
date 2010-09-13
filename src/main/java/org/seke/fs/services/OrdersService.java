@@ -3,6 +3,8 @@ package org.seke.fs.services;
 import org.apache.tapestry5.hibernate.annotations.CommitAfter;
 import org.seke.fs.Order;
 
+import java.util.Collection;
+
 /**
  * Created by IntelliJ IDEA.
  * User: nenad
@@ -15,5 +17,9 @@ public interface OrdersService {
     @CommitAfter
     void purchaseOrder(Order order);
 
-    
+    Order retrieve(long id);
+
+    Collection<Order> retrieve();
+
+    void processOrder(Order order);
 }

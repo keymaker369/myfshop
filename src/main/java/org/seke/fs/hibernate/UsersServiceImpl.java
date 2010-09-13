@@ -1,5 +1,6 @@
 package org.seke.fs.hibernate;
 
+import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.seke.fs.Order;
@@ -10,6 +11,7 @@ import org.seke.fs.beans.UserBean;
 import org.seke.fs.services.UsersService;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.Collection;
 import java.util.Iterator;
 
 /**
@@ -49,6 +51,21 @@ public class UsersServiceImpl implements UsersService {
             return (User) user;
     }
 
+    @Override
+    public User retrieve(long id) {
+        Object user = getSession().createQuery("from UserBean where id = " + id).uniqueResult();
+        if (user == null)
+            return null;
+        else
+            return (User) user;
+    }
+
+    @Override
+    public Collection<User> retrieve() {
+        Criteria criteria = getSession().createCriteria(UserBean.class);
+        return criteria.list();
+    }
+
     @Transactional
     public boolean isUserExist(String username, String password) {
         Object user = getSession().createQuery("from UserBean where username = '" + username + "' and password = '" + password + "'").uniqueResult();
@@ -79,16 +96,19 @@ public class UsersServiceImpl implements UsersService {
 
     @Transactional
     public void purchaseOrder(User user, Order purchasedOrder) {
+        double ordersPrice = 0;
         Iterator it = purchasedOrder.getOrdersItems().iterator();
         while (it.hasNext()) {
             OrdersItem currentItem = (OrdersItem) it.next();
             Product currentProduct = currentItem.getProduct();
+            ordersPrice += currentItem.getPrice();
             int amountOfOrderedProducts = currentItem.getAmount();
             int newAmount = currentProduct.getAmountInStock() - amountOfOrderedProducts;
             currentProduct.setAmountInStock(newAmount);
             getSession().saveOrUpdate(currentProduct);
             getSession().save(currentItem);
         }
+        purchasedOrder.setPrice(ordersPrice);
         user.getOrders().add(purchasedOrder);
         getSession().update(user);
 

@@ -3,12 +3,13 @@
       xmlns:p="tapestry:parameter">
 <t:if t:test="userExists">
     <t:if test="user.getOrders()">
-        <ul t:type="Loop" t:source="user.getOrders()" t:value="currentOrder">
-            <li>
-                Commit date:${currentOrder.commitDate}
-                <!--Numer of items:${currentOrder.ordersItems.size()}-->
-            </li>
-        </ul>
+        <t:grid t:source="user.getOrders()" rowsPerPage="5" pagerPosition="bottom" row="currentOrder">
+            <t:parameter name="idCell">
+                <t:pagelink t:page="ShowOrder" t:context="currentOrderId">
+                    ${currentOrderId}
+                </t:pagelink>
+            </t:parameter>
+        </t:grid>
         <p:else>
             ${user.getUsername()}, you do not have any orders.
         </p:else>

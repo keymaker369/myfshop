@@ -6,31 +6,29 @@
 </t:zone>
 <t:block id="edit">
     <t:form t:id="fAlterProduct" t:zone="addZone">
-        <p>
-            <t:label for="tfTitle">Title:</t:label>
-            <t:textfield t:id="tfTitle" value="product.title"
-                         t:validate="required,minlength=2,regexp=^[A-Z][a-z]+$"/>
-        </p>
 
-        <p>
-            <t:label for="tfAmountInStock">Amount in Stock:</t:label>
-            <t:textfield t:id="tfAmountInStock" value="product.amountInStock" t:validate="required,minlength=1"/>
-        </p>
+        <t:label for="tfTitle">Title:<br/></t:label>
+        <t:textfield t:id="tfTitle" value="product.title"
+                     t:validate="required,minlength=2,regexp=^[A-Z][a-z]+$"/>
+        <br/>
 
-        <p>
-            <t:label for="tfPrice">Price:</t:label>
-            <t:textfield t:id="tfPrice" value="product.price" t:validate="required,minlength=1"/>
-        </p>
-        <p>
-            <input type="submit" id="yesId" value="yes" t:type="submit" t:id="yesButton"/>
-            <input type="submit" id="noId" value="no" t:type="submit" t:id="noButton"/>
-        </p>
 
+        <t:label for="tfAmountInStock">Amount in Stock:<br/></t:label>
+        <t:textfield t:id="tfAmountInStock" value="product.amountInStock" t:validate="required,minlength=1"/>
+        <br/>
+
+        <t:label for="tfPrice">Price:<br/></t:label>
+        <t:textfield t:id="tfPrice" value="product.price" t:validate="required,minlength=1"/>
+        <br/>
+        <br/>
+        <input type="submit" id="yesId" value="yes" t:type="submit" t:id="yesButton"/>
+        <input type="submit" id="noId" value="no" t:type="submit" t:id="noButton"/>
+        <br/>
     </t:form>
 </t:block>
 <t:block id="congratulations">
     <p>
-        You have successfully reactivated product: ${product.title}
+        You have successfully altered product: ${product.title}
     </p>
 
     <p>

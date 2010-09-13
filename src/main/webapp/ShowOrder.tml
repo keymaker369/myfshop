@@ -1,0 +1,38 @@
+<html t:type="layout" title="Show order"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd"
+      xmlns:p="tapestry:parameter">
+<t:if test="order">
+    <ul>
+        <li>Commit date: ${order.commitDate}</li>
+        <li>Full price: ${order.price}</li>
+        <t:if test="order.isProcessed()">
+            <li>Order is processed.</li>
+            <p:else>
+                <li>Order is still processing.</li>
+            </p:else>
+        </t:if>
+        <li>Items:
+            <ul t:type="Loop" t:source="order.getOrdersItems()" t:value="ordersItem">
+                <li>
+                    Title:${ordersItem.product.title}
+                </li>
+                <li>
+                    Amount of product: ${ordersItem.amount}
+                </li>
+                <li>
+                    Price for current amount: ${ordersItem.price}
+                </li>
+            </ul>
+        </li>
+    </ul>
+    <t:if t:test="isUserAdmin()">
+        <t:form t:id="fProcessOrder">
+            <input type="submit" name="bProcessOrder" id="bprocessOrder" value="Process order"/>
+        </t:form>
+    </t:if>
+    <p:else>
+        Unknown product.
+    </p:else>
+    ${message}
+</t:if>
+</html>

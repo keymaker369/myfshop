@@ -4,6 +4,7 @@ import org.apache.tapestry5.annotations.Property;
 import org.apache.tapestry5.annotations.SessionState;
 import org.apache.tapestry5.annotations.SetupRender;
 import org.apache.tapestry5.ioc.annotations.Inject;
+import org.seke.fs.Identifiable;
 import org.seke.fs.Order;
 import org.seke.fs.User;
 import org.seke.fs.services.UsersService;
@@ -16,6 +17,7 @@ import org.seke.fs.services.UsersService;
  * To change this template use File | Settings | File Templates.
  */
 public class PurchasedOrders {
+
     @SessionState
     private User user;
 
@@ -37,6 +39,10 @@ public class PurchasedOrders {
 
     public boolean getUserExists() {
         return userExists;
+    }
+
+    public long getCurrentOrderId() {
+        return Identifiable.class.cast(currentOrder).getId();
     }
 
     public void setUserExists(boolean costmerExists) {

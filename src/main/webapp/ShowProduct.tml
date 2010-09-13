@@ -8,8 +8,8 @@
         <li>Price: ${product.price}</li>
         <t:if t:test="userExists">
             <t:form t:id="fAddToCart">
-                <t:textfield t:id="tfWontedAmount" t:value="wontedAmount"/>
-                <input type="submit" name="bInsertInCart" id="bInsertInCart" value="Add to cart"/>
+                <t:textfield t:id="tfWontedAmount" t:value="wontedAmount" t:validate="required" />
+                <input type="submit" name="bInsertInCart" id="bInsertInCart" value="Add to cart" />
             </t:form>
         </t:if>
     </ul>

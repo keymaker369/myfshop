@@ -4,6 +4,8 @@ import org.apache.tapestry5.hibernate.annotations.CommitAfter;
 import org.seke.fs.Order;
 import org.seke.fs.User;
 
+import java.util.Collection;
+
 /**
  * Created by IntelliJ IDEA.
  * User: nenad
@@ -17,6 +19,10 @@ public interface UsersService {
     User register(User user);
 
     User retrieve(String username);
+
+    User retrieve(long id);
+
+    Collection<User> retrieve();
 
     boolean isUserExist(String username, String password);
 

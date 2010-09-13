@@ -6,33 +6,26 @@
 </t:zone>
 <t:block id="edit">
     <t:form t:id="fRegister" t:zone="addZone">
-        <p>
-            <t:label for="tfUsername">username:</t:label>
-            <t:textfield t:id="tfUsername" t:value="username"/>
-        </p>
-        <p>
-            <t:label for="tfPassword">password:</t:label>
-            <t:textfield t:id="tfPassword" t:value="password"/>
-        </p>
-        <p>
-            <t:label for="tfFirstName">first name:</t:label>
-            <t:textfield t:id="tfFirstName" t:value="firstName"/>
-        </p>
-        <p>
-            <t:label for="tfLastName">last name:</t:label>
-            <t:textfield t:id="tfLastName" t:value="lastName"/>
-        </p>
-        <p>
-            <t:label for="tfEmail">email:</t:label>
-            <t:textfield t:id="tfEmail" t:value="email"/>
-        </p>
-        <p>
-            <t:label for="type">type:</t:label>
-            <t:select t:id="type" model="literal:costumer,administrator"/>
-        </p>
-        <p>
-            <input type="submit" name="bRegister" id="bRegister" value="Register"/>
-        </p>
+        <t:label for="tfUsername">username:<br/></t:label>
+        <t:textfield t:id="tfUsername" t:value="username" t:validate="required,minlength=3,maxlength=20"/>
+        <br/>
+        <t:label for="tfPassword">password:<br/></t:label>
+        <t:passwordfield t:id="tfPassword" t:value="password" t:validate="required,minlength=3,maxlength=20"/>
+        <br/>
+        <t:label for="tfFirstName">first name:<br/></t:label>
+        <t:textfield t:id="tfFirstName" t:value="firstName" t:validate="required,minlength=1,maxlength=20"/>
+        <br/>
+        <t:label for="tfLastName">last name:<br/></t:label>
+        <t:textfield t:id="tfLastName" t:value="lastName" t:validate="required,minlength=1,maxlength=20"/>
+        <br/>
+        <t:label for="tfEmail">email:<br/></t:label>
+        <t:textfield t:id="tfEmail" t:value="email" t:validate="required"/>
+        <br/>
+        <t:label for="type">type:<br/></t:label>
+        <t:select t:id="type" model="literal:costumer,administrator" t:validate="required"/>
+        <br/>
+        <br/>
+        <input type="submit" name="bRegister" id="bRegister" value="Register"/>
     </t:form>
 </t:block>
 <t:block id="congratulations">

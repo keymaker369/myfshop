@@ -57,7 +57,7 @@ public class Layout {
 
     public String[] getAdminPageNames() {
         return new String[]{"Index", "About", "Contact", "BrowseProductsAdmin",
-                "AddProduct", "UserInfo", "LogOut"};
+                "AddProduct", "AllUsers", "Orders", "UserInfo", "LogOut"};
     }
 
 
