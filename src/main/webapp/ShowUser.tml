@@ -1,0 +1,15 @@
+<html t:type="layout" title="ShowProduct"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd"
+      xmlns:p="tapestry:parameter">
+<t:if test="user">
+    <ul>
+        <li>First name: ${user.getFirstName()}</li>
+        <li>Last name: ${user.getLastName()}</li>
+        <li>Email: ${user.getEmail()}</li>
+        <li>Username: ${user.getUsername()}</li>
+    </ul>
+    <p:else>
+        Unknown user.
+    </p:else>
+</t:if>
+</html>

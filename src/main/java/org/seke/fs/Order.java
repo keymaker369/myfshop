@@ -18,6 +18,15 @@ public interface Order {
     List<OrdersItem> getOrdersItems();
 
     void setOrdersItems(List<OrdersItem> ordersItems);
+
+    double getPrice();
+
+    void setPrice(double price);
+
+    boolean isProcessed();
+
+    void setProcessing(boolean processed);
+
 //
 //    User getUser();
 //

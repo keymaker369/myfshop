@@ -1,7 +1,6 @@
 package org.seke.fs.beans;
 
 import org.seke.fs.Identifiable;
-import org.seke.fs.Order;
 import org.seke.fs.OrdersItem;
 import org.seke.fs.Product;
 
@@ -22,9 +21,6 @@ public class OrdersItemBean implements OrdersItem, Identifiable{
     private long id;
 
     @Basic
-    private int ordersItemNumber;
-
-    @Basic
     private int amount;
 
     @Basic
@@ -39,18 +35,9 @@ public class OrdersItemBean implements OrdersItem, Identifiable{
     public OrdersItemBean() {
     }
 
-    public OrdersItemBean(int ordersItemNumber, int amount, double price) {
-        this.ordersItemNumber = ordersItemNumber;
+    public OrdersItemBean( int amount, double price) {
         this.amount = amount;
         this.price = price;
-    }
-
-    public int getOrdersItemNumber() {
-        return ordersItemNumber;
-    }
-
-    public void setOrdersItemNumber(int ordersItemNumber) {
-        this.ordersItemNumber = ordersItemNumber;
     }
 
     public int getAmount() {
@@ -79,17 +66,14 @@ public class OrdersItemBean implements OrdersItem, Identifiable{
 //        this.order = order;
 //    }
 
-    @Override
     public Product getProduct() {
         return product;
     }
 
-    @Override
     public void setProduct(Product product) {
         this.product = product;
     }
 
-    @Override
     public long getId() {
         return id;
     }

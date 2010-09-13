@@ -1,7 +1,9 @@
 package org.seke.fs.services;
 
+import org.seke.fs.Order;
 import org.seke.fs.User;
 
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -36,6 +38,16 @@ public class UsersServiceBean implements UsersService {
     }
 
     @Override
+    public User retrieve(long id) {
+        return null;  //To change body of implemented methods use File | Settings | File Templates.
+    }
+
+    @Override
+    public Collection<User> retrieve() {
+        return null;  //To change body of implemented methods use File | Settings | File Templates.
+    }
+
+    @Override
     public boolean isUserExist(String username, String password) {
         return false;  //To change body of implemented methods use File | Settings | File Templates.
     }
@@ -47,6 +59,11 @@ public class UsersServiceBean implements UsersService {
 
     @Override
     public void saveOrUpdateUser(User user) {
+        //To change body of implemented methods use File | Settings | File Templates.
+    }
+
+    @Override
+    public void purchaseOrder(User user, Order purchasedOrder) {
         //To change body of implemented methods use File | Settings | File Templates.
     }
 }

@@ -73,4 +73,8 @@ public class Register {
         usersService.register(registeringUser);
         return congratulations;
     }
+
+    public String getEmptySpaces(){
+        return "   ";
+    }
 }

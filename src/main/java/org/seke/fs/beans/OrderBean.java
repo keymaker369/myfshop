@@ -25,7 +25,13 @@ public class OrderBean implements Order, Identifiable {
     @Basic
     private String commitDate;
 
-    @OneToMany(targetEntity=OrdersItemBean.class)
+    @Basic
+    private double price;
+
+    @Basic
+    private boolean processed;
+
+    @OneToMany(targetEntity = OrdersItemBean.class)
     private List<OrdersItem> ordersItems = new LinkedList<OrdersItem>();
 
     public OrderBean() {
@@ -48,12 +54,30 @@ public class OrderBean implements Order, Identifiable {
         this.commitDate = commitDate;
     }
 
-    public List<OrdersItem> getOrdersItems(){
+    public List<OrdersItem> getOrdersItems() {
         return ordersItems;
     }
 
     public void setOrdersItems(List<OrdersItem> ordersItems) {
         this.ordersItems = ordersItems;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
+    @Override
+    public boolean isProcessed() {
+        return processed;
+    }
+
+    @Override
+    public void setProcessing(boolean processed) {
+        this.processed = processed;
     }
 
 //    @Override

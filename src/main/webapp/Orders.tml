@@ -1,0 +1,20 @@
+<html t:type="layout" title="All orders"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd"
+      xmlns:p="tapestry:parameter">
+<!--<ul t:type="Loop" t:source="usersService.retrieve()" t:value="currentUser">-->
+<!--<li>-->
+<!--<a t:type="PageLink" t:page="ShowUser" t:context="currentUserId">-->
+<!--username: ${currentUser.getUsername()}-->
+<!--</a>-->
+<!--</li>-->
+<!---->
+<!--</ul>-->
+<t:grid source="ordersService.retrieve()" pagerPosition="bottom" row="currentOrder"
+        reorder="commitDate,price,id" >
+    <t:parameter name="idCell">
+        <t:pagelink t:page="ShowOrder" t:context="currentOrderId">
+            ${currentOrderId}
+        </t:pagelink>
+    </t:parameter>
+</t:grid>
+</html>

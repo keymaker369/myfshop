@@ -1,12 +1,8 @@
 package org.seke.fs.pages;
 
 import org.apache.tapestry5.Block;
-import org.apache.tapestry5.annotations.OnEvent;
-import org.apache.tapestry5.annotations.Persist;
-import org.apache.tapestry5.annotations.Property;
-import org.apache.tapestry5.annotations.SessionState;
+import org.apache.tapestry5.annotations.*;
 import org.apache.tapestry5.ioc.annotations.Inject;
-import org.seke.fs.Order;
 import org.seke.fs.User;
 import org.seke.fs.services.UsersService;
 
@@ -24,9 +20,6 @@ public class UserInfo {
 
     @Inject
     private UsersService usersService;
-
-    @Property
-    private Order currentOrder;
 
     @Property
     private String oldPassword;
@@ -49,6 +42,9 @@ public class UserInfo {
     @Persist("flash")
     private String message;
 
+    @InjectPage
+    private UserInfo userInfoPage;
+
     public User getUser() {
         return user;
     }
@@ -67,22 +63,30 @@ public class UserInfo {
         this.userExists = userExists;
     }
 
-    @OnEvent(value = "submit", component = "fRegister")
+    @OnEvent(value = "submit", component = "fUpdateUsersData")
     Object updateUser() {
-        if(!newPassword.equals(retypedNewPassword)){
-            message = "Passwords not same!";
-            return null;
+        if (oldPassword == null) {
+            message = "Password is needed for verification!";
+            return userInfoPage;
         }
-        usersService.saveOrUpdateUser(user);
-        return congratulations;
+        if (!(user.getPassword().equals(oldPassword))) {
+            message = "Wrong password";
+            return userInfoPage;
+        }
+        if (newPassword == null && retypedNewPassword == null) {
+            usersService.saveOrUpdateUser(user);
+            return congratulations;
+        }
+        if (!((newPassword == null && retypedNewPassword != null) ||
+                (newPassword != null && retypedNewPassword == null))) {
+            if (newPassword.equals(retypedNewPassword)) {
+                user.setPassword(newPassword);
+                usersService.saveOrUpdateUser(user);
+                return congratulations;
+            }
+        }
+        message = "New password is not same as retyped new password!";
+        return userInfoPage;
     }
-//    @SetupRender
-//    void setup() {
-//        if (userExists) {
-//            User c2 = user;
-//            user = usersService.retrieve(user.getUsername());
-//            User c1 = user;
-//            System.out.println("kraj");
-//        }
-//    }
+
 }

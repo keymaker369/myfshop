@@ -1,11 +1,14 @@
 package org.seke.fs.hibernate;
 
+import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.seke.fs.Order;
 import org.seke.fs.beans.OrderBean;
 import org.seke.fs.services.OrdersService;
 import org.springframework.transaction.annotation.Transactional;
+
+import java.util.Collection;
 
 /**
  * Created by IntelliJ IDEA.
@@ -34,6 +37,27 @@ public class OrdersServiceImpl implements OrdersService {
 
     @Transactional
     public void purchaseOrder(Order order) {
+        getSession().saveOrUpdate(order);
+    }
+
+    @Transactional
+    public Order retrieve(long id) {
+        Object order = getSession().createQuery("from OrderBean where id = " + id).uniqueResult();
+        if (order == null)
+            return null;
+        else
+            return (Order) order;
+    }
+
+    @Transactional
+    public Collection<Order> retrieve() {
+        Criteria criteria = getSession().createCriteria(OrderBean.class);
+        return criteria.list();
+    }
+
+    @Transactional
+    public void processOrder(Order order) {
+        order.setProcessing(true);
         getSession().saveOrUpdate(order);
     }
 }

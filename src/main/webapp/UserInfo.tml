@@ -7,45 +7,35 @@
     </t:zone>
     <t:block id="edit">
         <t:form t:id="fUpdateUsersData" t:zone="addZone">
-            <p>
-                <t:label for="tfUsername">username:</t:label>
-                <t:textfield t:id="tfUsername" t:value="user.username"/>
-            </p>
-
-            <p>
-                <t:label for="tfFirstName">first name:</t:label>
-                <t:textfield t:id="tfFirstName" t:value="user.firstName"/>
-            </p>
-
-            <p>
-                <t:label for="tfLastName">last name:</t:label>
-                <t:textfield t:id="tfLastName" t:value="user.lastName"/>
-            </p>
-
-            <p>
-                <t:label for="tfEmail">email:</t:label>
-                <t:textfield t:id="tfEmail" t:value="user.password"/>
-            </p>
-
-            <p>
-                type: ${user.getType()}
-            </p>
-
-            <p>
-                <t:label for="tfOldPassword">Old password:</t:label>
-                <t:textfield t:id="tfOldPassword" t:value="oldPassword"/>
-            </p>
-            <p>
-                <t:label for="tfNewPassword">New password:</t:label>
-                <t:textfield t:id="tfNewPassword" t:value="newPassword"/>
-            </p>
-            <p>
-                <t:label for="tfAgainNewPassword">New password*:</t:label>
-                <t:textfield t:id="tfAgainNewPassword" t:value="retypedNewPassword"/>
-            </p>
-            <p>
-                <input type="submit" name="bUpdate" id="bUpdate" value="Update"/>
-            </p>
+            username:${user.getUsername()}
+            <br/>
+            <br/>
+            <t:label for="tfFirstName">first name:<br/></t:label>
+            <t:textfield t:id="tfFirstName" t:value="user.username" t:validate="required,minlength=1,maxlength=20"/>
+            <br/>
+            <t:label for="tfLastName">last name:<br/></t:label>
+            <t:textfield t:id="tfLastName" t:value="user.lastName" t:validate="required,minlength=1,maxlength=20"/>
+            <br/>
+            <t:label for="tfEmail">email:<br/></t:label>
+            <t:textfield t:id="tfEmail" t:value="user.email" t:validate="required"/>
+            <br/>
+            <br/>
+            type: ${user.getType()}
+            <br/>
+            <br/>
+            <t:label for="tfOldPassword">Old password:<br/></t:label>
+            <t:passwordfield t:id="tfOldPassword" t:value="oldPassword" t:validate="required,minlength=3,maxlength=20"/>
+            <br/>
+            <t:label for="tfNewPassword">New password:<br/></t:label>
+            <t:passwordfield t:id="tfNewPassword" t:value="newPassword" t:validate="minlength=3,maxlength=20"/>
+            <br/>
+            <t:label for="tfAgainNewPassword">New password*:<br/></t:label>
+            <t:passwordfield t:id="tfAgainNewPassword" t:value="retypedNewPassword"
+                             t:validate="minlength=3,maxlength=20"/>
+            <br/>
+            <br/>
+            <input type="submit" name="bUpdate" id="bUpdate" value="Update"/>
+            <br/>
         </t:form>
         <p>
             ${message}
