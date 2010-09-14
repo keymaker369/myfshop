@@ -13,12 +13,12 @@ import javax.persistence.Id;
  * change this template use File | Settings | File Templates.
  */
 @Entity
-public class ProductBean implements Product,Identifiable {
+public class ProductBean implements Product, Identifiable {
 
     @Id
     @GeneratedValue
-	private long id;
-	
+    private long id;
+
     @Basic
     private String title;
 
@@ -31,42 +31,47 @@ public class ProductBean implements Product,Identifiable {
     @Basic
     private boolean active;
 
-	public ProductBean() {
-	}
+    public ProductBean() {
+    }
 
-	public ProductBean(String title, int amountInStock, double price) {
-		this.title = title;
-		this.amountInStock = amountInStock;
-		this.price = price;
-	}
+    public ProductBean(String title, int amountInStock, double price) {
+        this.title = title;
+        this.amountInStock = amountInStock;
+        this.price = price;
+    }
 
-	public long getId() {
-		return id;
-	}
+    public long getId() {
+        return id;
+    }
 
-	public String getTitle() {
-		return title;
-	}
+    public String getTitle() {
+        return title;
+    }
 
-	public void setTitle(String title) {
-		this.title = title;
-	}
+    public void setTitle(String title) {
+        assert title != null;
+        assert title.length() > 0;
+        assert !title.equals(" ");
+        this.title = title;
+    }
 
-	public int getAmountInStock() {
-		return amountInStock;
-	}
+    public int getAmountInStock() {
+        return amountInStock;
+    }
 
-	public void setAmountInStock(int amountInStock) {
-		this.amountInStock = amountInStock;
-	}
+    public void setAmountInStock(int amountInStock) {
+        assert amountInStock >= 0;
+        this.amountInStock = amountInStock;
+    }
 
-	public double getPrice() {
-		return price;
-	}
+    public double getPrice() {
+        return price;
+    }
 
-	public void setPrice(double price) {
-		this.price = price;
-	}
+    public void setPrice(double price) {
+        assert price > 0;
+        this.price = price;
+    }
 
     @Override
     public boolean isActive() {

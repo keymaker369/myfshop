@@ -51,6 +51,8 @@ public class OrderBean implements Order, Identifiable {
     }
 
     public void setCommitDate(String commitDate) {
+        assert commitDate != null;
+        assert !commitDate.equals("");
         this.commitDate = commitDate;
     }
 
@@ -59,6 +61,7 @@ public class OrderBean implements Order, Identifiable {
     }
 
     public void setOrdersItems(List<OrdersItem> ordersItems) {
+        assert ordersItems != null;
         this.ordersItems = ordersItems;
     }
 
@@ -70,24 +73,12 @@ public class OrderBean implements Order, Identifiable {
         this.price = price;
     }
 
-    @Override
     public boolean isProcessed() {
         return processed;
     }
 
-    @Override
     public void setProcessing(boolean processed) {
         this.processed = processed;
     }
-
-//    @Override
-//    public User getUser() {
-//        return user;
-//    }
-//
-//    @Override
-//    public void setUser(User user) {
-//        this.user = user;
-//    }
 
 }

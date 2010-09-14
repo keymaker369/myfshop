@@ -14,7 +14,7 @@ import javax.persistence.*;
  * To change this template use File | Settings | File Templates.
  */
 @Entity
-public class OrdersItemBean implements OrdersItem, Identifiable{
+public class OrdersItemBean implements OrdersItem, Identifiable {
 
     @Id
     @GeneratedValue
@@ -29,13 +29,10 @@ public class OrdersItemBean implements OrdersItem, Identifiable{
     @ManyToOne(targetEntity = ProductBean.class)
     private Product product;
 
-//    @ManyToOne(targetEntity = OrderBean.class)
-//    private Order order;
-
     public OrdersItemBean() {
     }
 
-    public OrdersItemBean( int amount, double price) {
+    public OrdersItemBean(int amount, double price) {
         this.amount = amount;
         this.price = price;
     }
@@ -45,6 +42,7 @@ public class OrdersItemBean implements OrdersItem, Identifiable{
     }
 
     public void setAmount(int amount) {
+        assert amount > 0;
         this.amount = amount;
     }
 
@@ -53,24 +51,16 @@ public class OrdersItemBean implements OrdersItem, Identifiable{
     }
 
     public void setPrice(double price) {
+        assert price > 0;
         this.price = price;
     }
-
-//    @Override
-//    public Order getOrder() {
-//        return order;
-//    }
-//
-//    @Override
-//    public void setOrder(Order order) {
-//        this.order = order;
-//    }
 
     public Product getProduct() {
         return product;
     }
 
     public void setProduct(Product product) {
+        assert product != null;
         this.product = product;
     }
 

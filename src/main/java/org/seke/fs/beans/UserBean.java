@@ -60,6 +60,8 @@ public class UserBean implements User, Identifiable {
     }
 
     public void setUsername(String username) {
+        assert username != null;
+        assert username.length() >= 3 && username.length() <= 20;
         this.username = username;
     }
 
@@ -68,6 +70,8 @@ public class UserBean implements User, Identifiable {
     }
 
     public void setPassword(String password) {
+        assert password != null;
+        assert password.length() >= 3 && password.length() <= 20;
         this.password = password;
     }
 
@@ -76,6 +80,8 @@ public class UserBean implements User, Identifiable {
     }
 
     public void setFirstName(String firstName) {
+        assert firstName != null;
+        assert firstName.length() >= 1 && firstName.length() <= 20;
         this.firstName = firstName;
     }
 
@@ -84,6 +90,8 @@ public class UserBean implements User, Identifiable {
     }
 
     public void setLastName(String lastName) {
+        assert lastName != null;
+        assert lastName.length() >= 1 && lastName.length() <= 20;
         this.lastName = lastName;
     }
 
@@ -110,6 +118,8 @@ public class UserBean implements User, Identifiable {
 
     @Override
     public void setType(String type) {
+        assert type != null;
+        assert type.equals("administrator") || type.equals("costumer");
         this.type = type;
     }
 

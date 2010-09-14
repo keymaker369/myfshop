@@ -15,8 +15,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="ca8dd3ce-0735-430b-a543-291834fa6938" name="Default" comment="" />
-    <ignored path="$USER_HOME_GRAILS$/" />
     <ignored path="$USER_HOME_GRIFFON$/" />
+    <ignored path="$USER_HOME_GRAILS$/" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,8 +84,8 @@
       <property name="field_breakpoints_groupByClasses" value="true" />
       <property name="method_breakpoints_groupByClasses" value="true" />
       <property name="exception_breakpoints_viewId" value="TABLE" />
-      <property name="exception_breakpoints_groupByClasses" value="true" />
       <property name="field_breakpoints_viewId" value="TABLE" />
+      <property name="exception_breakpoints_groupByClasses" value="true" />
       <property name="method_breakpoints_groupByMethods" value="false" />
     </ui_properties>
   </component>
@@ -94,7 +94,28 @@
   </component>
   <component name="FileColors" enabled="true" enabledForTabs="true" />
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="UserBean.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/seke/fs/beans/UserBean.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="121" column="71" selection-start="2721" selection-end="2721" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserBeanTest.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/org/seke/fs/beans/UserBeanTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="140" column="9" selection-start="4201" selection-end="4201" vertical-scroll-proportion="0.67019403">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -108,22 +129,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/org/seke/fs/pages/Orders.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/seke/fs/components/Layout.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/Orders.tml" />
-        <option value="$PROJECT_DIR$/src/main/java/org/seke/fs/Order.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/seke/fs/beans/OrderBean.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/seke/fs/services/OrdersService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/seke/fs/hibernate/OrdersServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/seke/fs/pages/ShowOrder.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/ShowOrder.tml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/ShowProduct.tml" />
         <option value="$PROJECT_DIR$/src/main/webapp/Index.tml" />
         <option value="$PROJECT_DIR$/src/main/java/org/seke/fs/pages/Register.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/Register.tml" />
         <option value="$PROJECT_DIR$/src/main/webapp/AlterProduct.tml" />
         <option value="$PROJECT_DIR$/src/main/webapp/UserInfo.tml" />
         <option value="$PROJECT_DIR$/src/main/webapp/AddProduct.tml" />
+        <option value="$PROJECT_DIR$/src/test/resources/testng.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/org/seke/fs/beans/OrderBean.java" />
+        <option value="$PROJECT_DIR$/src/test/java/org/seke/fs/beans/OrderBeanTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/seke/fs/beans/OrdersItemBean.java" />
+        <option value="$PROJECT_DIR$/src/test/java/org/seke/fs/beans/OrdersItemBeanTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/org/seke/fs/spring/ApplicationContestProviderTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/org/seke/fs/beans/ProductBeanTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/seke/fs/beans/ProductBean.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/seke/fs/beans/UserBean.java" />
+        <option value="$PROJECT_DIR$/src/test/java/org/seke/fs/beans/UserBeanTest.java" />
       </list>
     </option>
   </component>
@@ -192,6 +213,100 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="TapestryProjectView">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="com.intellij.tapestry.intellij.view.nodes.RootNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fs" />
+              <option name="myItemType" value="com.intellij.tapestry.intellij.view.nodes.ModuleNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="com.intellij.tapestry.intellij.view.nodes.RootNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fs" />
+              <option name="myItemType" value="com.intellij.tapestry.intellij.view.nodes.ModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="org" />
+              <option name="myItemType" value="com.intellij.tapestry.intellij.view.nodes.PackageNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="seke" />
+              <option name="myItemType" value="com.intellij.tapestry.intellij.view.nodes.PackageNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fs" />
+              <option name="myItemType" value="com.intellij.tapestry.intellij.view.nodes.LibraryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="com.intellij.tapestry.intellij.view.nodes.RootNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fs" />
+              <option name="myItemType" value="com.intellij.tapestry.intellij.view.nodes.ModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="org" />
+              <option name="myItemType" value="com.intellij.tapestry.intellij.view.nodes.PackageNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="seke" />
+              <option name="myItemType" value="com.intellij.tapestry.intellij.view.nodes.PackageNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fs" />
+              <option name="myItemType" value="com.intellij.tapestry.intellij.view.nodes.LibraryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pages" />
+              <option name="myItemType" value="com.intellij.tapestry.intellij.view.nodes.PagesNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="com.intellij.tapestry.intellij.view.nodes.RootNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fs" />
+              <option name="myItemType" value="com.intellij.tapestry.intellij.view.nodes.ModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="org" />
+              <option name="myItemType" value="com.intellij.tapestry.intellij.view.nodes.PackageNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="seke" />
+              <option name="myItemType" value="com.intellij.tapestry.intellij.view.nodes.PackageNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fs" />
+              <option name="myItemType" value="com.intellij.tapestry.intellij.view.nodes.LibraryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pages" />
+              <option name="myItemType" value="com.intellij.tapestry.intellij.view.nodes.PagesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AddProduct" />
+              <option name="myItemType" value="com.intellij.tapestry.intellij.view.nodes.PageNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="Favorites" />
       <pane id="PackagesPane">
         <subPane>
           <PATH>
@@ -328,7 +443,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Favorites" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -362,6 +476,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -410,6 +528,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="fs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spring" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -470,6 +592,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="beans" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="myfshop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="myfshop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -819,115 +959,8 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="myfshop" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="myfshop" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value=".idea" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
-      <pane id="TapestryProjectView">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="com.intellij.tapestry.intellij.view.nodes.RootNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fs" />
-              <option name="myItemType" value="com.intellij.tapestry.intellij.view.nodes.ModuleNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="com.intellij.tapestry.intellij.view.nodes.RootNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fs" />
-              <option name="myItemType" value="com.intellij.tapestry.intellij.view.nodes.ModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="org" />
-              <option name="myItemType" value="com.intellij.tapestry.intellij.view.nodes.PackageNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="seke" />
-              <option name="myItemType" value="com.intellij.tapestry.intellij.view.nodes.PackageNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fs" />
-              <option name="myItemType" value="com.intellij.tapestry.intellij.view.nodes.LibraryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="com.intellij.tapestry.intellij.view.nodes.RootNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fs" />
-              <option name="myItemType" value="com.intellij.tapestry.intellij.view.nodes.ModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="org" />
-              <option name="myItemType" value="com.intellij.tapestry.intellij.view.nodes.PackageNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="seke" />
-              <option name="myItemType" value="com.intellij.tapestry.intellij.view.nodes.PackageNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fs" />
-              <option name="myItemType" value="com.intellij.tapestry.intellij.view.nodes.LibraryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pages" />
-              <option name="myItemType" value="com.intellij.tapestry.intellij.view.nodes.PagesNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="com.intellij.tapestry.intellij.view.nodes.RootNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fs" />
-              <option name="myItemType" value="com.intellij.tapestry.intellij.view.nodes.ModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="org" />
-              <option name="myItemType" value="com.intellij.tapestry.intellij.view.nodes.PackageNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="seke" />
-              <option name="myItemType" value="com.intellij.tapestry.intellij.view.nodes.PackageNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fs" />
-              <option name="myItemType" value="com.intellij.tapestry.intellij.view.nodes.LibraryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pages" />
-              <option name="myItemType" value="com.intellij.tapestry.intellij.view.nodes.PagesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AddProduct" />
-              <option name="myItemType" value="com.intellij.tapestry.intellij.view.nodes.PageNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -945,9 +978,9 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.searchVisible" value="true" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="dynamic.classpath" value="false" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -1587,7 +1620,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -1604,7 +1637,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23684211" sideWeight="0.66549706" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39871088" sideWeight="0.99764705" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33054712" sideWeight="0.0" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33054712" sideWeight="0.0" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32658958" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="true" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" x="160" y="229" width="578" height="409" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1688,93 +1721,103 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/AllUsers.tml">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/AddProduct.tml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="691" vertical-scroll-proportion="0.0" />
+        <state line="45" column="53" selection-start="1530" selection-end="1530" vertical-scroll-proportion="0.67140317" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/seke/fs/pages/AllUsers.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/org/seke/fs/services/ProductsBeanTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="0" selection-start="414" selection-end="628" vertical-scroll-proportion="0.4920354" />
+        <state line="22" column="13" selection-start="589" selection-end="589" vertical-scroll-proportion="0.26455027" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/seke/fs/Order.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/seke/fs/beans/OrdersItemBean.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="40" selection-start="525" selection-end="525" vertical-scroll-proportion="0.8123894" />
+        <state line="23" column="31" selection-start="467" selection-end="467" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/seke/fs/services/OrdersService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/seke/fs/pages/Cart.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="9" selection-start="473" selection-end="473" vertical-scroll-proportion="0.6920354" />
+        <state line="27" column="13" selection-start="821" selection-end="821" vertical-scroll-proportion="-0.90652555" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/seke/fs/pages/ShowProduct.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/seke/fs/pages/ShowUser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="40" selection-start="1209" selection-end="1209" vertical-scroll-proportion="0.45132744" />
+        <state line="15" column="13" selection-start="402" selection-end="402" vertical-scroll-proportion="0.329806" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/seke/fs/beans/OrderBean.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/seke/fs/Product.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="79" column="35" selection-start="1601" selection-end="1601" vertical-scroll-proportion="0.4884956" />
+        <state line="6" column="17" selection-start="188" selection-end="188" vertical-scroll-proportion="0.17989418" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/seke/fs/hibernate/OrdersServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/seke/fs/Identifiable.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="18" selection-start="1377" selection-end="1377" vertical-scroll-proportion="0.57345134" />
+        <state line="9" column="17" selection-start="198" selection-end="198" vertical-scroll-proportion="0.26984128" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/ShowOrder.tml">
+    <entry file="file://$PROJECT_DIR$/src/test/java/org/seke/fs/spring/ApplicationContestProviderTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="31" selection-start="950" selection-end="950" vertical-scroll-proportion="0.8152753" />
+        <state line="7" column="28" selection-start="148" selection-end="148" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/seke/fs/pages/ShowOrder.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/seke/fs/beans/ProductBean.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="20" selection-start="1319" selection-end="1319" vertical-scroll-proportion="0.54867256" />
+        <state line="81" column="45" selection-start="1664" selection-end="1664" vertical-scroll-proportion="0.70017636">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/ShowProduct.tml">
+    <entry file="file://$PROJECT_DIR$/src/test/java/org/seke/fs/beans/ProductBeanTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="45" selection-start="725" selection-end="725" vertical-scroll-proportion="0.60390764" />
+        <state line="91" column="34" selection-start="2716" selection-end="2716" vertical-scroll-proportion="0.8201058">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/Index.tml">
+    <entry file="file://$PROJECT_DIR$/src/test/java/org/seke/fs/beans/OrdersItemBeanTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="115" selection-start="693" selection-end="693" vertical-scroll-proportion="0.46532845" />
+        <state line="55" column="22" selection-start="1500" selection-end="1500" vertical-scroll-proportion="0.6296296">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/Register.tml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="8" selection-start="1319" selection-end="1324" vertical-scroll-proportion="0.75488454">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/seke/fs/pages/Register.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/seke/fs/beans/OrderBean.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="71" column="5" selection-start="1757" selection-end="1757" vertical-scroll-proportion="0.54867256">
+        <state line="50" column="8" selection-start="993" selection-end="993" vertical-scroll-proportion="0.030088495">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/AlterProduct.tml">
+    <entry file="file://$PROJECT_DIR$/src/test/java/org/seke/fs/beans/OrderBeanTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="8" selection-start="480" selection-end="485" vertical-scroll-proportion="0.3623446">
+        <state line="55" column="51" selection-start="1408" selection-end="1408" vertical-scroll-proportion="0.5802469">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/UserInfo.tml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/seke/fs/beans/UserBean.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="0" selection-start="1465" selection-end="1465" vertical-scroll-proportion="0.5894161">
+        <state line="121" column="71" selection-start="2721" selection-end="2721" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/AddProduct.tml">
+    <entry file="file://$PROJECT_DIR$/src/test/java/org/seke/fs/beans/UserBeanTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="53" selection-start="1530" selection-end="1530" vertical-scroll-proportion="0.67140317">
-          <folding />
+        <state line="140" column="9" selection-start="4201" selection-end="4201" vertical-scroll-proportion="0.67019403">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
