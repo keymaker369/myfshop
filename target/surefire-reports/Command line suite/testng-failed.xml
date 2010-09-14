@@ -2,9 +2,10 @@
 <suite thread-count="5" skipfailedinvocationCounts="false" verbose="0" name="Failed suite [Command line suite]" junit="false" annotations="JDK">
   <test name="Command line test(failed)" junit="false" annotations="JDK">
     <classes>
-      <class name="org.seke.fs.spring.ApplicationContestProviderTest">
+      <class name="org.seke.fs.beans.ProductBeanTest">
         <methods>
-          <include name="contextUnderTest"/>
+          <include name="testTitle"/>
+          <include name="setUp"/>
         </methods>
       </class>
     </classes>

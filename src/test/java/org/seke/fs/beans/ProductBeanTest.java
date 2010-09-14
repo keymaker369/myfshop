@@ -1,5 +1,6 @@
 package org.seke.fs.beans;
 
+import org.seke.fs.Identifiable;
 import org.seke.fs.Product;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -26,14 +27,10 @@ public class ProductBeanTest {
     }
 
 
-//    @Test
-//    public void testId() {
-//        assertNotNull(productUnderTest.getId());
-//        assertSame(0, productUnderTest.getId());
-//        int id = 3;
-//        productUnderTest.setId(id);
-//        assertSame(id, productUnderTest.getId());
-//    }
+    @Test
+    public void testId() {
+        assertNotNull(Identifiable.class.cast(productUnderTest).getId());
+    }
 
     @Test
     public void testTitle() {
@@ -41,6 +38,27 @@ public class ProductBeanTest {
         String title = "test";
         productUnderTest.setTitle(title);
         assertSame(title, productUnderTest.getTitle());
+    }
+
+    @Test(expectedExceptions = AssertionError.class)
+    public void testProductTitleInvalid() {
+        assertNull(productUnderTest.getTitle());
+        String title = null;
+        productUnderTest.setTitle(title);
+    }
+
+    @Test(expectedExceptions = AssertionError.class)
+    public void testProductTitleInvalid1() {
+        assertNull(productUnderTest.getTitle());
+        String title = "";
+        productUnderTest.setTitle(title);
+    }
+
+    @Test(expectedExceptions = AssertionError.class)
+    public void testProductTitleInvalid2() {
+        assertNull(productUnderTest.getTitle());
+        String title = " ";
+        productUnderTest.setTitle(title);
     }
 
     @Test
@@ -51,6 +69,13 @@ public class ProductBeanTest {
         assertEquals(amountInStock, productUnderTest.getAmountInStock());
     }
 
+    @Test(expectedExceptions = AssertionError.class)
+    public void testAmountInStockInvalid() {
+        assertNotNull(productUnderTest.getAmountInStock());
+        int amount = -12;
+        productUnderTest.setAmountInStock(amount);
+    }
+
     @Test
     public void testPrice() {
         assertNotNull(productUnderTest.getPrice());
@@ -58,6 +83,13 @@ public class ProductBeanTest {
         double price = 134.134;
         productUnderTest.setPrice(price);
         assertEquals(price, productUnderTest.getPrice());
+    }
+
+    @Test(expectedExceptions = AssertionError.class)
+    public void testPriceInvalid() {
+        assertNotNull(productUnderTest.getPrice());
+        int price = -12;
+        productUnderTest.setPrice(price);
     }
 
 }

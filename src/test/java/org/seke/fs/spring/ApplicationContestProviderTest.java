@@ -1,7 +1,5 @@
 package org.seke.fs.spring;
 
-import org.testng.annotations.Test;
-
 /**
  * Created by IntelliJ IDEA.
  * User: nenad
@@ -10,7 +8,7 @@ import org.testng.annotations.Test;
  * To change this template use File | Settings | File Templates.
  */
 public class ApplicationContestProviderTest {
-
+    /*
     @Test
     public void contextUnderTest() {
 
@@ -19,5 +17,5 @@ public class ApplicationContestProviderTest {
         for (int i = 0; i < contextUnderTest.getContextLocations().length; i++) {
             System.out.println(contextUnderTest.getContextLocations()[i]);
         }
-    }
+    } */
 }

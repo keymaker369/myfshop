@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Command line test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>23/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>40/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Sun Aug 29 01:35:58 CEST 2010</td>
+<td>Started on:</td><td>Tue Sep 14 14:56:43 CEST 2010</td>
 </tr>
-<tr><td>Total time:</td><td>14 seconds (14776 ms)</td>
+<tr><td>Total time:</td><td>0 seconds (328 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -79,16 +79,6 @@ function toggleAllBoxes() {
 <td></td>
 </tr>
 <tr>
-<td title='org.seke.fs.spring.ApplicationContestProviderTest.contextUnderTest()'>contextUnderTest</td>
-<td>0</td>
-<td></td>
-</tr>
-<tr>
-<td title='org.seke.fs.SeleniumTest.testAddProduct()'>testAddProduct</td>
-<td>3</td>
-<td></td>
-</tr>
-<tr>
 <td title='org.seke.fs.beans.OrdersItemBeanTest.testAmount()'>testAmount</td>
 <td>0</td>
 <td></td>
@@ -99,27 +89,528 @@ function toggleAllBoxes() {
 <td></td>
 </tr>
 <tr>
-<td title='org.seke.fs.SeleniumTest.testApplicationStartup()'>testApplicationStartup</td>
+<td title='org.seke.fs.beans.ProductBeanTest.testAmountInStockInvalid()'>testAmountInStockInvalid</td>
+<td>0</td>
+<td><div><pre>java.lang.AssertionError
+	at org.seke.fs.beans.ProductBean.setAmountInStock(ProductBean.java:63)
+	at org.seke.fs.beans.ProductBeanTest.testAmountInStockInvalid(ProductBeanTest.java:76)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:62)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:141)
+	at org.apache.maven.surefire.Surefire.run(Surefire.java:177)
+	at org.apache.maven.surefire.booter.SurefireBooter.runSuitesInProcess(SurefireBooter.java:345)
+	at org.apache.maven.surefire.booter.SurefireBooter.main(SurefireBooter.java:1009)
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace239779852", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace239779852'><pre>java.lang.AssertionError
+	at org.seke.fs.beans.ProductBean.setAmountInStock(ProductBean.java:63)
+	at org.seke.fs.beans.ProductBeanTest.testAmountInStockInvalid(ProductBeanTest.java:76)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.testng.internal.MethodHelper.invokeMethod(MethodHelper.java:580)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:478)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:617)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:885)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:110)
+	at org.testng.TestRunner.runWorkers(TestRunner.java:712)
+	at org.testng.TestRunner.privateRun(TestRunner.java:582)
+	at org.testng.TestRunner.run(TestRunner.java:477)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:324)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:292)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:198)
+	at org.testng.TestNG.createAndRunSuiteRunners(TestNG.java:821)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:788)
+	at org.testng.TestNG.run(TestNG.java:708)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:62)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:141)
+	at org.apache.maven.surefire.Surefire.run(Surefire.java:177)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.maven.surefire.booter.SurefireBooter.runSuitesInProcess(SurefireBooter.java:345)
+	at org.apache.maven.surefire.booter.SurefireBooter.main(SurefireBooter.java:1009)
+</pre></div></td>
+</tr>
+<tr>
+<td title='org.seke.fs.beans.OrderBeanTest.testCommitDateInvalid()'>testCommitDateInvalid</td>
+<td>0</td>
+<td><div><pre>java.lang.AssertionError
+	at org.seke.fs.beans.OrderBean.setCommitDate(OrderBean.java:54)
+	at org.seke.fs.beans.OrderBeanTest.testCommitDateInvalid(OrderBeanTest.java:40)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:62)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:141)
+	at org.apache.maven.surefire.Surefire.run(Surefire.java:177)
+	at org.apache.maven.surefire.booter.SurefireBooter.runSuitesInProcess(SurefireBooter.java:345)
+	at org.apache.maven.surefire.booter.SurefireBooter.main(SurefireBooter.java:1009)
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace197005066", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace197005066'><pre>java.lang.AssertionError
+	at org.seke.fs.beans.OrderBean.setCommitDate(OrderBean.java:54)
+	at org.seke.fs.beans.OrderBeanTest.testCommitDateInvalid(OrderBeanTest.java:40)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.testng.internal.MethodHelper.invokeMethod(MethodHelper.java:580)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:478)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:617)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:885)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:110)
+	at org.testng.TestRunner.runWorkers(TestRunner.java:712)
+	at org.testng.TestRunner.privateRun(TestRunner.java:582)
+	at org.testng.TestRunner.run(TestRunner.java:477)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:324)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:292)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:198)
+	at org.testng.TestNG.createAndRunSuiteRunners(TestNG.java:821)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:788)
+	at org.testng.TestNG.run(TestNG.java:708)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:62)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:141)
+	at org.apache.maven.surefire.Surefire.run(Surefire.java:177)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.maven.surefire.booter.SurefireBooter.runSuitesInProcess(SurefireBooter.java:345)
+	at org.apache.maven.surefire.booter.SurefireBooter.main(SurefireBooter.java:1009)
+</pre></div></td>
+</tr>
+<tr>
+<td title='org.seke.fs.beans.OrderBeanTest.testCommitDateInvalid1()'>testCommitDateInvalid1</td>
+<td>0</td>
+<td><div><pre>java.lang.AssertionError
+	at org.seke.fs.beans.OrderBean.setCommitDate(OrderBean.java:55)
+	at org.seke.fs.beans.OrderBeanTest.testCommitDateInvalid1(OrderBeanTest.java:48)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:62)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:141)
+	at org.apache.maven.surefire.Surefire.run(Surefire.java:177)
+	at org.apache.maven.surefire.booter.SurefireBooter.runSuitesInProcess(SurefireBooter.java:345)
+	at org.apache.maven.surefire.booter.SurefireBooter.main(SurefireBooter.java:1009)
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1362875764", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1362875764'><pre>java.lang.AssertionError
+	at org.seke.fs.beans.OrderBean.setCommitDate(OrderBean.java:55)
+	at org.seke.fs.beans.OrderBeanTest.testCommitDateInvalid1(OrderBeanTest.java:48)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.testng.internal.MethodHelper.invokeMethod(MethodHelper.java:580)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:478)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:617)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:885)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:110)
+	at org.testng.TestRunner.runWorkers(TestRunner.java:712)
+	at org.testng.TestRunner.privateRun(TestRunner.java:582)
+	at org.testng.TestRunner.run(TestRunner.java:477)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:324)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:292)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:198)
+	at org.testng.TestNG.createAndRunSuiteRunners(TestNG.java:821)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:788)
+	at org.testng.TestNG.run(TestNG.java:708)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:62)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:141)
+	at org.apache.maven.surefire.Surefire.run(Surefire.java:177)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.maven.surefire.booter.SurefireBooter.runSuitesInProcess(SurefireBooter.java:345)
+	at org.apache.maven.surefire.booter.SurefireBooter.main(SurefireBooter.java:1009)
+</pre></div></td>
+</tr>
+<tr>
+<td title='org.seke.fs.beans.UserBeanTest.testFirstName()'>testFirstName</td>
 <td>0</td>
 <td></td>
 </tr>
 <tr>
-<td title='org.seke.fs.beans.CostumerBeanTest.testFirstName()'>testFirstName</td>
+<td title='org.seke.fs.beans.UserBeanTest.testFirstNameInvalid()'>testFirstNameInvalid</td>
+<td>0</td>
+<td><div><pre>java.lang.AssertionError
+	at org.seke.fs.beans.UserBean.setFirstName(UserBean.java:84)
+	at org.seke.fs.beans.UserBeanTest.testFirstNameInvalid(UserBeanTest.java:95)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:62)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:141)
+	at org.apache.maven.surefire.Surefire.run(Surefire.java:177)
+	at org.apache.maven.surefire.booter.SurefireBooter.runSuitesInProcess(SurefireBooter.java:345)
+	at org.apache.maven.surefire.booter.SurefireBooter.main(SurefireBooter.java:1009)
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace922682751", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace922682751'><pre>java.lang.AssertionError
+	at org.seke.fs.beans.UserBean.setFirstName(UserBean.java:84)
+	at org.seke.fs.beans.UserBeanTest.testFirstNameInvalid(UserBeanTest.java:95)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.testng.internal.MethodHelper.invokeMethod(MethodHelper.java:580)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:478)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:617)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:885)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:110)
+	at org.testng.TestRunner.runWorkers(TestRunner.java:712)
+	at org.testng.TestRunner.privateRun(TestRunner.java:582)
+	at org.testng.TestRunner.run(TestRunner.java:477)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:324)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:292)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:198)
+	at org.testng.TestNG.createAndRunSuiteRunners(TestNG.java:821)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:788)
+	at org.testng.TestNG.run(TestNG.java:708)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:62)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:141)
+	at org.apache.maven.surefire.Surefire.run(Surefire.java:177)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.maven.surefire.booter.SurefireBooter.runSuitesInProcess(SurefireBooter.java:345)
+	at org.apache.maven.surefire.booter.SurefireBooter.main(SurefireBooter.java:1009)
+</pre></div></td>
+</tr>
+<tr>
+<td title='org.seke.fs.beans.UserBeanTest.testFirstNameInvalid1()'>testFirstNameInvalid1</td>
+<td>0</td>
+<td><div><pre>java.lang.AssertionError
+	at org.seke.fs.beans.UserBean.setFirstName(UserBean.java:84)
+	at org.seke.fs.beans.UserBeanTest.testFirstNameInvalid1(UserBeanTest.java:102)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:62)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:141)
+	at org.apache.maven.surefire.Surefire.run(Surefire.java:177)
+	at org.apache.maven.surefire.booter.SurefireBooter.runSuitesInProcess(SurefireBooter.java:345)
+	at org.apache.maven.surefire.booter.SurefireBooter.main(SurefireBooter.java:1009)
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace359851081", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace359851081'><pre>java.lang.AssertionError
+	at org.seke.fs.beans.UserBean.setFirstName(UserBean.java:84)
+	at org.seke.fs.beans.UserBeanTest.testFirstNameInvalid1(UserBeanTest.java:102)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.testng.internal.MethodHelper.invokeMethod(MethodHelper.java:580)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:478)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:617)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:885)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:110)
+	at org.testng.TestRunner.runWorkers(TestRunner.java:712)
+	at org.testng.TestRunner.privateRun(TestRunner.java:582)
+	at org.testng.TestRunner.run(TestRunner.java:477)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:324)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:292)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:198)
+	at org.testng.TestNG.createAndRunSuiteRunners(TestNG.java:821)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:788)
+	at org.testng.TestNG.run(TestNG.java:708)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:62)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:141)
+	at org.apache.maven.surefire.Surefire.run(Surefire.java:177)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.maven.surefire.booter.SurefireBooter.runSuitesInProcess(SurefireBooter.java:345)
+	at org.apache.maven.surefire.booter.SurefireBooter.main(SurefireBooter.java:1009)
+</pre></div></td>
+</tr>
+<tr>
+<td title='org.seke.fs.beans.UserBeanTest.testFirstNameInvalid2()'>testFirstNameInvalid2</td>
+<td>0</td>
+<td><div><pre>java.lang.AssertionError
+	at org.seke.fs.beans.UserBean.setFirstName(UserBean.java:83)
+	at org.seke.fs.beans.UserBeanTest.testFirstNameInvalid2(UserBeanTest.java:109)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:62)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:141)
+	at org.apache.maven.surefire.Surefire.run(Surefire.java:177)
+	at org.apache.maven.surefire.booter.SurefireBooter.runSuitesInProcess(SurefireBooter.java:345)
+	at org.apache.maven.surefire.booter.SurefireBooter.main(SurefireBooter.java:1009)
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1520314875", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1520314875'><pre>java.lang.AssertionError
+	at org.seke.fs.beans.UserBean.setFirstName(UserBean.java:83)
+	at org.seke.fs.beans.UserBeanTest.testFirstNameInvalid2(UserBeanTest.java:109)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.testng.internal.MethodHelper.invokeMethod(MethodHelper.java:580)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:478)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:617)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:885)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:110)
+	at org.testng.TestRunner.runWorkers(TestRunner.java:712)
+	at org.testng.TestRunner.privateRun(TestRunner.java:582)
+	at org.testng.TestRunner.run(TestRunner.java:477)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:324)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:292)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:198)
+	at org.testng.TestNG.createAndRunSuiteRunners(TestNG.java:821)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:788)
+	at org.testng.TestNG.run(TestNG.java:708)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:62)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:141)
+	at org.apache.maven.surefire.Surefire.run(Surefire.java:177)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.maven.surefire.booter.SurefireBooter.runSuitesInProcess(SurefireBooter.java:345)
+	at org.apache.maven.surefire.booter.SurefireBooter.main(SurefireBooter.java:1009)
+</pre></div></td>
+</tr>
+<tr>
+<td title='org.seke.fs.beans.ProductBeanTest.testId()'>testId</td>
 <td>0</td>
 <td></td>
 </tr>
 <tr>
-<td title='org.seke.fs.beans.CostumerBeanTest.testLastName()'>testLastName</td>
+<td title='org.seke.fs.beans.OrdersItemBeanTest.testInvalidAmount()'>testInvalidAmount</td>
+<td>0</td>
+<td><div><pre>java.lang.AssertionError
+	at org.seke.fs.beans.OrdersItemBean.setAmount(OrdersItemBean.java:45)
+	at org.seke.fs.beans.OrdersItemBeanTest.testInvalidAmount(OrdersItemBeanTest.java:37)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:62)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:141)
+	at org.apache.maven.surefire.Surefire.run(Surefire.java:177)
+	at org.apache.maven.surefire.booter.SurefireBooter.runSuitesInProcess(SurefireBooter.java:345)
+	at org.apache.maven.surefire.booter.SurefireBooter.main(SurefireBooter.java:1009)
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1651462312", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1651462312'><pre>java.lang.AssertionError
+	at org.seke.fs.beans.OrdersItemBean.setAmount(OrdersItemBean.java:45)
+	at org.seke.fs.beans.OrdersItemBeanTest.testInvalidAmount(OrdersItemBeanTest.java:37)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.testng.internal.MethodHelper.invokeMethod(MethodHelper.java:580)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:478)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:617)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:885)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:110)
+	at org.testng.TestRunner.runWorkers(TestRunner.java:712)
+	at org.testng.TestRunner.privateRun(TestRunner.java:582)
+	at org.testng.TestRunner.run(TestRunner.java:477)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:324)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:292)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:198)
+	at org.testng.TestNG.createAndRunSuiteRunners(TestNG.java:821)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:788)
+	at org.testng.TestNG.run(TestNG.java:708)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:62)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:141)
+	at org.apache.maven.surefire.Surefire.run(Surefire.java:177)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.maven.surefire.booter.SurefireBooter.runSuitesInProcess(SurefireBooter.java:345)
+	at org.apache.maven.surefire.booter.SurefireBooter.main(SurefireBooter.java:1009)
+</pre></div></td>
+</tr>
+<tr>
+<td title='org.seke.fs.beans.OrdersItemBeanTest.testInvalidPrice()'>testInvalidPrice</td>
+<td>0</td>
+<td><div><pre>java.lang.AssertionError
+	at org.seke.fs.beans.OrdersItemBean.setPrice(OrdersItemBean.java:54)
+	at org.seke.fs.beans.OrdersItemBeanTest.testInvalidPrice(OrdersItemBeanTest.java:52)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:62)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:141)
+	at org.apache.maven.surefire.Surefire.run(Surefire.java:177)
+	at org.apache.maven.surefire.booter.SurefireBooter.runSuitesInProcess(SurefireBooter.java:345)
+	at org.apache.maven.surefire.booter.SurefireBooter.main(SurefireBooter.java:1009)
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1418902458", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1418902458'><pre>java.lang.AssertionError
+	at org.seke.fs.beans.OrdersItemBean.setPrice(OrdersItemBean.java:54)
+	at org.seke.fs.beans.OrdersItemBeanTest.testInvalidPrice(OrdersItemBeanTest.java:52)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.testng.internal.MethodHelper.invokeMethod(MethodHelper.java:580)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:478)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:617)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:885)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:110)
+	at org.testng.TestRunner.runWorkers(TestRunner.java:712)
+	at org.testng.TestRunner.privateRun(TestRunner.java:582)
+	at org.testng.TestRunner.run(TestRunner.java:477)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:324)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:292)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:198)
+	at org.testng.TestNG.createAndRunSuiteRunners(TestNG.java:821)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:788)
+	at org.testng.TestNG.run(TestNG.java:708)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:62)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:141)
+	at org.apache.maven.surefire.Surefire.run(Surefire.java:177)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.maven.surefire.booter.SurefireBooter.runSuitesInProcess(SurefireBooter.java:345)
+	at org.apache.maven.surefire.booter.SurefireBooter.main(SurefireBooter.java:1009)
+</pre></div></td>
+</tr>
+<tr>
+<td title='org.seke.fs.beans.UserBeanTest.testLastName()'>testLastName</td>
 <td>0</td>
 <td></td>
 </tr>
 <tr>
-<td title='org.seke.fs.beans.CostumerBeanTest.testOrders()'>testOrders</td>
+<td title='org.seke.fs.beans.UserBeanTest.testLastNameInvalid()'>testLastNameInvalid</td>
 <td>0</td>
-<td></td>
+<td><div><pre>java.lang.AssertionError
+	at org.seke.fs.beans.UserBean.setLastName(UserBean.java:94)
+	at org.seke.fs.beans.UserBeanTest.testLastNameInvalid(UserBeanTest.java:124)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:62)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:141)
+	at org.apache.maven.surefire.Surefire.run(Surefire.java:177)
+	at org.apache.maven.surefire.booter.SurefireBooter.runSuitesInProcess(SurefireBooter.java:345)
+	at org.apache.maven.surefire.booter.SurefireBooter.main(SurefireBooter.java:1009)
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1352529649", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1352529649'><pre>java.lang.AssertionError
+	at org.seke.fs.beans.UserBean.setLastName(UserBean.java:94)
+	at org.seke.fs.beans.UserBeanTest.testLastNameInvalid(UserBeanTest.java:124)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.testng.internal.MethodHelper.invokeMethod(MethodHelper.java:580)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:478)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:617)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:885)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:110)
+	at org.testng.TestRunner.runWorkers(TestRunner.java:712)
+	at org.testng.TestRunner.privateRun(TestRunner.java:582)
+	at org.testng.TestRunner.run(TestRunner.java:477)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:324)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:292)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:198)
+	at org.testng.TestNG.createAndRunSuiteRunners(TestNG.java:821)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:788)
+	at org.testng.TestNG.run(TestNG.java:708)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:62)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:141)
+	at org.apache.maven.surefire.Surefire.run(Surefire.java:177)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.maven.surefire.booter.SurefireBooter.runSuitesInProcess(SurefireBooter.java:345)
+	at org.apache.maven.surefire.booter.SurefireBooter.main(SurefireBooter.java:1009)
+</pre></div></td>
 </tr>
 <tr>
-<td title='org.seke.fs.beans.OrdersItemBeanTest.testOrdersItemNumber()'>testOrdersItemNumber</td>
+<td title='org.seke.fs.beans.UserBeanTest.testLastNameInvalid1()'>testLastNameInvalid1</td>
+<td>0</td>
+<td><div><pre>java.lang.AssertionError
+	at org.seke.fs.beans.UserBean.setLastName(UserBean.java:94)
+	at org.seke.fs.beans.UserBeanTest.testLastNameInvalid1(UserBeanTest.java:131)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:62)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:141)
+	at org.apache.maven.surefire.Surefire.run(Surefire.java:177)
+	at org.apache.maven.surefire.booter.SurefireBooter.runSuitesInProcess(SurefireBooter.java:345)
+	at org.apache.maven.surefire.booter.SurefireBooter.main(SurefireBooter.java:1009)
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2099705691", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2099705691'><pre>java.lang.AssertionError
+	at org.seke.fs.beans.UserBean.setLastName(UserBean.java:94)
+	at org.seke.fs.beans.UserBeanTest.testLastNameInvalid1(UserBeanTest.java:131)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.testng.internal.MethodHelper.invokeMethod(MethodHelper.java:580)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:478)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:617)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:885)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:110)
+	at org.testng.TestRunner.runWorkers(TestRunner.java:712)
+	at org.testng.TestRunner.privateRun(TestRunner.java:582)
+	at org.testng.TestRunner.run(TestRunner.java:477)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:324)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:292)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:198)
+	at org.testng.TestNG.createAndRunSuiteRunners(TestNG.java:821)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:788)
+	at org.testng.TestNG.run(TestNG.java:708)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:62)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:141)
+	at org.apache.maven.surefire.Surefire.run(Surefire.java:177)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.maven.surefire.booter.SurefireBooter.runSuitesInProcess(SurefireBooter.java:345)
+	at org.apache.maven.surefire.booter.SurefireBooter.main(SurefireBooter.java:1009)
+</pre></div></td>
+</tr>
+<tr>
+<td title='org.seke.fs.beans.UserBeanTest.testLastNameInvalid2()'>testLastNameInvalid2</td>
+<td>0</td>
+<td><div><pre>java.lang.AssertionError
+	at org.seke.fs.beans.UserBean.setLastName(UserBean.java:93)
+	at org.seke.fs.beans.UserBeanTest.testLastNameInvalid2(UserBeanTest.java:138)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:62)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:141)
+	at org.apache.maven.surefire.Surefire.run(Surefire.java:177)
+	at org.apache.maven.surefire.booter.SurefireBooter.runSuitesInProcess(SurefireBooter.java:345)
+	at org.apache.maven.surefire.booter.SurefireBooter.main(SurefireBooter.java:1009)
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace742510685", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace742510685'><pre>java.lang.AssertionError
+	at org.seke.fs.beans.UserBean.setLastName(UserBean.java:93)
+	at org.seke.fs.beans.UserBeanTest.testLastNameInvalid2(UserBeanTest.java:138)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.testng.internal.MethodHelper.invokeMethod(MethodHelper.java:580)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:478)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:617)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:885)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:110)
+	at org.testng.TestRunner.runWorkers(TestRunner.java:712)
+	at org.testng.TestRunner.privateRun(TestRunner.java:582)
+	at org.testng.TestRunner.run(TestRunner.java:477)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:324)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:292)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:198)
+	at org.testng.TestNG.createAndRunSuiteRunners(TestNG.java:821)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:788)
+	at org.testng.TestNG.run(TestNG.java:708)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:62)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:141)
+	at org.apache.maven.surefire.Surefire.run(Surefire.java:177)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.maven.surefire.booter.SurefireBooter.runSuitesInProcess(SurefireBooter.java:345)
+	at org.apache.maven.surefire.booter.SurefireBooter.main(SurefireBooter.java:1009)
+</pre></div></td>
+</tr>
+<tr>
+<td title='org.seke.fs.beans.UserBeanTest.testOrders()'>testOrders</td>
 <td>0</td>
 <td></td>
 </tr>
@@ -129,9 +620,193 @@ function toggleAllBoxes() {
 <td></td>
 </tr>
 <tr>
-<td title='org.seke.fs.beans.CostumerBeanTest.testPassword()'>testPassword</td>
+<td title='org.seke.fs.beans.OrderBeanTest.testOrdersItemsInvalid()'>testOrdersItemsInvalid</td>
+<td>0</td>
+<td><div><pre>java.lang.AssertionError
+	at org.seke.fs.beans.OrderBean.setOrdersItems(OrderBean.java:64)
+	at org.seke.fs.beans.OrderBeanTest.testOrdersItemsInvalid(OrderBeanTest.java:60)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:62)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:141)
+	at org.apache.maven.surefire.Surefire.run(Surefire.java:177)
+	at org.apache.maven.surefire.booter.SurefireBooter.runSuitesInProcess(SurefireBooter.java:345)
+	at org.apache.maven.surefire.booter.SurefireBooter.main(SurefireBooter.java:1009)
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace331781542", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace331781542'><pre>java.lang.AssertionError
+	at org.seke.fs.beans.OrderBean.setOrdersItems(OrderBean.java:64)
+	at org.seke.fs.beans.OrderBeanTest.testOrdersItemsInvalid(OrderBeanTest.java:60)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.testng.internal.MethodHelper.invokeMethod(MethodHelper.java:580)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:478)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:617)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:885)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:110)
+	at org.testng.TestRunner.runWorkers(TestRunner.java:712)
+	at org.testng.TestRunner.privateRun(TestRunner.java:582)
+	at org.testng.TestRunner.run(TestRunner.java:477)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:324)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:292)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:198)
+	at org.testng.TestNG.createAndRunSuiteRunners(TestNG.java:821)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:788)
+	at org.testng.TestNG.run(TestNG.java:708)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:62)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:141)
+	at org.apache.maven.surefire.Surefire.run(Surefire.java:177)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.maven.surefire.booter.SurefireBooter.runSuitesInProcess(SurefireBooter.java:345)
+	at org.apache.maven.surefire.booter.SurefireBooter.main(SurefireBooter.java:1009)
+</pre></div></td>
+</tr>
+<tr>
+<td title='org.seke.fs.beans.UserBeanTest.testPassword()'>testPassword</td>
 <td>0</td>
 <td></td>
+</tr>
+<tr>
+<td title='org.seke.fs.beans.UserBeanTest.testPasswordInvalid()'>testPasswordInvalid</td>
+<td>0</td>
+<td><div><pre>java.lang.AssertionError
+	at org.seke.fs.beans.UserBean.setPassword(UserBean.java:74)
+	at org.seke.fs.beans.UserBeanTest.testPasswordInvalid(UserBeanTest.java:66)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:62)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:141)
+	at org.apache.maven.surefire.Surefire.run(Surefire.java:177)
+	at org.apache.maven.surefire.booter.SurefireBooter.runSuitesInProcess(SurefireBooter.java:345)
+	at org.apache.maven.surefire.booter.SurefireBooter.main(SurefireBooter.java:1009)
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace15735326", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace15735326'><pre>java.lang.AssertionError
+	at org.seke.fs.beans.UserBean.setPassword(UserBean.java:74)
+	at org.seke.fs.beans.UserBeanTest.testPasswordInvalid(UserBeanTest.java:66)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.testng.internal.MethodHelper.invokeMethod(MethodHelper.java:580)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:478)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:617)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:885)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:110)
+	at org.testng.TestRunner.runWorkers(TestRunner.java:712)
+	at org.testng.TestRunner.privateRun(TestRunner.java:582)
+	at org.testng.TestRunner.run(TestRunner.java:477)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:324)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:292)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:198)
+	at org.testng.TestNG.createAndRunSuiteRunners(TestNG.java:821)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:788)
+	at org.testng.TestNG.run(TestNG.java:708)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:62)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:141)
+	at org.apache.maven.surefire.Surefire.run(Surefire.java:177)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.maven.surefire.booter.SurefireBooter.runSuitesInProcess(SurefireBooter.java:345)
+	at org.apache.maven.surefire.booter.SurefireBooter.main(SurefireBooter.java:1009)
+</pre></div></td>
+</tr>
+<tr>
+<td title='org.seke.fs.beans.UserBeanTest.testPasswordInvalid1()'>testPasswordInvalid1</td>
+<td>0</td>
+<td><div><pre>java.lang.AssertionError
+	at org.seke.fs.beans.UserBean.setPassword(UserBean.java:74)
+	at org.seke.fs.beans.UserBeanTest.testPasswordInvalid1(UserBeanTest.java:73)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:62)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:141)
+	at org.apache.maven.surefire.Surefire.run(Surefire.java:177)
+	at org.apache.maven.surefire.booter.SurefireBooter.runSuitesInProcess(SurefireBooter.java:345)
+	at org.apache.maven.surefire.booter.SurefireBooter.main(SurefireBooter.java:1009)
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1922091779", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1922091779'><pre>java.lang.AssertionError
+	at org.seke.fs.beans.UserBean.setPassword(UserBean.java:74)
+	at org.seke.fs.beans.UserBeanTest.testPasswordInvalid1(UserBeanTest.java:73)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.testng.internal.MethodHelper.invokeMethod(MethodHelper.java:580)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:478)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:617)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:885)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:110)
+	at org.testng.TestRunner.runWorkers(TestRunner.java:712)
+	at org.testng.TestRunner.privateRun(TestRunner.java:582)
+	at org.testng.TestRunner.run(TestRunner.java:477)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:324)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:292)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:198)
+	at org.testng.TestNG.createAndRunSuiteRunners(TestNG.java:821)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:788)
+	at org.testng.TestNG.run(TestNG.java:708)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:62)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:141)
+	at org.apache.maven.surefire.Surefire.run(Surefire.java:177)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.maven.surefire.booter.SurefireBooter.runSuitesInProcess(SurefireBooter.java:345)
+	at org.apache.maven.surefire.booter.SurefireBooter.main(SurefireBooter.java:1009)
+</pre></div></td>
+</tr>
+<tr>
+<td title='org.seke.fs.beans.UserBeanTest.testPasswordInvalid2()'>testPasswordInvalid2</td>
+<td>0</td>
+<td><div><pre>java.lang.AssertionError
+	at org.seke.fs.beans.UserBean.setPassword(UserBean.java:73)
+	at org.seke.fs.beans.UserBeanTest.testPasswordInvalid2(UserBeanTest.java:80)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:62)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:141)
+	at org.apache.maven.surefire.Surefire.run(Surefire.java:177)
+	at org.apache.maven.surefire.booter.SurefireBooter.runSuitesInProcess(SurefireBooter.java:345)
+	at org.apache.maven.surefire.booter.SurefireBooter.main(SurefireBooter.java:1009)
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2131361171", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2131361171'><pre>java.lang.AssertionError
+	at org.seke.fs.beans.UserBean.setPassword(UserBean.java:73)
+	at org.seke.fs.beans.UserBeanTest.testPasswordInvalid2(UserBeanTest.java:80)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.testng.internal.MethodHelper.invokeMethod(MethodHelper.java:580)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:478)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:617)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:885)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:110)
+	at org.testng.TestRunner.runWorkers(TestRunner.java:712)
+	at org.testng.TestRunner.privateRun(TestRunner.java:582)
+	at org.testng.TestRunner.run(TestRunner.java:477)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:324)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:292)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:198)
+	at org.testng.TestNG.createAndRunSuiteRunners(TestNG.java:821)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:788)
+	at org.testng.TestNG.run(TestNG.java:708)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:62)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:141)
+	at org.apache.maven.surefire.Surefire.run(Surefire.java:177)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.maven.surefire.booter.SurefireBooter.runSuitesInProcess(SurefireBooter.java:345)
+	at org.apache.maven.surefire.booter.SurefireBooter.main(SurefireBooter.java:1009)
+</pre></div></td>
 </tr>
 <tr>
 <td title='org.seke.fs.beans.OrdersItemBeanTest.testPrice()'>testPrice</td>
@@ -144,7 +819,191 @@ function toggleAllBoxes() {
 <td></td>
 </tr>
 <tr>
-<td title='org.seke.fs.services.CostumersBeanTest.testRegister()'>testRegister</td>
+<td title='org.seke.fs.beans.ProductBeanTest.testPriceInvalid()'>testPriceInvalid</td>
+<td>0</td>
+<td><div><pre>java.lang.AssertionError
+	at org.seke.fs.beans.ProductBean.setPrice(ProductBean.java:72)
+	at org.seke.fs.beans.ProductBeanTest.testPriceInvalid(ProductBeanTest.java:92)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:62)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:141)
+	at org.apache.maven.surefire.Surefire.run(Surefire.java:177)
+	at org.apache.maven.surefire.booter.SurefireBooter.runSuitesInProcess(SurefireBooter.java:345)
+	at org.apache.maven.surefire.booter.SurefireBooter.main(SurefireBooter.java:1009)
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1250696665", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1250696665'><pre>java.lang.AssertionError
+	at org.seke.fs.beans.ProductBean.setPrice(ProductBean.java:72)
+	at org.seke.fs.beans.ProductBeanTest.testPriceInvalid(ProductBeanTest.java:92)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.testng.internal.MethodHelper.invokeMethod(MethodHelper.java:580)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:478)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:617)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:885)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:110)
+	at org.testng.TestRunner.runWorkers(TestRunner.java:712)
+	at org.testng.TestRunner.privateRun(TestRunner.java:582)
+	at org.testng.TestRunner.run(TestRunner.java:477)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:324)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:292)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:198)
+	at org.testng.TestNG.createAndRunSuiteRunners(TestNG.java:821)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:788)
+	at org.testng.TestNG.run(TestNG.java:708)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:62)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:141)
+	at org.apache.maven.surefire.Surefire.run(Surefire.java:177)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.maven.surefire.booter.SurefireBooter.runSuitesInProcess(SurefireBooter.java:345)
+	at org.apache.maven.surefire.booter.SurefireBooter.main(SurefireBooter.java:1009)
+</pre></div></td>
+</tr>
+<tr>
+<td title='org.seke.fs.beans.ProductBeanTest.testProductTitleInvalid()'>testProductTitleInvalid</td>
+<td>0</td>
+<td><div><pre>java.lang.AssertionError
+	at org.seke.fs.beans.ProductBean.setTitle(ProductBean.java:52)
+	at org.seke.fs.beans.ProductBeanTest.testProductTitleInvalid(ProductBeanTest.java:47)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:62)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:141)
+	at org.apache.maven.surefire.Surefire.run(Surefire.java:177)
+	at org.apache.maven.surefire.booter.SurefireBooter.runSuitesInProcess(SurefireBooter.java:345)
+	at org.apache.maven.surefire.booter.SurefireBooter.main(SurefireBooter.java:1009)
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2019524978", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2019524978'><pre>java.lang.AssertionError
+	at org.seke.fs.beans.ProductBean.setTitle(ProductBean.java:52)
+	at org.seke.fs.beans.ProductBeanTest.testProductTitleInvalid(ProductBeanTest.java:47)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.testng.internal.MethodHelper.invokeMethod(MethodHelper.java:580)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:478)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:617)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:885)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:110)
+	at org.testng.TestRunner.runWorkers(TestRunner.java:712)
+	at org.testng.TestRunner.privateRun(TestRunner.java:582)
+	at org.testng.TestRunner.run(TestRunner.java:477)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:324)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:292)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:198)
+	at org.testng.TestNG.createAndRunSuiteRunners(TestNG.java:821)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:788)
+	at org.testng.TestNG.run(TestNG.java:708)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:62)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:141)
+	at org.apache.maven.surefire.Surefire.run(Surefire.java:177)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.maven.surefire.booter.SurefireBooter.runSuitesInProcess(SurefireBooter.java:345)
+	at org.apache.maven.surefire.booter.SurefireBooter.main(SurefireBooter.java:1009)
+</pre></div></td>
+</tr>
+<tr>
+<td title='org.seke.fs.beans.ProductBeanTest.testProductTitleInvalid1()'>testProductTitleInvalid1</td>
+<td>0</td>
+<td><div><pre>java.lang.AssertionError
+	at org.seke.fs.beans.ProductBean.setTitle(ProductBean.java:53)
+	at org.seke.fs.beans.ProductBeanTest.testProductTitleInvalid1(ProductBeanTest.java:54)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:62)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:141)
+	at org.apache.maven.surefire.Surefire.run(Surefire.java:177)
+	at org.apache.maven.surefire.booter.SurefireBooter.runSuitesInProcess(SurefireBooter.java:345)
+	at org.apache.maven.surefire.booter.SurefireBooter.main(SurefireBooter.java:1009)
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace727368649", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace727368649'><pre>java.lang.AssertionError
+	at org.seke.fs.beans.ProductBean.setTitle(ProductBean.java:53)
+	at org.seke.fs.beans.ProductBeanTest.testProductTitleInvalid1(ProductBeanTest.java:54)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.testng.internal.MethodHelper.invokeMethod(MethodHelper.java:580)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:478)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:617)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:885)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:110)
+	at org.testng.TestRunner.runWorkers(TestRunner.java:712)
+	at org.testng.TestRunner.privateRun(TestRunner.java:582)
+	at org.testng.TestRunner.run(TestRunner.java:477)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:324)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:292)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:198)
+	at org.testng.TestNG.createAndRunSuiteRunners(TestNG.java:821)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:788)
+	at org.testng.TestNG.run(TestNG.java:708)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:62)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:141)
+	at org.apache.maven.surefire.Surefire.run(Surefire.java:177)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.maven.surefire.booter.SurefireBooter.runSuitesInProcess(SurefireBooter.java:345)
+	at org.apache.maven.surefire.booter.SurefireBooter.main(SurefireBooter.java:1009)
+</pre></div></td>
+</tr>
+<tr>
+<td title='org.seke.fs.beans.ProductBeanTest.testProductTitleInvalid2()'>testProductTitleInvalid2</td>
+<td>0</td>
+<td><div><pre>java.lang.AssertionError
+	at org.seke.fs.beans.ProductBean.setTitle(ProductBean.java:54)
+	at org.seke.fs.beans.ProductBeanTest.testProductTitleInvalid2(ProductBeanTest.java:61)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:62)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:141)
+	at org.apache.maven.surefire.Surefire.run(Surefire.java:177)
+	at org.apache.maven.surefire.booter.SurefireBooter.runSuitesInProcess(SurefireBooter.java:345)
+	at org.apache.maven.surefire.booter.SurefireBooter.main(SurefireBooter.java:1009)
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace801818331", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace801818331'><pre>java.lang.AssertionError
+	at org.seke.fs.beans.ProductBean.setTitle(ProductBean.java:54)
+	at org.seke.fs.beans.ProductBeanTest.testProductTitleInvalid2(ProductBeanTest.java:61)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.testng.internal.MethodHelper.invokeMethod(MethodHelper.java:580)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:478)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:617)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:885)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:110)
+	at org.testng.TestRunner.runWorkers(TestRunner.java:712)
+	at org.testng.TestRunner.privateRun(TestRunner.java:582)
+	at org.testng.TestRunner.run(TestRunner.java:477)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:324)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:292)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:198)
+	at org.testng.TestNG.createAndRunSuiteRunners(TestNG.java:821)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:788)
+	at org.testng.TestNG.run(TestNG.java:708)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:62)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:141)
+	at org.apache.maven.surefire.Surefire.run(Surefire.java:177)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.maven.surefire.booter.SurefireBooter.runSuitesInProcess(SurefireBooter.java:345)
+	at org.apache.maven.surefire.booter.SurefireBooter.main(SurefireBooter.java:1009)
+</pre></div></td>
+</tr>
+<tr>
+<td title='org.seke.fs.services.UsersBeanTest.testRegister()'>testRegister</td>
 <td>0</td>
 <td></td>
 </tr>
@@ -167,16 +1026,16 @@ function toggleAllBoxes() {
 <td title='org.seke.fs.services.ProductsBeanTest.testSaveInvalid()'>testSaveInvalid</td>
 <td>0</td>
 <td><div><pre>java.lang.AssertionError
-	at org.seke.fs.services.ProductsServiceBean.save(ProductsServiceBean.java:36)
+	at org.seke.fs.services.ProductsServiceBean.save(ProductsServiceBean.java:41)
 	at org.seke.fs.services.ProductsBeanTest.testSaveInvalid(ProductsBeanTest.java:48)
 	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:62)
 	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:141)
 	at org.apache.maven.surefire.Surefire.run(Surefire.java:177)
 	at org.apache.maven.surefire.booter.SurefireBooter.runSuitesInProcess(SurefireBooter.java:345)
 	at org.apache.maven.surefire.booter.SurefireBooter.main(SurefireBooter.java:1009)
-... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace12406210", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace12406210'><pre>java.lang.AssertionError
-	at org.seke.fs.services.ProductsServiceBean.save(ProductsServiceBean.java:36)
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace71786792", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace71786792'><pre>java.lang.AssertionError
+	at org.seke.fs.services.ProductsServiceBean.save(ProductsServiceBean.java:41)
 	at org.seke.fs.services.ProductsBeanTest.testSaveInvalid(ProductsBeanTest.java:48)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
@@ -210,24 +1069,152 @@ function toggleAllBoxes() {
 </pre></div></td>
 </tr>
 <tr>
-<td title='org.seke.fs.SeleniumTest.testShowProductDoesNotExist()'>testShowProductDoesNotExist</td>
-<td>0</td>
-<td></td>
-</tr>
-<tr>
 <td title='org.seke.fs.beans.ProductBeanTest.testTitle()'>testTitle</td>
 <td>0</td>
 <td></td>
 </tr>
 <tr>
-<td title='org.seke.fs.SeleniumTest.testUserLogingIfExists()'>testUserLogingIfExists</td>
+<td title='org.seke.fs.beans.UserBeanTest.testUsername()'>testUsername</td>
 <td>0</td>
 <td></td>
 </tr>
 <tr>
-<td title='org.seke.fs.beans.CostumerBeanTest.testUsername()'>testUsername</td>
+<td title='org.seke.fs.beans.UserBeanTest.testUsernameInvalid()'>testUsernameInvalid</td>
 <td>0</td>
-<td></td>
+<td><div><pre>java.lang.AssertionError
+	at org.seke.fs.beans.UserBean.setUsername(UserBean.java:64)
+	at org.seke.fs.beans.UserBeanTest.testUsernameInvalid(UserBeanTest.java:37)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:62)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:141)
+	at org.apache.maven.surefire.Surefire.run(Surefire.java:177)
+	at org.apache.maven.surefire.booter.SurefireBooter.runSuitesInProcess(SurefireBooter.java:345)
+	at org.apache.maven.surefire.booter.SurefireBooter.main(SurefireBooter.java:1009)
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace481877743", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace481877743'><pre>java.lang.AssertionError
+	at org.seke.fs.beans.UserBean.setUsername(UserBean.java:64)
+	at org.seke.fs.beans.UserBeanTest.testUsernameInvalid(UserBeanTest.java:37)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.testng.internal.MethodHelper.invokeMethod(MethodHelper.java:580)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:478)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:617)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:885)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:110)
+	at org.testng.TestRunner.runWorkers(TestRunner.java:712)
+	at org.testng.TestRunner.privateRun(TestRunner.java:582)
+	at org.testng.TestRunner.run(TestRunner.java:477)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:324)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:292)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:198)
+	at org.testng.TestNG.createAndRunSuiteRunners(TestNG.java:821)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:788)
+	at org.testng.TestNG.run(TestNG.java:708)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:62)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:141)
+	at org.apache.maven.surefire.Surefire.run(Surefire.java:177)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.maven.surefire.booter.SurefireBooter.runSuitesInProcess(SurefireBooter.java:345)
+	at org.apache.maven.surefire.booter.SurefireBooter.main(SurefireBooter.java:1009)
+</pre></div></td>
+</tr>
+<tr>
+<td title='org.seke.fs.beans.UserBeanTest.testUsernameInvalid1()'>testUsernameInvalid1</td>
+<td>0</td>
+<td><div><pre>java.lang.AssertionError
+	at org.seke.fs.beans.UserBean.setUsername(UserBean.java:64)
+	at org.seke.fs.beans.UserBeanTest.testUsernameInvalid1(UserBeanTest.java:44)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:62)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:141)
+	at org.apache.maven.surefire.Surefire.run(Surefire.java:177)
+	at org.apache.maven.surefire.booter.SurefireBooter.runSuitesInProcess(SurefireBooter.java:345)
+	at org.apache.maven.surefire.booter.SurefireBooter.main(SurefireBooter.java:1009)
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2015744690", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2015744690'><pre>java.lang.AssertionError
+	at org.seke.fs.beans.UserBean.setUsername(UserBean.java:64)
+	at org.seke.fs.beans.UserBeanTest.testUsernameInvalid1(UserBeanTest.java:44)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.testng.internal.MethodHelper.invokeMethod(MethodHelper.java:580)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:478)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:617)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:885)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:110)
+	at org.testng.TestRunner.runWorkers(TestRunner.java:712)
+	at org.testng.TestRunner.privateRun(TestRunner.java:582)
+	at org.testng.TestRunner.run(TestRunner.java:477)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:324)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:292)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:198)
+	at org.testng.TestNG.createAndRunSuiteRunners(TestNG.java:821)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:788)
+	at org.testng.TestNG.run(TestNG.java:708)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:62)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:141)
+	at org.apache.maven.surefire.Surefire.run(Surefire.java:177)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.maven.surefire.booter.SurefireBooter.runSuitesInProcess(SurefireBooter.java:345)
+	at org.apache.maven.surefire.booter.SurefireBooter.main(SurefireBooter.java:1009)
+</pre></div></td>
+</tr>
+<tr>
+<td title='org.seke.fs.beans.UserBeanTest.testUsernameInvalid2()'>testUsernameInvalid2</td>
+<td>0</td>
+<td><div><pre>java.lang.AssertionError
+	at org.seke.fs.beans.UserBean.setUsername(UserBean.java:63)
+	at org.seke.fs.beans.UserBeanTest.testUsernameInvalid2(UserBeanTest.java:51)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:62)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:141)
+	at org.apache.maven.surefire.Surefire.run(Surefire.java:177)
+	at org.apache.maven.surefire.booter.SurefireBooter.runSuitesInProcess(SurefireBooter.java:345)
+	at org.apache.maven.surefire.booter.SurefireBooter.main(SurefireBooter.java:1009)
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2112978551", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2112978551'><pre>java.lang.AssertionError
+	at org.seke.fs.beans.UserBean.setUsername(UserBean.java:63)
+	at org.seke.fs.beans.UserBeanTest.testUsernameInvalid2(UserBeanTest.java:51)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.testng.internal.MethodHelper.invokeMethod(MethodHelper.java:580)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:478)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:617)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:885)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:110)
+	at org.testng.TestRunner.runWorkers(TestRunner.java:712)
+	at org.testng.TestRunner.privateRun(TestRunner.java:582)
+	at org.testng.TestRunner.run(TestRunner.java:477)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:324)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:292)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:198)
+	at org.testng.TestNG.createAndRunSuiteRunners(TestNG.java:821)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:788)
+	at org.testng.TestNG.run(TestNG.java:708)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:62)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:141)
+	at org.apache.maven.surefire.Surefire.run(Surefire.java:177)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.maven.surefire.booter.SurefireBooter.runSuitesInProcess(SurefireBooter.java:345)
+	at org.apache.maven.surefire.booter.SurefireBooter.main(SurefireBooter.java:1009)
+</pre></div></td>
 </tr>
 </table><p>
 </body>

@@ -29,72 +29,236 @@ div.shootout {padding:2em;border:3px #4854A8 solid}
 <body>
 <table cellspacing=0 cellpadding=0 class="param">
 <tr><th>Test</th><th class="numi">Methods<br/>Passed</th><th class="numi">Scenarios<br/>Passed</th><th class="numi"># skipped</th><th class="numi"># failed</th><th class="numi">Total<br/>Time</th><th class="numi">Included<br/>Groups</th><th class="numi">Excluded<br/>Groups</th></tr>
-<tr><td style="text-align:left;padding-right:2em">Command line test</td><td class="numi">23</td><td class="numi">23</td><td class="numi">0</td><td class="numi">0</td><td class="numi">14.8 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr><td style="text-align:left;padding-right:2em">Command line test</td><td class="numi">40</td><td class="numi">40</td><td class="numi">0</td><td class="numi">0</td><td class="numi">0.3 seconds</td><td class="numi"></td><td class="numi"></td></tr>
 </table>
 <a id="summary"></a>
 <table cellspacing=0 cellpadding=0 class="passed">
 <tr><th>Class</th><th>Method</th><th># of<br/>Scenarios</th><th>Time<br/>(Msecs)</th></tr>
 <tr><th colspan="4">Command line test &#8212; passed</th></tr>
-<tr class="passedodd"><td rowspan="4">org.seke.fs.SeleniumTest<td><a href="#m1">testAddProduct</a></td><td class="numi">1</td><td class="numi">3777</td></tr><tr class="passedodd"><td><a href="#m2">testApplicationStartup</a></td><td class="numi">1</td><td class="numi">175</td></tr><tr class="passedodd"><td><a href="#m3">testShowProductDoesNotExist</a></td><td class="numi">1</td><td class="numi">140</td></tr><tr class="passedodd"><td><a href="#m4">testUserLogingIfExists</a></td><td class="numi">1</td><td class="numi">0</td></tr>
-<tr class="passedeven"><td rowspan="5">org.seke.fs.beans.CostumerBeanTest<td><a href="#m5">testFirstName</a></td><td class="numi">1</td><td class="numi">0</td></tr><tr class="passedeven"><td><a href="#m6">testLastName</a></td><td class="numi">1</td><td class="numi">0</td></tr><tr class="passedeven"><td><a href="#m7">testOrders</a></td><td class="numi">1</td><td class="numi">0</td></tr><tr class="passedeven"><td><a href="#m8">testPassword</a></td><td class="numi">1</td><td class="numi">1</td></tr><tr class="passedeven"><td><a href="#m9">testUsername</a></td><td class="numi">1</td><td class="numi">2</td></tr>
-<tr class="passedodd"><td rowspan="2">org.seke.fs.beans.OrderBeanTest<td><a href="#m10">commitDate</a></td><td class="numi">1</td><td class="numi">0</td></tr><tr class="passedodd"><td><a href="#m11">testOrdersItems</a></td><td class="numi">1</td><td class="numi">0</td></tr>
-<tr class="passedeven"><td rowspan="3">org.seke.fs.beans.OrdersItemBeanTest<td><a href="#m12">testAmount</a></td><td class="numi">1</td><td class="numi">0</td></tr><tr class="passedeven"><td><a href="#m13">testOrdersItemNumber</a></td><td class="numi">1</td><td class="numi">0</td></tr><tr class="passedeven"><td><a href="#m14">testPrice</a></td><td class="numi">1</td><td class="numi">0</td></tr>
-<tr class="passedodd"><td rowspan="3">org.seke.fs.beans.ProductBeanTest<td><a href="#m15">testAmountInStock</a></td><td class="numi">1</td><td class="numi">0</td></tr><tr class="passedodd"><td><a href="#m16">testPrice</a></td><td class="numi">1</td><td class="numi">0</td></tr><tr class="passedodd"><td><a href="#m17">testTitle</a></td><td class="numi">1</td><td class="numi">0</td></tr>
-<tr class="passedeven"><td rowspan="1">org.seke.fs.services.CostumersBeanTest<td><a href="#m18">testRegister</a></td><td class="numi">1</td><td class="numi">214</td></tr>
-<tr class="passedodd"><td rowspan="4">org.seke.fs.services.ProductsBeanTest<td><a href="#m19">testRetreive</a></td><td class="numi">1</td><td class="numi">1</td></tr><tr class="passedodd"><td><a href="#m20">testRetreiveById</a></td><td class="numi">1</td><td class="numi">0</td></tr><tr class="passedodd"><td><a href="#m21">testSave</a></td><td class="numi">1</td><td class="numi">1</td></tr><tr class="passedodd"><td><a href="#m22">testSaveInvalid</a></td><td class="numi">1</td><td class="numi">10</td></tr>
-<tr class="passedeven"><td rowspan="1">org.seke.fs.spring.ApplicationContestProviderTest<td><a href="#m23">contextUnderTest</a></td><td class="numi">1</td><td class="numi">254</td></tr>
+<tr class="passedodd"><td rowspan="5">org.seke.fs.beans.OrderBeanTest<td><a href="#m1">commitDate</a></td><td class="numi">1</td><td class="numi">1</td></tr><tr class="passedodd"><td><a href="#m2">testCommitDateInvalid</a></td><td class="numi">1</td><td class="numi">0</td></tr><tr class="passedodd"><td><a href="#m3">testCommitDateInvalid1</a></td><td class="numi">1</td><td class="numi">0</td></tr><tr class="passedodd"><td><a href="#m4">testOrdersItems</a></td><td class="numi">1</td><td class="numi">0</td></tr><tr class="passedodd"><td><a href="#m5">testOrdersItemsInvalid</a></td><td class="numi">1</td><td class="numi">2</td></tr>
+<tr class="passedeven"><td rowspan="4">org.seke.fs.beans.OrdersItemBeanTest<td><a href="#m6">testAmount</a></td><td class="numi">1</td><td class="numi">1</td></tr><tr class="passedeven"><td><a href="#m7">testInvalidAmount</a></td><td class="numi">1</td><td class="numi">1</td></tr><tr class="passedeven"><td><a href="#m8">testInvalidPrice</a></td><td class="numi">1</td><td class="numi">0</td></tr><tr class="passedeven"><td><a href="#m9">testPrice</a></td><td class="numi">1</td><td class="numi">1</td></tr>
+<tr class="passedodd"><td rowspan="9">org.seke.fs.beans.ProductBeanTest<td><a href="#m10">testAmountInStock</a></td><td class="numi">1</td><td class="numi">0</td></tr><tr class="passedodd"><td><a href="#m11">testAmountInStockInvalid</a></td><td class="numi">1</td><td class="numi">1</td></tr><tr class="passedodd"><td><a href="#m12">testId</a></td><td class="numi">1</td><td class="numi">1</td></tr><tr class="passedodd"><td><a href="#m13">testPrice</a></td><td class="numi">1</td><td class="numi">0</td></tr><tr class="passedodd"><td><a href="#m14">testPriceInvalid</a></td><td class="numi">1</td><td class="numi">0</td></tr><tr class="passedodd"><td><a href="#m15">testProductTitleInvalid</a></td><td class="numi">1</td><td class="numi">0</td></tr><tr class="passedodd"><td><a href="#m16">testProductTitleInvalid1</a></td><td class="numi">1</td><td class="numi">4</td></tr><tr class="passedodd"><td><a href="#m17">testProductTitleInvalid2</a></td><td class="numi">1</td><td class="numi">0</td></tr><tr class="passedodd"><td><a href="#m18">testTitle</a></td><td class="numi">1</td><td class="numi">0</td></tr>
+<tr class="passedeven"><td rowspan="17">org.seke.fs.beans.UserBeanTest<td><a href="#m19">testFirstName</a></td><td class="numi">1</td><td class="numi">0</td></tr><tr class="passedeven"><td><a href="#m20">testFirstNameInvalid</a></td><td class="numi">1</td><td class="numi">1</td></tr><tr class="passedeven"><td><a href="#m21">testFirstNameInvalid1</a></td><td class="numi">1</td><td class="numi">0</td></tr><tr class="passedeven"><td><a href="#m22">testFirstNameInvalid2</a></td><td class="numi">1</td><td class="numi">1</td></tr><tr class="passedeven"><td><a href="#m23">testLastName</a></td><td class="numi">1</td><td class="numi">0</td></tr><tr class="passedeven"><td><a href="#m24">testLastNameInvalid</a></td><td class="numi">1</td><td class="numi">0</td></tr><tr class="passedeven"><td><a href="#m25">testLastNameInvalid1</a></td><td class="numi">1</td><td class="numi">1</td></tr><tr class="passedeven"><td><a href="#m26">testLastNameInvalid2</a></td><td class="numi">1</td><td class="numi">0</td></tr><tr class="passedeven"><td><a href="#m27">testOrders</a></td><td class="numi">1</td><td class="numi">0</td></tr><tr class="passedeven"><td><a href="#m28">testPassword</a></td><td class="numi">1</td><td class="numi">1</td></tr><tr class="passedeven"><td><a href="#m29">testPasswordInvalid</a></td><td class="numi">1</td><td class="numi">0</td></tr><tr class="passedeven"><td><a href="#m30">testPasswordInvalid1</a></td><td class="numi">1</td><td class="numi">0</td></tr><tr class="passedeven"><td><a href="#m31">testPasswordInvalid2</a></td><td class="numi">1</td><td class="numi">0</td></tr><tr class="passedeven"><td><a href="#m32">testUsername</a></td><td class="numi">1</td><td class="numi">0</td></tr><tr class="passedeven"><td><a href="#m33">testUsernameInvalid</a></td><td class="numi">1</td><td class="numi">1</td></tr><tr class="passedeven"><td><a href="#m34">testUsernameInvalid1</a></td><td class="numi">1</td><td class="numi">1</td></tr><tr class="passedeven"><td><a href="#m35">testUsernameInvalid2</a></td><td class="numi">1</td><td class="numi">0</td></tr>
+<tr class="passedodd"><td rowspan="4">org.seke.fs.services.ProductsBeanTest<td><a href="#m36">testRetreive</a></td><td class="numi">1</td><td class="numi">0</td></tr><tr class="passedodd"><td><a href="#m37">testRetreiveById</a></td><td class="numi">1</td><td class="numi">1</td></tr><tr class="passedodd"><td><a href="#m38">testSave</a></td><td class="numi">1</td><td class="numi">251</td></tr><tr class="passedodd"><td><a href="#m39">testSaveInvalid</a></td><td class="numi">1</td><td class="numi">1</td></tr>
+<tr class="passedeven"><td rowspan="1">org.seke.fs.services.UsersBeanTest<td><a href="#m40">testRegister</a></td><td class="numi">1</td><td class="numi">11</td></tr>
 </table>
 <h1>Command line test</h1>
-<a id="m1"></a><h2>org.seke.fs.SeleniumTest:testAddProduct</h2>
+<a id="m1"></a><h2>org.seke.fs.beans.OrderBeanTest:commitDate</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<a id="m2"></a><h2>org.seke.fs.SeleniumTest:testApplicationStartup</h2>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<a id="m3"></a><h2>org.seke.fs.SeleniumTest:testShowProductDoesNotExist</h2>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<a id="m4"></a><h2>org.seke.fs.SeleniumTest:testUserLogingIfExists</h2>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<a id="m5"></a><h2>org.seke.fs.beans.CostumerBeanTest:testFirstName</h2>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<a id="m6"></a><h2>org.seke.fs.beans.CostumerBeanTest:testLastName</h2>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<a id="m7"></a><h2>org.seke.fs.beans.CostumerBeanTest:testOrders</h2>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<a id="m8"></a><h2>org.seke.fs.beans.CostumerBeanTest:testPassword</h2>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<a id="m9"></a><h2>org.seke.fs.beans.CostumerBeanTest:testUsername</h2>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<a id="m10"></a><h2>org.seke.fs.beans.OrderBeanTest:commitDate</h2>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<a id="m11"></a><h2>org.seke.fs.beans.OrderBeanTest:testOrdersItems</h2>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<a id="m12"></a><h2>org.seke.fs.beans.OrdersItemBeanTest:testAmount</h2>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<a id="m13"></a><h2>org.seke.fs.beans.OrdersItemBeanTest:testOrdersItemNumber</h2>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<a id="m14"></a><h2>org.seke.fs.beans.OrdersItemBeanTest:testPrice</h2>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<a id="m15"></a><h2>org.seke.fs.beans.ProductBeanTest:testAmountInStock</h2>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<a id="m16"></a><h2>org.seke.fs.beans.ProductBeanTest:testPrice</h2>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<a id="m17"></a><h2>org.seke.fs.beans.ProductBeanTest:testTitle</h2>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<a id="m18"></a><h2>org.seke.fs.services.CostumersBeanTest:testRegister</h2>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<a id="m19"></a><h2>org.seke.fs.services.ProductsBeanTest:testRetreive</h2>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<a id="m20"></a><h2>org.seke.fs.services.ProductsBeanTest:testRetreiveById</h2>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<a id="m21"></a><h2>org.seke.fs.services.ProductsBeanTest:testSave</h2>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<a id="m22"></a><h2>org.seke.fs.services.ProductsBeanTest:testSaveInvalid</h2>
+<a id="m2"></a><h2>org.seke.fs.beans.OrderBeanTest:testCommitDateInvalid</h2>
 <div style="padding-left:3em">
 <p>null</p>
-org.seke.fs.services.ProductsServiceBean.save(ProductsServiceBean.java:36)
+org.seke.fs.beans.OrderBean.setCommitDate(OrderBean.java:54)
+<br/>at org.seke.fs.beans.OrderBeanTest.testCommitDateInvalid(OrderBeanTest.java:40)
+<br/>30 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m3"></a><h2>org.seke.fs.beans.OrderBeanTest:testCommitDateInvalid1</h2>
+<div style="padding-left:3em">
+<p>null</p>
+org.seke.fs.beans.OrderBean.setCommitDate(OrderBean.java:55)
+<br/>at org.seke.fs.beans.OrderBeanTest.testCommitDateInvalid1(OrderBeanTest.java:48)
+<br/>30 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m4"></a><h2>org.seke.fs.beans.OrderBeanTest:testOrdersItems</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m5"></a><h2>org.seke.fs.beans.OrderBeanTest:testOrdersItemsInvalid</h2>
+<div style="padding-left:3em">
+<p>null</p>
+org.seke.fs.beans.OrderBean.setOrdersItems(OrderBean.java:64)
+<br/>at org.seke.fs.beans.OrderBeanTest.testOrdersItemsInvalid(OrderBeanTest.java:60)
+<br/>30 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m6"></a><h2>org.seke.fs.beans.OrdersItemBeanTest:testAmount</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m7"></a><h2>org.seke.fs.beans.OrdersItemBeanTest:testInvalidAmount</h2>
+<div style="padding-left:3em">
+<p>null</p>
+org.seke.fs.beans.OrdersItemBean.setAmount(OrdersItemBean.java:45)
+<br/>at org.seke.fs.beans.OrdersItemBeanTest.testInvalidAmount(OrdersItemBeanTest.java:37)
+<br/>30 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m8"></a><h2>org.seke.fs.beans.OrdersItemBeanTest:testInvalidPrice</h2>
+<div style="padding-left:3em">
+<p>null</p>
+org.seke.fs.beans.OrdersItemBean.setPrice(OrdersItemBean.java:54)
+<br/>at org.seke.fs.beans.OrdersItemBeanTest.testInvalidPrice(OrdersItemBeanTest.java:52)
+<br/>30 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m9"></a><h2>org.seke.fs.beans.OrdersItemBeanTest:testPrice</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m10"></a><h2>org.seke.fs.beans.ProductBeanTest:testAmountInStock</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m11"></a><h2>org.seke.fs.beans.ProductBeanTest:testAmountInStockInvalid</h2>
+<div style="padding-left:3em">
+<p>null</p>
+org.seke.fs.beans.ProductBean.setAmountInStock(ProductBean.java:63)
+<br/>at org.seke.fs.beans.ProductBeanTest.testAmountInStockInvalid(ProductBeanTest.java:76)
+<br/>30 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m12"></a><h2>org.seke.fs.beans.ProductBeanTest:testId</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m13"></a><h2>org.seke.fs.beans.ProductBeanTest:testPrice</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m14"></a><h2>org.seke.fs.beans.ProductBeanTest:testPriceInvalid</h2>
+<div style="padding-left:3em">
+<p>null</p>
+org.seke.fs.beans.ProductBean.setPrice(ProductBean.java:72)
+<br/>at org.seke.fs.beans.ProductBeanTest.testPriceInvalid(ProductBeanTest.java:92)
+<br/>30 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m15"></a><h2>org.seke.fs.beans.ProductBeanTest:testProductTitleInvalid</h2>
+<div style="padding-left:3em">
+<p>null</p>
+org.seke.fs.beans.ProductBean.setTitle(ProductBean.java:52)
+<br/>at org.seke.fs.beans.ProductBeanTest.testProductTitleInvalid(ProductBeanTest.java:47)
+<br/>30 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m16"></a><h2>org.seke.fs.beans.ProductBeanTest:testProductTitleInvalid1</h2>
+<div style="padding-left:3em">
+<p>null</p>
+org.seke.fs.beans.ProductBean.setTitle(ProductBean.java:53)
+<br/>at org.seke.fs.beans.ProductBeanTest.testProductTitleInvalid1(ProductBeanTest.java:54)
+<br/>30 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m17"></a><h2>org.seke.fs.beans.ProductBeanTest:testProductTitleInvalid2</h2>
+<div style="padding-left:3em">
+<p>null</p>
+org.seke.fs.beans.ProductBean.setTitle(ProductBean.java:54)
+<br/>at org.seke.fs.beans.ProductBeanTest.testProductTitleInvalid2(ProductBeanTest.java:61)
+<br/>30 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m18"></a><h2>org.seke.fs.beans.ProductBeanTest:testTitle</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m19"></a><h2>org.seke.fs.beans.UserBeanTest:testFirstName</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m20"></a><h2>org.seke.fs.beans.UserBeanTest:testFirstNameInvalid</h2>
+<div style="padding-left:3em">
+<p>null</p>
+org.seke.fs.beans.UserBean.setFirstName(UserBean.java:84)
+<br/>at org.seke.fs.beans.UserBeanTest.testFirstNameInvalid(UserBeanTest.java:95)
+<br/>30 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m21"></a><h2>org.seke.fs.beans.UserBeanTest:testFirstNameInvalid1</h2>
+<div style="padding-left:3em">
+<p>null</p>
+org.seke.fs.beans.UserBean.setFirstName(UserBean.java:84)
+<br/>at org.seke.fs.beans.UserBeanTest.testFirstNameInvalid1(UserBeanTest.java:102)
+<br/>30 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m22"></a><h2>org.seke.fs.beans.UserBeanTest:testFirstNameInvalid2</h2>
+<div style="padding-left:3em">
+<p>null</p>
+org.seke.fs.beans.UserBean.setFirstName(UserBean.java:83)
+<br/>at org.seke.fs.beans.UserBeanTest.testFirstNameInvalid2(UserBeanTest.java:109)
+<br/>30 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m23"></a><h2>org.seke.fs.beans.UserBeanTest:testLastName</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m24"></a><h2>org.seke.fs.beans.UserBeanTest:testLastNameInvalid</h2>
+<div style="padding-left:3em">
+<p>null</p>
+org.seke.fs.beans.UserBean.setLastName(UserBean.java:94)
+<br/>at org.seke.fs.beans.UserBeanTest.testLastNameInvalid(UserBeanTest.java:124)
+<br/>30 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m25"></a><h2>org.seke.fs.beans.UserBeanTest:testLastNameInvalid1</h2>
+<div style="padding-left:3em">
+<p>null</p>
+org.seke.fs.beans.UserBean.setLastName(UserBean.java:94)
+<br/>at org.seke.fs.beans.UserBeanTest.testLastNameInvalid1(UserBeanTest.java:131)
+<br/>30 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m26"></a><h2>org.seke.fs.beans.UserBeanTest:testLastNameInvalid2</h2>
+<div style="padding-left:3em">
+<p>null</p>
+org.seke.fs.beans.UserBean.setLastName(UserBean.java:93)
+<br/>at org.seke.fs.beans.UserBeanTest.testLastNameInvalid2(UserBeanTest.java:138)
+<br/>30 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m27"></a><h2>org.seke.fs.beans.UserBeanTest:testOrders</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m28"></a><h2>org.seke.fs.beans.UserBeanTest:testPassword</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m29"></a><h2>org.seke.fs.beans.UserBeanTest:testPasswordInvalid</h2>
+<div style="padding-left:3em">
+<p>null</p>
+org.seke.fs.beans.UserBean.setPassword(UserBean.java:74)
+<br/>at org.seke.fs.beans.UserBeanTest.testPasswordInvalid(UserBeanTest.java:66)
+<br/>30 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m30"></a><h2>org.seke.fs.beans.UserBeanTest:testPasswordInvalid1</h2>
+<div style="padding-left:3em">
+<p>null</p>
+org.seke.fs.beans.UserBean.setPassword(UserBean.java:74)
+<br/>at org.seke.fs.beans.UserBeanTest.testPasswordInvalid1(UserBeanTest.java:73)
+<br/>30 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m31"></a><h2>org.seke.fs.beans.UserBeanTest:testPasswordInvalid2</h2>
+<div style="padding-left:3em">
+<p>null</p>
+org.seke.fs.beans.UserBean.setPassword(UserBean.java:73)
+<br/>at org.seke.fs.beans.UserBeanTest.testPasswordInvalid2(UserBeanTest.java:80)
+<br/>30 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m32"></a><h2>org.seke.fs.beans.UserBeanTest:testUsername</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m33"></a><h2>org.seke.fs.beans.UserBeanTest:testUsernameInvalid</h2>
+<div style="padding-left:3em">
+<p>null</p>
+org.seke.fs.beans.UserBean.setUsername(UserBean.java:64)
+<br/>at org.seke.fs.beans.UserBeanTest.testUsernameInvalid(UserBeanTest.java:37)
+<br/>30 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m34"></a><h2>org.seke.fs.beans.UserBeanTest:testUsernameInvalid1</h2>
+<div style="padding-left:3em">
+<p>null</p>
+org.seke.fs.beans.UserBean.setUsername(UserBean.java:64)
+<br/>at org.seke.fs.beans.UserBeanTest.testUsernameInvalid1(UserBeanTest.java:44)
+<br/>30 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m35"></a><h2>org.seke.fs.beans.UserBeanTest:testUsernameInvalid2</h2>
+<div style="padding-left:3em">
+<p>null</p>
+org.seke.fs.beans.UserBean.setUsername(UserBean.java:63)
+<br/>at org.seke.fs.beans.UserBeanTest.testUsernameInvalid2(UserBeanTest.java:51)
+<br/>30 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m36"></a><h2>org.seke.fs.services.ProductsBeanTest:testRetreive</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m37"></a><h2>org.seke.fs.services.ProductsBeanTest:testRetreiveById</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m38"></a><h2>org.seke.fs.services.ProductsBeanTest:testSave</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m39"></a><h2>org.seke.fs.services.ProductsBeanTest:testSaveInvalid</h2>
+<div style="padding-left:3em">
+<p>null</p>
+org.seke.fs.services.ProductsServiceBean.save(ProductsServiceBean.java:41)
 <br/>at org.seke.fs.services.ProductsBeanTest.testSaveInvalid(ProductsBeanTest.java:48)
 <br/>30 lines not shown
 </div>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<a id="m23"></a><h2>org.seke.fs.spring.ApplicationContestProviderTest:contextUnderTest</h2>
+<a id="m40"></a><h2>org.seke.fs.services.UsersBeanTest:testRegister</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
 </body></html>
