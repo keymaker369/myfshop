@@ -34,4 +34,6 @@ public interface UsersService {
 
     @CommitAfter
     void purchaseOrder(User user, Order purchasedOrder);
+
+    public void deleteAllUsers();
 }

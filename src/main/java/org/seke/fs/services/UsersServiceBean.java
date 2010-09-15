@@ -66,4 +66,9 @@ public class UsersServiceBean implements UsersService {
     public void purchaseOrder(User user, Order purchasedOrder) {
         //To change body of implemented methods use File | Settings | File Templates.
     }
+
+    @Override
+    public void deleteAllUsers() {
+        //To change body of implemented methods use File | Settings | File Templates.
+    }
 }

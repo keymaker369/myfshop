@@ -99,12 +99,12 @@
 
 
         <!--
-                tapestry-test will conflict with RunJettyRun inside Eclipse.
-                tapestry-test brings in Selenium, which is based on Jetty 5.1;
+                tapestry-SveTest will conflict with RunJettyRun inside Eclipse.
+                tapestry-SveTest brings in Selenium, which is based on Jetty 5.1;
                 RunJettyRun uses Jetty 6. <dependency>
                 <groupId>org.apache.tapestry</groupId>
-                <artifactId>tapestry-test</artifactId>
-                <version>${tapestry-release-version}</version> <scope>test</scope>
+                <artifactId>tapestry-SveTest</artifactId>
+                <version>${tapestry-release-version}</version> <scope>SveTest</scope>
                 </dependency>
         -->
 
