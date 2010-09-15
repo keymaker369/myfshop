@@ -111,7 +111,10 @@ public class UsersServiceImpl implements UsersService {
         purchasedOrder.setPrice(ordersPrice);
         user.getOrders().add(purchasedOrder);
         getSession().update(user);
+    }
 
-
+    @Transactional
+    public void deleteAllUsers(){
+        getSession().createQuery("delete from UserBean");
     }
 }

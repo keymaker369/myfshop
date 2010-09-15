@@ -139,8 +139,33 @@ public class UserBeanTest {
     }
 
     @Test
-    public void testType(){
+    public void testTypeAsAdmin() {
+        assertNull(userUnderTest.getType());
+        String type = "administrator";
+        userUnderTest.setType(type);
+        assertSame(userUnderTest.getType(), type);
+    }
 
+    @Test
+    public void testTypeAsCostumer() {
+        assertNull(userUnderTest.getType());
+        String type = "costumer";
+        userUnderTest.setType(type);
+        assertSame(userUnderTest.getType(), type);
+    }
+
+    @Test(expectedExceptions = AssertionError.class)
+    public void testTypeInvalid() {
+        assertNull(userUnderTest.getType());
+        String type = "somethingElse";
+        userUnderTest.setType(type);
+    }
+
+    @Test(expectedExceptions = AssertionError.class)
+    public void testTypeInvalid1() {
+        assertNull(userUnderTest.getType());
+        String type = null;
+        userUnderTest.setType(type);
     }
 
     @Test

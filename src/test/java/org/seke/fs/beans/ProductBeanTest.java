@@ -35,7 +35,7 @@ public class ProductBeanTest {
     @Test
     public void testTitle() {
         assertNull(productUnderTest.getTitle());
-        String title = "test";
+        String title = "SveTest";
         productUnderTest.setTitle(title);
         assertSame(title, productUnderTest.getTitle());
     }
